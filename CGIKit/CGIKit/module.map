@@ -1,0 +1,8 @@
+framework module CGIKit {
+    umbrella header "CGIKit.h"
+    
+    export *
+    module * {
+        export *
+    }
+}
