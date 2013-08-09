@@ -1,0 +1,13 @@
+framework module MSBooster {
+    umbrella header "MSBooster.h"
+    
+    export *
+    module * {
+        export *
+    }
+    
+    explicit module MSBoosterPrivate {
+        header "MSBooster_Private.h"
+        export *
+    }
+}
