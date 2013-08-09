@@ -6,11 +6,92 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		1D4BF0B017A8FF31005080A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D4BF07D17A8FF30005080A2;
+			remoteInfo = MSBooster;
+		};
+		1D4BF10317A91740005080A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D4BF0D017A9173F005080A2;
+			remoteInfo = CGIKit;
+		};
+		1D4BF2AF17AA0BC0005080A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D4BF27C17AA0BBF005080A2;
+			remoteInfo = CGIJSONObject;
+		};
+		1D4BF2B117AA0BC0005080A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D4BF29317AA0BBF005080A2;
+			remoteInfo = CGIJSONObjectTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.en.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.en.md; sourceTree = "<group>"; };
+		1D4BF06B17A8FEA8005080A2 /* COPYRIGHT.zh-Hans.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "COPYRIGHT.zh-Hans.md"; sourceTree = "<group>"; };
+		1D4BF06C17A8FEA8005080A2 /* README.en.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.en.md; sourceTree = "<group>"; };
+		1D4BF06D17A8FEB9005080A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSBooster.xcodeproj; path = MSBooster/MSBooster.xcodeproj; sourceTree = "<group>"; };
+		1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CGIKit.xcodeproj; path = CGIKit/CGIKit.xcodeproj; sourceTree = "<group>"; };
+		1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CGIJSONObject.xcodeproj; path = CGIJSONObject/CGIJSONObject.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		1D4BF06317A8FE92005080A2 = {
 			isa = PBXGroup;
 			children = (
+				1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */,
+				1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */,
+				1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */,
+				1D4BF0C117A90686005080A2 /* Documentation & More */,
 			);
+			sourceTree = "<group>";
+		};
+		1D4BF0AC17A8FF30005080A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF0B117A8FF31005080A2 /* MSBooster.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D4BF0C117A90686005080A2 /* Documentation & More */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF06D17A8FEB9005080A2 /* .gitignore */,
+				1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.en.md */,
+				1D4BF06B17A8FEA8005080A2 /* COPYRIGHT.zh-Hans.md */,
+				1D4BF06C17A8FEA8005080A2 /* README.en.md */,
+			);
+			name = "Documentation & More";
+			sourceTree = "<group>";
+		};
+		1D4BF0FF17A9173F005080A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF10417A91740005080A2 /* CGIKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D4BF2AB17AA0BBF005080A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D4BF2B017AA0BC0005080A2 /* CGIJSONObject.framework */,
+				1D4BF2B217AA0BC0005080A2 /* CGIJSONObjectTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -30,11 +111,56 @@
 			);
 			mainGroup = 1D4BF06317A8FE92005080A2;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1D4BF2AB17AA0BBF005080A2 /* Products */;
+					ProjectRef = 1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */;
+				},
+				{
+					ProductGroup = 1D4BF0FF17A9173F005080A2 /* Products */;
+					ProjectRef = 1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 1D4BF0AC17A8FF30005080A2 /* Products */;
+					ProjectRef = 1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1D4BF0B117A8FF31005080A2 /* MSBooster.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = MSBooster.framework;
+			remoteRef = 1D4BF0B017A8FF31005080A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D4BF10417A91740005080A2 /* CGIKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CGIKit.framework;
+			remoteRef = 1D4BF10317A91740005080A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D4BF2B017AA0BC0005080A2 /* CGIJSONObject.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CGIJSONObject.framework;
+			remoteRef = 1D4BF2AF17AA0BC0005080A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D4BF2B217AA0BC0005080A2 /* CGIJSONObjectTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CGIJSONObjectTests.xctest;
+			remoteRef = 1D4BF2B117AA0BC0005080A2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		1D4BF06817A8FE92005080A2 /* Debug */ = {
