@@ -10,39 +10,40 @@
 #import <MSBooster/MSBooster.h>
 
 /**
- @enum      CGIHTTPResponseCode
- 
- HTTP Response Codes.
- 
- @see       RFC 2616
+ HTTP Response Codes as defined in RFC 2616.
  */
 typedef NS_ENUM(NSUInteger, CGIHTTPResponseCode)
 {
-#pragma mark Informational
+
     /// Continue the rest of the request.
     CGIHTTPResponseContinue = 100,
-    
     /// Switch to another protocol and continue.
     CGIHTTPResponseSwitchingProtocols,
-    
-#pragma mark Succeed
+
     /// The request is processed successfully.
     CGIHTTPResponseOK = 200,
-    
     /// The requested file have been created.
     CGIHTTPResponseCreated,
-    
     /// The request have been accepted.
     CGIHTTPResponseAccepted,
+    /// The response is non-authoritative.
     CGIHTTPResponseNonAuthoritativeInformation,
+    /// The response is empty.
     CGIHTTPResponseNoContent,
+    /// The request is processed. Please reset the form.
     CGIHTTPResponseResetContent,
+    /// The response is part of the complete response.
     CGIHTTPResponsePartialContent,
     
+    /// There are multiple choices possible for the response.
     CGIHTTPResponseMultipleChoices = 300,
+    /// The requested object is permanently moved to another location.
     CGIHTTPResponseMovedPermanently,
+    /// The requested object is found at another location.
     CGIHTTPResponseFound,
+    /// The
     CGIHTTPResponseSeeOther,
+    /// The requested content is not modified since last request.
     CGIHTTPResponseNotModified,
     CGIHTTPResponseUseProxy,
     CGIHTTPResponseTemporaryRedirect = 307,
@@ -94,6 +95,8 @@ typedef NS_ENUM(NSUInteger, CGIHTTPResponseCode)
 - (void)setResponseWithException:(NSException *)exception;
 - (void)setResponseWithRedirection:(NSString *)target;
 - (void)setResponseWithRedirection:(NSString *)target statusCode:(CGIHTTPResponseCode)statusCode;
+- (void)setResponseWithRejectedRequest;
+- (void)setResponseWithRedactedResponse;
 
 @end
 

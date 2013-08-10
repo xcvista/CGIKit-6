@@ -56,7 +56,7 @@ int MSNoReturn CGIApplicationMain(int argc,
     
     dispatch_group_t group = dispatch_group_create();
     
-    while ((context = [[CGIHTTPContext alloc] initWithDisptachGroup:group]))
+    while ((context = [[CGIHTTPContext alloc] initWithDisptachGroup:group delegate:[self createDelegateForContext]]))
     {
         [(CGIHTTPContext *)objc_retain(context) run];
     }
@@ -72,6 +72,14 @@ int MSNoReturn CGIApplicationMain(int argc,
 {
     if ([self.delegate respondsToSelector:@selector(applicationDidFinishLaunching:)])
         [self.delegate applicationDidFinishLaunching:self];
+}
+
+- (id<CGIHTTPContextDelegate>)createDelegateForContext
+{
+    if ([self.delegate respondsToSelector:@selector(createDelegateForContext:)])
+        return [self.delegate createDelegateForContext:self];
+    else
+        return nil;
 }
 
 - (BOOL)applicationShouldHandleRequest:(CGIHTTPRequest *)request

@@ -22,9 +22,10 @@ static BOOL _CGI_Executed;
     
     CGIHTTPRequest *_request;
     CGIHTTPResponse *_response;
+    id<CGIHTTPContextDelegate> _delegate;
 }
 
-- (id)initWithDisptachGroup:(dispatch_group_t)group
+- (id)initWithDisptachGroup:(dispatch_group_t)group delegate:(id<CGIHTTPContextDelegate>)delegate
 {
     self = [super init];
     if (self) {
@@ -50,6 +51,7 @@ static BOOL _CGI_Executed;
         }
         _group = group;
         _queue = dispatch_queue_create("", 0);
+        _delegate = delegate;
     }
     return self;
 }
@@ -110,31 +112,66 @@ static BOOL _CGI_Executed;
             }
         }
         
-        CGIApplication *app = [CGIApplication sharedApplication];
+        _response = [[CGIHTTPResponse alloc] init];
         
         @try
         {
-            if ([app applicationShouldHandleRequest:_request])
+            if ([self contextShouldHandleRequest:_request])
             {
-                [app applicationHandleHTTPContext:self];
+                [self handleHTTPContext];
+                if (![self contextShouldSendResponse:_response])
+                {
+                    [_response setResponseWithRedactedResponse];
+                }
             }
             else
             {
-                
+                [_response setResponseWithRejectedRequest];
             }
         }
         @catch (NSException *exception)
         {
-            ;
+            [_response setResponseWithException:exception];
         }
-        @finally
-        {
-            if (!FCGX_IsCGI())
-                FCGX_Finish_r(&_fcgi_request);
-            
-            objc_release(self);
-        }
+        
+        
+        if (!FCGX_IsCGI())
+            FCGX_Finish_r(&_fcgi_request);
+        
+        objc_release(self);
     });
+}
+
+- (BOOL)contextShouldHandleRequest:(CGIHTTPRequest *)request
+{
+    if ([self.delegate respondsToSelector:@selector(context:shouldHandleRequest:)])
+        return [self.delegate context:self shouldHandleRequest:request];
+    else
+        return [[CGIApplication sharedApplication] applicationShouldHandleRequest:request];
+}
+
+- (void)handleHTTPContext
+{
+    if ([self.delegate respondsToSelector:@selector(handleHTTPContext:)])
+        [self.delegate handleHTTPContext:self];
+    else
+        [[CGIApplication sharedApplication] applicationHandleHTTPContext:self];
+}
+
+- (BOOL)contextShouldSendResponse:(CGIHTTPResponse *)response
+{
+    if ([self.delegate respondsToSelector:@selector(context:shouldSendResponse:)])
+        return [self.delegate context:self shouldSendResponse:response];
+    else
+        return [[CGIApplication sharedApplication] applicationShouldSendResponse:response];
+}
+
+- (void)contextDidSendResponse:(CGIHTTPResponse *)response
+{
+    if ([self.delegate respondsToSelector:@selector(context:didSendResponse:)])
+        [self.delegate context:self didSendResponse:response];
+    else
+        return [[CGIApplication sharedApplication] applicationDidSendResponse:response];
 }
 
 @end

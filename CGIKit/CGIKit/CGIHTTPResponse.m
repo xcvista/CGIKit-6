@@ -22,6 +22,18 @@
     self.headers[CGIHTTPResponseStatusKey] = @(statusCode);
 }
 
+- (void)setResponseWithError:(NSError *)error
+{
+    [self setResponseWithError:error
+                    statusCode:CGIHTTPResponseInternalServerError];
+}
+
+- (void)setResponseWithRedirection:(NSString *)target
+{
+    [self setResponseWithRedirection:target
+                          statusCode:CGIHTTPResponseFound];
+}
+
 @end
 
 #import <MSBooster/MSBooster_Private.h>
