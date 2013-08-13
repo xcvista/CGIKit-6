@@ -32,6 +32,8 @@ ifeq ($(PROJECT_ROOT),)
 	PROJECT_ROOT := $(shell git rev-parse --show-toplevel)
 endif
 
+default:: all
+
 before-all::
 	mkdir -p $(PROJECT_ROOT)/build
 
