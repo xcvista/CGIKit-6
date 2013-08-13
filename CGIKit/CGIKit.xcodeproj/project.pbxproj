@@ -84,6 +84,8 @@
 		1D4BF26817A92162005080A2 /* os_unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = os_unix.c; sourceTree = "<group>"; };
 		1D4BF26A17A9235B005080A2 /* module.map */ = {isa = PBXFileReference; lastKnownFileType = text; path = module.map; sourceTree = "<group>"; };
 		1D61210717B9170700C2AD14 /* error.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = error.html; sourceTree = "<group>"; };
+		1D61211517BA0FC400C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		1D61211617BA0FE900C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1D67AFCE17AAA27C009D0826 /* CGIJSONObject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67AFE217AAAF58009D0826 /* CGIHTTPContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPContext.h; sourceTree = "<group>"; };
 		1D67AFE317AAAF58009D0826 /* CGIHTTPContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPContext.m; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		1D4BF0C617A9173F005080A2 = {
 			isa = PBXGroup;
 			children = (
+				1D61211517BA0FC400C2AD14 /* GNUmakefile */,
 				1D4BF0D917A9173F005080A2 /* CGIKit */,
 				1D67AFF117AAB9F4009D0826 /* ls.cgi */,
 				1D4BF0D217A9173F005080A2 /* Frameworks */,
@@ -188,6 +191,7 @@
 				1D4BF0DC17A9173F005080A2 /* InfoPlist.strings */,
 				1D4BF26A17A9235B005080A2 /* module.map */,
 				1D61210717B9170700C2AD14 /* error.html */,
+				1D61211617BA0FE900C2AD14 /* GNUmakefile */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
