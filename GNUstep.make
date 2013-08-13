@@ -32,7 +32,7 @@ ifeq ($(PROJECT_ROOT),)
 	PROJECT_ROOT := $(shell pwd)
 endif
 
-before-all:: $(PROJECT_ROOT)/build
+before-all::
 	mkdir -p $(PROJECT_ROOT)/build
 
 before-clean::
