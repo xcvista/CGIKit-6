@@ -208,6 +208,13 @@ shouldHandleRequest:(CGIHTTPRequest *)request;
  */
 - (int)run MSNoReturn;
 
+/**
+ Obtains the version string of CGIKit.
+ 
+ @return    The library version string.
+ */
+- (NSString *)versionString;
+
 #pragma mark - Lifecycle and delegate methods
 
 /**
@@ -280,7 +287,7 @@ shouldHandleRequest:(CGIHTTPRequest *)request;
 
 /**
  Called by the applicaiton to obtain new delegate for the context. The context
- delegate will catch
+ delegate will catch connection events before application delegate does.
  
  @return    The new context delegate. Return nil will make application delegate
             the handler of connection messages.

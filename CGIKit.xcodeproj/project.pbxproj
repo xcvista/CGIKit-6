@@ -28,12 +28,12 @@
 			remoteGlobalIDString = 1D4BF27C17AA0BBF005080A2;
 			remoteInfo = CGIJSONObject;
 		};
-		1D4BF2B117AA0BC0005080A2 /* PBXContainerItemProxy */ = {
+		1D61210D17BA028F00C2AD14 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */;
+			containerPortal = 1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1D4BF29317AA0BBF005080A2;
-			remoteInfo = CGIJSONObjectTests;
+			remoteGlobalIDString = 1D67AFEE17AAB9F4009D0826;
+			remoteInfo = ls.fcgi;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,6 +45,9 @@
 		1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSBooster.xcodeproj; path = MSBooster/MSBooster.xcodeproj; sourceTree = "<group>"; };
 		1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CGIKit.xcodeproj; path = CGIKit/CGIKit.xcodeproj; sourceTree = "<group>"; };
 		1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CGIJSONObject.xcodeproj; path = CGIJSONObject/CGIJSONObject.xcodeproj; sourceTree = "<group>"; };
+		1D61211017BA02B500C2AD14 /* GNUstep.make */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = GNUstep.make; sourceTree = "<group>"; };
+		1D61211117BA040700C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = GNUmakefile; sourceTree = "<group>"; };
+		1D61211417BA092300C2AD14 /* framework.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = framework.make; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -55,6 +58,7 @@
 				1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */,
 				1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */,
 				1D4BF0C117A90686005080A2 /* Documentation & More */,
+				1D61210917BA028F00C2AD14 /* Makefiles */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF10417A91740005080A2 /* CGIKit.framework */,
+				1D61210E17BA028F00C2AD14 /* ls.fcgi */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,9 +94,18 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF2B017AA0BC0005080A2 /* CGIJSONObject.framework */,
-				1D4BF2B217AA0BC0005080A2 /* CGIJSONObjectTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1D61210917BA028F00C2AD14 /* Makefiles */ = {
+			isa = PBXGroup;
+			children = (
+				1D61211017BA02B500C2AD14 /* GNUstep.make */,
+				1D61211117BA040700C2AD14 /* GNUmakefile */,
+				1D61211417BA092300C2AD14 /* framework.make */,
+			);
+			name = Makefiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,11 +167,11 @@
 			remoteRef = 1D4BF2AF17AA0BC0005080A2 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		1D4BF2B217AA0BC0005080A2 /* CGIJSONObjectTests.xctest */ = {
+		1D61210E17BA028F00C2AD14 /* ls.fcgi */ = {
 			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = CGIJSONObjectTests.xctest;
-			remoteRef = 1D4BF2B117AA0BC0005080A2 /* PBXContainerItemProxy */;
+			fileType = "compiled.mach-o.executable";
+			path = ls.fcgi;
+			remoteRef = 1D61210D17BA028F00C2AD14 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

@@ -11,6 +11,8 @@
 
 #import "CGIHTTPContext.h"
 
+#import <sys/utsname.h>
+
 id CGIApp;
 
 int MSNoReturn CGIApplicationMain(int argc,
@@ -66,6 +68,19 @@ int MSNoReturn CGIApplicationMain(int argc,
     dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
     
     exit(0);
+}
+
+- (NSString *)versionString
+{
+    NSString *system = @"Unknown-OS";
+    
+    struct utsname utsname;
+    if (!uname(&utsname))
+    {
+        system = MSSTR(@"%s/%s", utsname.sysname, utsname.release);
+    }
+    
+    return MSSTR(NSLocalizedString(@"<address>CGIKit/6.0 (version 6A16, %@) &copy; 2011-2013 Maxthon T. Chan et al.</address>", nil));
 }
 
 - (void)applicationDidFinishLaunching

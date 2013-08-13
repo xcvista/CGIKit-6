@@ -49,6 +49,8 @@
 		1D4BF0BE17A90653005080A2 /* MSBooster_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSBooster_Private.h; sourceTree = "<group>"; };
 		1D4BF0C217A90712005080A2 /* MSOCCompatibility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSOCCompatibility.h; sourceTree = "<group>"; };
 		1D4BF0C417A9165F005080A2 /* MSStringConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSStringConstant.h; sourceTree = "<group>"; };
+		1D61211217BA06FD00C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		1D61211317BA073200C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		1D4BF07317A8FF30005080A2 = {
 			isa = PBXGroup;
 			children = (
+				1D61211217BA06FD00C2AD14 /* GNUmakefile */,
 				1D4BF08617A8FF30005080A2 /* MSBooster */,
 				1D4BF07F17A8FF30005080A2 /* Frameworks */,
 				1D4BF07E17A8FF30005080A2 /* Products */,
@@ -121,6 +124,7 @@
 				1D4BF0BA17A9051B005080A2 /* module.map */,
 				1D4BF08817A8FF30005080A2 /* MSBooster-Info.plist */,
 				1D4BF08917A8FF30005080A2 /* InfoPlist.strings */,
+				1D61211317BA073200C2AD14 /* GNUmakefile */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

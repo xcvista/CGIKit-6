@@ -84,12 +84,13 @@ typedef NS_ENUM(NSUInteger, CGIHTTPResponseCode)
 #pragma mark Accessors
 
 @property (nonatomic) CGIHTTPResponseCode statusCode;
-
+@property (nonatomic) NSUInteger contentLength;
 @property (nonatomic) NSString *contentType;
 @property (nonatomic) NSString *setCookie;
 
 #pragma mark - Easy error reporting methods
 
+- (void)setResponseWithTemplatePage:(NSString *)template substitutions:(NSDictionary *)substitutions;
 - (void)setResponseWithError:(NSError *)error;
 - (void)setResponseWithError:(NSError *)error statusCode:(CGIHTTPResponseCode)statusCode;
 - (void)setResponseWithException:(NSException *)exception;

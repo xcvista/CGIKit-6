@@ -19,6 +19,7 @@
 		1D4BF26717A91FFA005080A2 /* CGIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4BF0E017A9173F005080A2 /* CGIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D4BF26917A92162005080A2 /* os_unix.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D4BF26817A92162005080A2 /* os_unix.c */; settings = {COMPILER_FLAGS = "-Wno-shorten-64-to-32 -Wno-pointer-sign"; }; };
 		1D4BF26C17A92390005080A2 /* module.map in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D4BF26A17A9235B005080A2 /* module.map */; };
+		1D61210817B9170700C2AD14 /* error.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D61210717B9170700C2AD14 /* error.html */; };
 		1D67AFE417AAAF58009D0826 /* CGIHTTPContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67AFE217AAAF58009D0826 /* CGIHTTPContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D67AFE517AAAF58009D0826 /* CGIHTTPContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67AFE317AAAF58009D0826 /* CGIHTTPContext.m */; };
 		1D67AFE817AAB2EF009D0826 /* CGIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67AFE617AAB2EF009D0826 /* CGIHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,6 +83,7 @@
 		1D4BF26517A91F8A005080A2 /* fcgi_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fcgi_config.h; sourceTree = "<group>"; };
 		1D4BF26817A92162005080A2 /* os_unix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = os_unix.c; sourceTree = "<group>"; };
 		1D4BF26A17A9235B005080A2 /* module.map */ = {isa = PBXFileReference; lastKnownFileType = text; path = module.map; sourceTree = "<group>"; };
+		1D61210717B9170700C2AD14 /* error.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = error.html; sourceTree = "<group>"; };
 		1D67AFCE17AAA27C009D0826 /* CGIJSONObject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67AFE217AAAF58009D0826 /* CGIHTTPContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPContext.h; sourceTree = "<group>"; };
 		1D67AFE317AAAF58009D0826 /* CGIHTTPContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPContext.m; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				1D4BF0DB17A9173F005080A2 /* CGIKit-Info.plist */,
 				1D4BF0DC17A9173F005080A2 /* InfoPlist.strings */,
 				1D4BF26A17A9235B005080A2 /* module.map */,
+				1D61210717B9170700C2AD14 /* error.html */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4BF0DE17A9173F005080A2 /* InfoPlist.strings in Resources */,
+				1D61210817B9170700C2AD14 /* error.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

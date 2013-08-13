@@ -13,22 +13,22 @@
 #include <objc/message.h>
 
 #if __has_include(<objc/arc.h>)
-#include <objc/arc.h>
-#else
+#   include <objc/arc.h>
+#else // !__has_include(<objc/arc.h>)
 extern id objc_retain(id);
 extern void objc_release(id);
-#endif
+#endif // __has_include(<objc/arc.h>)
 
 #if __has_include(<CoreFoundation/CoreFoundaton.h>)
 #include <CoreFoundation/CoreFoundation.h>
-#endif
+#endif // __has_include(<CoreFoundation/CoreFoundaton.h>)
 
 #if __OBJC__
 #import <Foundation/Foundation.h>
 #define __class @class
-#else
+#else // !__OBJC__
 #define __class typedef struct objc_object
-#endif
+#endif // __OBJC__
 
 // Commonly-used Foundation classes, redeclared for C.
 

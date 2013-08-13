@@ -131,7 +131,17 @@ static BOOL _CGI_Executed;
         }
         @catch (NSException *exception)
         {
+            NSLog(@"Exception: %@", exception);
             [_response setResponseWithException:exception];
+        }
+        
+        @try
+        {
+            [self contextDidSendResponse:_response];
+        }
+        @catch (NSException *exception)
+        {
+            NSLog(@"Exception: %@", exception);
         }
         
         
