@@ -31,7 +31,8 @@ int MSNoReturn CGIApplicationMain(int argc,
         CGIApplication *app = [appClass sharedApplication];
         app.delegate = [[delClass alloc] init];
         
-        exit([app run]);
+        int rv = [app run];
+        exit(rv);
     }
 }
 
