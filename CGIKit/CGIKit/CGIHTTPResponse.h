@@ -88,6 +88,8 @@ enum
 
 @interface CGIHTTPResponse : NSObject
 
+- (void)prepareForSend;
+
 #pragma mark - Response body
 
 @property NSMutableDictionary *headers;

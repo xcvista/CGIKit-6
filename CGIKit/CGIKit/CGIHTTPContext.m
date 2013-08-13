@@ -10,9 +10,10 @@
 #import "CGIHTTPRequest.h"
 #import "CGIHTTPResponse.h"
 #import "CGIApplication.h"
-#import "fcgi/fcgi_stdio.h"
+#import "fcgi/fcgiapp.h"
 
 static BOOL _CGI_Executed;
+static BOOL _CGI_Bad;
 
 @implementation CGIHTTPContext
 {
@@ -27,6 +28,9 @@ static BOOL _CGI_Executed;
 
 - (id)initWithDisptachGroup:(dispatch_group_t)group delegate:(id<CGIHTTPContextDelegate>)delegate
 {
+    if (_CGI_Bad)
+        return self = nil;
+    
     self = [super init];
     if (self) {
         if (!FCGX_IsCGI())
@@ -133,6 +137,46 @@ static BOOL _CGI_Executed;
         {
             NSLog(@"Exception: %@", exception);
             [_response setResponseWithException:exception];
+            _CGI_Bad = YES;
+        }
+        
+        @try
+        {
+            [_response prepareForSend];
+            
+            // Write headers
+            for (NSString *key in _response.headers)
+            {
+                NSString *value = _response.headers[key];
+                
+                NSString *line = MSSTR(@"%@: %@",
+                                       [key stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]],
+                                       [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]);
+                if (FCGX_IsCGI())
+                {
+                    fprintf(stdout, "%s\n", [line cStringUsingEncoding:NSASCIIStringEncoding]);
+                }
+                else
+                {
+                    FCGX_FPrintF(_fcgi_request.out, "%s\n", [line cStringUsingEncoding:NSASCIIStringEncoding]);
+                }
+            }
+            
+            if (FCGX_IsCGI())
+            {
+                fputc('\n', stdout);
+                fwrite([_response.data bytes], [_response.data length], 1, stdout);
+            }
+            else
+            {
+                FCGX_PutChar('\n', _fcgi_request.out);
+                FCGX_PutStr([_response.data bytes], (int)[_response.data length], _fcgi_request.out);
+            }
+        }
+        @catch (NSException *exception)
+        {
+            NSLog(@"Exception: %@", exception);
+            @throw exception;
         }
         
         @try
@@ -142,6 +186,7 @@ static BOOL _CGI_Executed;
         @catch (NSException *exception)
         {
             NSLog(@"Exception: %@", exception);
+            _CGI_Bad = YES;
         }
         
         

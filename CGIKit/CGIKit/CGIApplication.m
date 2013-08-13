@@ -81,7 +81,7 @@ int MSNoReturn CGIApplicationMain(int argc,
         system = MSSTR(@"%s/%s", utsname.sysname, utsname.release);
     }
     
-    return MSSTR(NSLocalizedString(@"<address>CGIKit/6.0 (version 6A16, %@) &copy; 2011-2013 Maxthon T. Chan et al.</address>", nil));
+    return MSSTR(NSLocalizedString(@"<address>CGIKit/6.0 (version 6A16, %@) &copy; 2011-2013 Maxthon T. Chan et al.</address>", nil), system);
 }
 
 - (void)applicationDidFinishLaunching
