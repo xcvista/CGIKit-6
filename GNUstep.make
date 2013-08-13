@@ -36,4 +36,4 @@ before-all::
 	mkdir -p $(PROJECT_ROOT)/build
 
 before-clean::
-	rm -r $(PROJECT_ROOT)/build
+	-rm -r $(PROJECT_ROOT)/build
