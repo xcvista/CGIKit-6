@@ -10,4 +10,4 @@ $(FRAMEWORK_NAME)_OBJC_FILES := MSStringManipulation.m
 $(FRAMEWORK_NAME)_CURRENT_VERSION_NAME := A
 $(FRAMEWORK_NAME)_VERSION := 1.0
 
-inlcude ../../framework.make
+include ../../framework.make
