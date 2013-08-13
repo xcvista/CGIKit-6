@@ -27,3 +27,7 @@ CXX := clang++
 ifneq ($(CC),clang)
     $(error You need clang 3.2+ to build this library.)
 endif
+
+ifeq ($(PROJECT_ROOT),)
+    PROJECT_ROOT := $(shell pwd)
+endif
