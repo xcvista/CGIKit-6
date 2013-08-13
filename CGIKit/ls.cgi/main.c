@@ -7,7 +7,6 @@
 //
 
 #include <CGIKit/CGIKit.h>
-#include <CoreFoundation/CoreFoundation.h>
 
 int main(int argc, const char **argv)
 {
