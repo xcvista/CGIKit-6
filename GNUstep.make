@@ -29,7 +29,7 @@ ifneq ($(CC),clang)
 endif
 
 ifeq ($(PROJECT_ROOT),)
-	PROJECT_ROOT := $(shell pwd)
+	PROJECT_ROOT := $(shell git rev-parse --show-toplevel)
 endif
 
 before-all::
