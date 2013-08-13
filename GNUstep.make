@@ -18,18 +18,19 @@ endif
 
 include $(GNUSTEP_MAKEFILES)/common.make
 
+ifeq ($(PROJECT_ROOT),)
+PROJECT_ROOT := $(shell git rev-parse --show-toplevel)
+endif
+
 ADDITIONAL_CFLAGS += -fblock
 ADDITIONAL_OBJCFLAGS += -fobjc-runtime=gnustep-1.7 -fobjc-nonfragile-abi -fobjc-arc -fblock -Xclang -fobjc-default-synthesize-properties -Wall
-ADDITIONAL_CXXFLAGS += -std=gnu++11 -stdlib=libc++
+ADDITIONAL_CPPFLAGS += -I$(PROJECT_ROOT)/build
+ADDITIONAL_LDFLAGS += -L$(PROJECT_ROOT)/build
 CC := clang
 CXX := clang++
 
 ifneq ($(CC),clang)
 	$(error You need clang 3.2+ to build this library.)
-endif
-
-ifeq ($(PROJECT_ROOT),)
-	PROJECT_ROOT := $(shell git rev-parse --show-toplevel)
 endif
 
 default:: all
