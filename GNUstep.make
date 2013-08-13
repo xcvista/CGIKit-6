@@ -20,7 +20,7 @@ include $(GNUSTEP_MAKEFILES)/common.make
 
 ADDITIONAL_CFLAGS += -fblock
 ADDITIONAL_OBJCFLAGS += -fobjc-runtime=gnustep-1.7 -fobjc-nonfragile-abi -fobjc-arc -fblock -Xclang -fobjc-default-synthesize-properties -Wall
-ADDITIONAL_CPPFLAGS += -std=gnu++11 -stdlib=libc++
+ADDITIONAL_CXXFLAGS += -std=gnu++11 -stdlib=libc++
 CC := clang
 CXX := clang++
 
