@@ -48,6 +48,7 @@
 		1D61211017BA02B500C2AD14 /* GNUstep.make */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = GNUstep.make; sourceTree = "<group>"; usesTabs = 1; };
 		1D61211117BA040700C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = GNUmakefile; sourceTree = "<group>"; };
 		1D61211417BA092300C2AD14 /* framework.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = framework.make; sourceTree = "<group>"; usesTabs = 1; };
+		1D61211817BA16B500C2AD14 /* tool.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = tool.make; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -104,6 +105,7 @@
 				1D61211017BA02B500C2AD14 /* GNUstep.make */,
 				1D61211117BA040700C2AD14 /* GNUmakefile */,
 				1D61211417BA092300C2AD14 /* framework.make */,
+				1D61211817BA16B500C2AD14 /* tool.make */,
 			);
 			name = Makefiles;
 			sourceTree = "<group>";

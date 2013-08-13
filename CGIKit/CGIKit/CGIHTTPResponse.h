@@ -41,18 +41,24 @@ typedef NS_ENUM(NSUInteger, CGIHTTPResponseCode)
     CGIHTTPResponseMovedPermanently,
     /// The requested object is found at another location.
     CGIHTTPResponseFound,
-    /// The
+    /// The server requires the client to load another address.
     CGIHTTPResponseSeeOther,
     /// The requested content is not modified since last request.
     CGIHTTPResponseNotModified,
     CGIHTTPResponseUseProxy,
     CGIHTTPResponseTemporaryRedirect = 307,
     
+    /// The request is malformed.
     CGIHTTPResponseBadRequest = 400,
+    /// The request cannot be fulfilled due to lack of authentication.
     CGIHTTPResponseUnauthorized,
+    /// The requested content requires payment.
     CGIHTTPResponsePaymentRequired,
+    /// The client is not allowed to access the resource requested.
     CGIHTTPResponseForbidden,
+    /// The resource is not found on the server.
     CGIHTTPResponseNotFound,
+    /// The HTTP method is not allowed on the server.
     CGIHTTPResponseMethodNotAllowed,
     CGIHTTPResponseNotAcceptable,
     CGIHTTPResponseProxyAuthenticationRequired,
@@ -72,6 +78,12 @@ typedef NS_ENUM(NSUInteger, CGIHTTPResponseCode)
     CGIHTTPResponseServiceUnavailable,
     CGIHTTPResponseGatewayTimeout,
     CGIHTTPResponseHTTPVersionNotSupported,
+};
+
+enum
+{
+    CGIHTTPResponseRedactedError,
+    CGIHTTPResponseRejectedError,
 };
 
 @interface CGIHTTPResponse : NSObject

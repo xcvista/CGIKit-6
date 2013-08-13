@@ -17,3 +17,5 @@ MSConstantString(CGIHTTPResponsePoweredByKey, X-Powered-By);
 MSConstantString(CGIHTTPResponseConnectionKey, Connection);
 MSConstantString(CGIHTTPResponseConnectionKeepAlive, Keep-Alive);
 MSConstantString(CGIHTTPResponseConnectionClose, Close);
+
+MSConstantString(CGIHTTPResponseErrorDomain, CGIHTTPResponseError);

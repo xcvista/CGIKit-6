@@ -108,6 +108,17 @@
                           statusCode:CGIHTTPResponseFound];
 }
 
+- (void)setResponseWithRejectedRequest
+{
+    [self setResponseWithError:[NSError errorWithDomain:CGIHTTPResponseErrorDomain
+                                                   code:CGIHTTPResponseRejectedError
+                                               userInfo:@{
+                                                          NSLocalizedDescriptionKey: NSLocalizedString(@"The service is not implemented.", nil),
+                                                          NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"The request is rejected bt the application.", nil),
+                                                          }]
+                    statusCode:CGIHTTPResponseNotImplemented];
+}
+
 @end
 
 #import <MSBooster/MSBooster_Private.h>
