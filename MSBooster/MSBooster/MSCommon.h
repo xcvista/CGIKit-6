@@ -83,14 +83,12 @@
 #   define MSUnavailable(_msg)
 #endif // __has_attribute(unavailable)
 
-#if !__has_include(<Foundation/Foundation.h>)
-#   ifndef NS_ENUM
-#       define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
-#   endif // !defined(NS_ENUM)
-#   ifndef NS_OPTION
-#       define NS_OPTION(_type, _name) enum _name : _type _name; enum _name : _type
-#   endif // !defined(NS_OPTION)
-#endif // !__has_include(<Foundation/Foundation.h>)
+#ifndef NS_ENUM
+#   define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
+#endif // !defined(NS_ENUM)
+#ifndef NS_OPTION
+#   define NS_OPTION(_type, _name) enum _name : _type _name; enum _name : _type
+#endif // !defined(NS_OPTION)
 
 #ifndef MSAssignPointer
 
