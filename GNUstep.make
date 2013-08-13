@@ -22,8 +22,8 @@ ifeq ($(PROJECT_ROOT),)
 PROJECT_ROOT := $(shell git rev-parse --show-toplevel)
 endif
 
-ADDITIONAL_CFLAGS += -fblock
-ADDITIONAL_OBJCFLAGS += -fobjc-runtime=gnustep-1.7 -fobjc-nonfragile-abi -fobjc-arc -fblock -Xclang -fobjc-default-synthesize-properties -Wall
+ADDITIONAL_CFLAGS += -fblocks
+ADDITIONAL_OBJCFLAGS += -fobjc-runtime=gnustep-1.7 -fobjc-nonfragile-abi -fobjc-arc -fblocks -Xclang -fobjc-default-synthesize-properties -Wall
 ADDITIONAL_CPPFLAGS += -I$(PROJECT_ROOT)/build
 ADDITIONAL_LDFLAGS += -L$(PROJECT_ROOT)/build
 CC := clang

@@ -23,6 +23,10 @@ extern void objc_release(id);
 #include <CoreFoundation/CoreFoundation.h>
 #endif // __has_include(<CoreFoundation/CoreFoundaton.h>)
 
+#if __has_include(<dispatch/dispatch.h>)
+#include <dispatch/dispatch.h>
+#endif
+
 #if __OBJC__
 #import <Foundation/Foundation.h>
 #define __class @class
