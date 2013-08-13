@@ -24,6 +24,6 @@ ADDITIONAL_CPPFLAGS += -std=gnu++11 -stdlib=libc++
 CC := clang
 CXX := clang++
 
-ifneq($(CC),clang)
+ifneq ($(CC),clang)
     $(error You need clang 3.2+ to build this library.)
 endif
