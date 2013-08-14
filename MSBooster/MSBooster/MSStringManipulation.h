@@ -12,7 +12,7 @@
 #include <MSBooster/MSCommon.h>
 #include <MSBooster/MSOCCompatibility.h>
 
-#if __has_include(<CoreFoundation/CoreFoundation.h>)
+#if !GNUSTEP && __has_include(<CoreFoundation/CoreFoundation.h>)
 #include <CoreFoundation/CoreFoundation.h>
 #else
 #ifndef CFSTR
