@@ -7,16 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D13DA5717BCBAB7008507EC /* NSObject+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA5517BCBAB7008507EC /* NSObject+CGIJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D13DA5817BCBAB7008507EC /* NSObject+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA5617BCBAB7008507EC /* NSObject+CGIJSONSerializable.m */; };
+		1D13DA5F17BCBE7C008507EC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D13DA5E17BCBE7C008507EC /* SenTestingKit.framework */; };
+		1D13DA6517BCBE7C008507EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D13DA6317BCBE7C008507EC /* InfoPlist.strings */; };
+		1D13DA6E17BCC847008507EC /* CGIJSONObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */; };
+		1D13DA7217BCC935008507EC /* NSArray+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7017BCC935008507EC /* NSArray+CGIJSONSerializable.m */; };
+		1D13DA7417BCCBF8008507EC /* CGINSObjetSerializing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7317BCCBF8008507EC /* CGINSObjetSerializing.m */; };
+		1D13DA7817BCDFF6008507EC /* NSString+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7617BCDFF6008507EC /* NSString+CGIJSONSerializable.m */; };
+		1D13DA8017BCE14D008507EC /* NSNumber+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7E17BCE14D008507EC /* NSNumber+CGIJSONSerializable.m */; };
+		1D13DA8217BCE378008507EC /* NSArray+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA8117BCE378008507EC /* NSArray+CGIJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D13DA8617BCE44D008507EC /* NSDate+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8417BCE44D008507EC /* NSDate+CGIJSONSerializable.m */; };
+		1D13DA8817BCF794008507EC /* CGINSArraySerializing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8717BCF794008507EC /* CGINSArraySerializing.m */; };
+		1D13DA8A17BCF816008507EC /* CGINSObjectClassSensing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8917BCF816008507EC /* CGINSObjectClassSensing.m */; };
+		1D13DA8E17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8C17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m */; };
+		1D13DA9117BCF9A9008507EC /* NSData+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA8F17BCF9A9008507EC /* NSData+CGIJSONSerializable.h */; };
+		1D13DA9217BCF9A9008507EC /* NSData+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9017BCF9A9008507EC /* NSData+CGIJSONSerializable.m */; };
+		1D13DA9617BCFBB4008507EC /* NSNull+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9417BCFBB4008507EC /* NSNull+CGIJSONSerializable.m */; };
+		1D13DA9917BCFCAC008507EC /* CGITestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9817BCFCAC008507EC /* CGITestClass.m */; };
+		1D13DA9C17BD00CC008507EC /* CGISingleElementClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9B17BD00CC008507EC /* CGISingleElementClass.m */; };
 		1D4BF28017AA0BBF005080A2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */; };
 		1D4BF28A17AA0BBF005080A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4BF28817AA0BBF005080A2 /* InfoPlist.strings */; };
 		1D67AFD217AAA314009D0826 /* module.map in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D67AFD017AAA29B009D0826 /* module.map */; };
-		1D67AFD517AAA35B009D0826 /* CGIKeyedCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67AFD317AAA35B009D0826 /* CGIKeyedCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D67AFD617AAA35B009D0826 /* CGIKeyedCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67AFD417AAA35B009D0826 /* CGIKeyedCoder.m */; };
 		1D67AFDC17AAA554009D0826 /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D67AFDB17AAA554009D0826 /* MSBooster.framework */; };
-		1D67AFDF17AAA780009D0826 /* CGICoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67AFDD17AAA780009D0826 /* CGICoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D67AFE017AAA780009D0826 /* CGICoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67AFDE17AAA780009D0826 /* CGICoder.m */; };
 		1D67AFE117AAAB68009D0826 /* CGIJSONObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4BF28C17AA0BBF005080A2 /* CGIJSONObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D13DA6917BCBE7C008507EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF27317AA0BBF005080A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D4BF27B17AA0BBF005080A2;
+			remoteInfo = CGIJSONObject;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1D67AFD117AAA30F009D0826 /* CopyFiles */ = {
@@ -33,6 +58,30 @@
 
 /* Begin PBXFileReference section */
 		1D13DA4717BCB49D008507EC /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		1D13DA4C17BCB6D4008507EC /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
+		1D13DA5517BCBAB7008507EC /* NSObject+CGIJSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CGIJSONSerializable.h"; sourceTree = "<group>"; };
+		1D13DA5617BCBAB7008507EC /* NSObject+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CGIJSONSerializable.m"; sourceTree = "<group>"; };
+		1D13DA5D17BCBE7C008507EC /* CGIJSONObject Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CGIJSONObject Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D13DA5E17BCBE7C008507EC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1D13DA6217BCBE7C008507EC /* CGIJSONObject Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGIJSONObject Tests-Info.plist"; sourceTree = "<group>"; };
+		1D13DA6417BCBE7C008507EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D13DA6817BCBE7C008507EC /* CGIJSONObject Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGIJSONObject Tests-Prefix.pch"; sourceTree = "<group>"; };
+		1D13DA7017BCC935008507EC /* NSArray+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CGIJSONSerializable.m"; sourceTree = "<group>"; };
+		1D13DA7317BCCBF8008507EC /* CGINSObjetSerializing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGINSObjetSerializing.m; sourceTree = "<group>"; };
+		1D13DA7617BCDFF6008507EC /* NSString+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CGIJSONSerializable.m"; sourceTree = "<group>"; };
+		1D13DA7E17BCE14D008507EC /* NSNumber+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CGIJSONSerializable.m"; sourceTree = "<group>"; };
+		1D13DA8117BCE378008507EC /* NSArray+CGIJSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CGIJSONSerializable.h"; sourceTree = "<group>"; };
+		1D13DA8417BCE44D008507EC /* NSDate+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CGIJSONSerializable.m"; sourceTree = "<group>"; };
+		1D13DA8717BCF794008507EC /* CGINSArraySerializing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGINSArraySerializing.m; sourceTree = "<group>"; };
+		1D13DA8917BCF816008507EC /* CGINSObjectClassSensing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGINSObjectClassSensing.m; sourceTree = "<group>"; };
+		1D13DA8C17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CGIJSONSerializable.m"; sourceTree = "<group>"; };
+		1D13DA8F17BCF9A9008507EC /* NSData+CGIJSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CGIJSONSerializable.h"; sourceTree = "<group>"; };
+		1D13DA9017BCF9A9008507EC /* NSData+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CGIJSONSerializable.m"; sourceTree = "<group>"; };
+		1D13DA9417BCFBB4008507EC /* NSNull+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+CGIJSONSerializable.m"; sourceTree = "<group>"; };
+		1D13DA9717BCFCAC008507EC /* CGITestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGITestClass.h; sourceTree = "<group>"; };
+		1D13DA9817BCFCAC008507EC /* CGITestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGITestClass.m; sourceTree = "<group>"; };
+		1D13DA9A17BD00CC008507EC /* CGISingleElementClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGISingleElementClass.h; sourceTree = "<group>"; };
+		1D13DA9B17BD00CC008507EC /* CGISingleElementClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGISingleElementClass.m; sourceTree = "<group>"; };
 		1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D4BF28217AA0BBF005080A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,14 +91,19 @@
 		1D4BF28917AA0BBF005080A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D4BF28C17AA0BBF005080A2 /* CGIJSONObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGIJSONObject.h; sourceTree = "<group>"; };
 		1D67AFD017AAA29B009D0826 /* module.map */ = {isa = PBXFileReference; lastKnownFileType = text; path = module.map; sourceTree = "<group>"; };
-		1D67AFD317AAA35B009D0826 /* CGIKeyedCoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIKeyedCoder.h; sourceTree = "<group>"; };
-		1D67AFD417AAA35B009D0826 /* CGIKeyedCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIKeyedCoder.m; sourceTree = "<group>"; };
 		1D67AFDB17AAA554009D0826 /* MSBooster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSBooster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D67AFDD17AAA780009D0826 /* CGICoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGICoder.h; sourceTree = "<group>"; };
-		1D67AFDE17AAA780009D0826 /* CGICoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGICoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1D13DA5A17BCBE7C008507EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D13DA6E17BCC847008507EC /* CGIJSONObject.framework in Frameworks */,
+				1D13DA5F17BCBE7C008507EC /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D4BF27817AA0BBF005080A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,11 +116,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D13DA6017BCBE7C008507EC /* CGIJSONObject Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1D13DA9717BCFCAC008507EC /* CGITestClass.h */,
+				1D13DA9817BCFCAC008507EC /* CGITestClass.m */,
+				1D13DA9A17BD00CC008507EC /* CGISingleElementClass.h */,
+				1D13DA9B17BD00CC008507EC /* CGISingleElementClass.m */,
+				1D13DA7317BCCBF8008507EC /* CGINSObjetSerializing.m */,
+				1D13DA8917BCF816008507EC /* CGINSObjectClassSensing.m */,
+				1D13DA8717BCF794008507EC /* CGINSArraySerializing.m */,
+				1D13DA6117BCBE7C008507EC /* Supporting Files */,
+			);
+			path = "CGIJSONObject Tests";
+			sourceTree = "<group>";
+		};
+		1D13DA6117BCBE7C008507EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D13DA6217BCBE7C008507EC /* CGIJSONObject Tests-Info.plist */,
+				1D13DA6317BCBE7C008507EC /* InfoPlist.strings */,
+				1D13DA6817BCBE7C008507EC /* CGIJSONObject Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1D4BF27217AA0BBF005080A2 = {
 			isa = PBXGroup;
 			children = (
 				1D13DA4717BCB49D008507EC /* GNUmakefile */,
 				1D4BF28517AA0BBF005080A2 /* CGIJSONObject */,
+				1D13DA6017BCBE7C008507EC /* CGIJSONObject Tests */,
 				1D4BF27E17AA0BBF005080A2 /* Frameworks */,
 				1D4BF27D17AA0BBF005080A2 /* Products */,
 			);
@@ -76,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */,
+				1D13DA5D17BCBE7C008507EC /* CGIJSONObject Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +166,7 @@
 			children = (
 				1D67AFDB17AAA554009D0826 /* MSBooster.framework */,
 				1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */,
+				1D13DA5E17BCBE7C008507EC /* SenTestingKit.framework */,
 				1D4BF28117AA0BBF005080A2 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -104,10 +186,17 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF28C17AA0BBF005080A2 /* CGIJSONObject.h */,
-				1D67AFDD17AAA780009D0826 /* CGICoder.h */,
-				1D67AFDE17AAA780009D0826 /* CGICoder.m */,
-				1D67AFD317AAA35B009D0826 /* CGIKeyedCoder.h */,
-				1D67AFD417AAA35B009D0826 /* CGIKeyedCoder.m */,
+				1D13DA5517BCBAB7008507EC /* NSObject+CGIJSONSerializable.h */,
+				1D13DA5617BCBAB7008507EC /* NSObject+CGIJSONSerializable.m */,
+				1D13DA8117BCE378008507EC /* NSArray+CGIJSONSerializable.h */,
+				1D13DA7017BCC935008507EC /* NSArray+CGIJSONSerializable.m */,
+				1D13DA7617BCDFF6008507EC /* NSString+CGIJSONSerializable.m */,
+				1D13DA7E17BCE14D008507EC /* NSNumber+CGIJSONSerializable.m */,
+				1D13DA8417BCE44D008507EC /* NSDate+CGIJSONSerializable.m */,
+				1D13DA8C17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m */,
+				1D13DA8F17BCF9A9008507EC /* NSData+CGIJSONSerializable.h */,
+				1D13DA9017BCF9A9008507EC /* NSData+CGIJSONSerializable.m */,
+				1D13DA9417BCFBB4008507EC /* NSNull+CGIJSONSerializable.m */,
 				1D4BF28617AA0BBF005080A2 /* Supporting Files */,
 			);
 			path = CGIJSONObject;
@@ -119,6 +208,7 @@
 				1D4BF28717AA0BBF005080A2 /* CGIJSONObject-Info.plist */,
 				1D4BF28817AA0BBF005080A2 /* InfoPlist.strings */,
 				1D67AFD017AAA29B009D0826 /* module.map */,
+				1D13DA4C17BCB6D4008507EC /* GNUmakefile */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -130,15 +220,34 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D13DA8217BCE378008507EC /* NSArray+CGIJSONSerializable.h in Headers */,
 				1D67AFE117AAAB68009D0826 /* CGIJSONObject.h in Headers */,
-				1D67AFDF17AAA780009D0826 /* CGICoder.h in Headers */,
-				1D67AFD517AAA35B009D0826 /* CGIKeyedCoder.h in Headers */,
+				1D13DA9117BCF9A9008507EC /* NSData+CGIJSONSerializable.h in Headers */,
+				1D13DA5717BCBAB7008507EC /* NSObject+CGIJSONSerializable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1D13DA5C17BCBE7C008507EC /* CGIJSONObject Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D13DA6B17BCBE7C008507EC /* Build configuration list for PBXNativeTarget "CGIJSONObject Tests" */;
+			buildPhases = (
+				1D13DA5917BCBE7C008507EC /* Sources */,
+				1D13DA5A17BCBE7C008507EC /* Frameworks */,
+				1D13DA5B17BCBE7C008507EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D13DA6A17BCBE7C008507EC /* PBXTargetDependency */,
+			);
+			name = "CGIJSONObject Tests";
+			productName = "CGIJSONObject Tests";
+			productReference = 1D13DA5D17BCBE7C008507EC /* CGIJSONObject Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		1D4BF27B17AA0BBF005080A2 /* CGIJSONObject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D4BF2A417AA0BBF005080A2 /* Build configuration list for PBXNativeTarget "CGIJSONObject" */;
@@ -167,6 +276,11 @@
 				CLASSPREFIX = CGI;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = muski;
+				TargetAttributes = {
+					1D13DA5C17BCBE7C008507EC = {
+						TestTargetID = 1D4BF27B17AA0BBF005080A2;
+					};
+				};
 			};
 			buildConfigurationList = 1D4BF27617AA0BBF005080A2 /* Build configuration list for PBXProject "CGIJSONObject" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -181,11 +295,20 @@
 			projectRoot = "";
 			targets = (
 				1D4BF27B17AA0BBF005080A2 /* CGIJSONObject */,
+				1D13DA5C17BCBE7C008507EC /* CGIJSONObject Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1D13DA5B17BCBE7C008507EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D13DA6517BCBE7C008507EC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D4BF27A17AA0BBF005080A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,18 +320,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D13DA5917BCBE7C008507EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D13DA8A17BCF816008507EC /* CGINSObjectClassSensing.m in Sources */,
+				1D13DA8817BCF794008507EC /* CGINSArraySerializing.m in Sources */,
+				1D13DA9C17BD00CC008507EC /* CGISingleElementClass.m in Sources */,
+				1D13DA9917BCFCAC008507EC /* CGITestClass.m in Sources */,
+				1D13DA7417BCCBF8008507EC /* CGINSObjetSerializing.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D4BF27717AA0BBF005080A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D67AFD617AAA35B009D0826 /* CGIKeyedCoder.m in Sources */,
-				1D67AFE017AAA780009D0826 /* CGICoder.m in Sources */,
+				1D13DA5817BCBAB7008507EC /* NSObject+CGIJSONSerializable.m in Sources */,
+				1D13DA8E17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m in Sources */,
+				1D13DA9617BCFBB4008507EC /* NSNull+CGIJSONSerializable.m in Sources */,
+				1D13DA9217BCF9A9008507EC /* NSData+CGIJSONSerializable.m in Sources */,
+				1D13DA7817BCDFF6008507EC /* NSString+CGIJSONSerializable.m in Sources */,
+				1D13DA8017BCE14D008507EC /* NSNumber+CGIJSONSerializable.m in Sources */,
+				1D13DA8617BCE44D008507EC /* NSDate+CGIJSONSerializable.m in Sources */,
+				1D13DA7217BCC935008507EC /* NSArray+CGIJSONSerializable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1D13DA6A17BCBE7C008507EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D4BF27B17AA0BBF005080A2 /* CGIJSONObject */;
+			targetProxy = 1D13DA6917BCBE7C008507EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1D13DA6317BCBE7C008507EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D13DA6417BCBE7C008507EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		1D4BF28817AA0BBF005080A2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -220,6 +377,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1D13DA6C17BCBE7C008507EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CGIJSONObject Tests/CGIJSONObject Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CGIJSONObject Tests/CGIJSONObject Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1D13DA6D17BCBE7C008507EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CGIJSONObject Tests/CGIJSONObject Tests-Prefix.pch";
+				INFOPLIST_FILE = "CGIJSONObject Tests/CGIJSONObject Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		1D4BF2A217AA0BBF005080A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -327,6 +520,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D13DA6B17BCBE7C008507EC /* Build configuration list for PBXNativeTarget "CGIJSONObject Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D13DA6C17BCBE7C008507EC /* Debug */,
+				1D13DA6D17BCBE7C008507EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1D4BF27617AA0BBF005080A2 /* Build configuration list for PBXProject "CGIJSONObject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

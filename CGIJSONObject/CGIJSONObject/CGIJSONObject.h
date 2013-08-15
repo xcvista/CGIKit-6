@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 #import <MSBooster/MSBooster.h>
 
-#import <CGIJSONObject/CGICoder.h>
-#import <CGIJSONObject/CGIKeyedCoder.h>
+#import <CGIJSONObject/NSObject+CGIJSONSerializable.h>
+#import <CGIJSONObject/NSArray+CGIJSONSerializable.h>
 
 #endif
