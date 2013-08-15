@@ -28,16 +28,10 @@
 			remoteGlobalIDString = 1D4BF27C17AA0BBF005080A2;
 			remoteInfo = CGIJSONObject;
 		};
-		1D61210D17BA028F00C2AD14 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1D67AFEE17AAB9F4009D0826;
-			remoteInfo = ls.fcgi;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D13DA4817BCB521008507EC /* GNUmakefile.postamble */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile.postamble; sourceTree = "<group>"; usesTabs = 1; };
 		1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.en.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.en.md; sourceTree = "<group>"; };
 		1D4BF06B17A8FEA8005080A2 /* COPYRIGHT.zh-Hans.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "COPYRIGHT.zh-Hans.md"; sourceTree = "<group>"; };
 		1D4BF06C17A8FEA8005080A2 /* README.en.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.en.md; sourceTree = "<group>"; };
@@ -86,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF10417A91740005080A2 /* CGIKit.framework */,
-				1D61210E17BA028F00C2AD14 /* ls.fcgi */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				1D61211017BA02B500C2AD14 /* GNUstep.make */,
+				1D13DA4817BCB521008507EC /* GNUmakefile.postamble */,
 				1D61211117BA040700C2AD14 /* GNUmakefile */,
 				1D61211417BA092300C2AD14 /* framework.make */,
 				1D61211817BA16B500C2AD14 /* tool.make */,
@@ -167,13 +161,6 @@
 			fileType = wrapper.framework;
 			path = CGIJSONObject.framework;
 			remoteRef = 1D4BF2AF17AA0BC0005080A2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		1D61210E17BA028F00C2AD14 /* ls.fcgi */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = ls.fcgi;
-			remoteRef = 1D61210D17BA028F00C2AD14 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

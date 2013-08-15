@@ -1,6 +1,8 @@
 
 include $(GNUSTEP_MAKEFILES)/framework.make
 
+include $(PROJECT_ROOT)/GNUmakefile.postamble
+
 after-all::
 	-cp module.map $(FRAMEWORK_NAME).framework
 	cp -r $(FRAMEWORK_NAME).framework $(PROJECT_ROOT)/build

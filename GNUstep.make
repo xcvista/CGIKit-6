@@ -32,11 +32,3 @@ CXX := clang++
 ifneq ($(CC),clang)
 	$(error You need clang 3.2+ to build this library.)
 endif
-
-default:: all
-
-before-all::
-	mkdir -p $(PROJECT_ROOT)/build
-
-before-clean::
-	-rm -r $(PROJECT_ROOT)/build

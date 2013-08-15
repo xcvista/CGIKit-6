@@ -32,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D13DA4717BCB49D008507EC /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D4BF28217AA0BBF005080A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +65,7 @@
 		1D4BF27217AA0BBF005080A2 = {
 			isa = PBXGroup;
 			children = (
+				1D13DA4717BCB49D008507EC /* GNUmakefile */,
 				1D4BF28517AA0BBF005080A2 /* CGIJSONObject */,
 				1D4BF27E17AA0BBF005080A2 /* Frameworks */,
 				1D4BF27D17AA0BBF005080A2 /* Products */,
