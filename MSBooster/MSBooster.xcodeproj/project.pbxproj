@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D4A9C0F17BD4A05002325B2 /* module.map in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D4BF0BA17A9051B005080A2 /* module.map */; };
 		1D4BF08117A8FF30005080A2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF08017A8FF30005080A2 /* Cocoa.framework */; };
 		1D4BF08B17A8FF30005080A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4BF08917A8FF30005080A2 /* InfoPlist.strings */; };
 		1D4BF0B617A8FFA8005080A2 /* MSStringManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4BF0B417A8FFA8005080A2 /* MSStringManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -29,16 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1D4A9C0E17BD49F5002325B2 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 1;
-			files = (
-				1D4A9C0F17BD4A05002325B2 /* module.map in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D4BF0BC17A905E4005080A2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,7 +209,6 @@
 				1D5CBA1517BD4900009D58E2 /* Frameworks */,
 				1D5CBA1617BD4900009D58E2 /* Headers */,
 				1D5CBA1717BD4900009D58E2 /* Resources */,
-				1D4A9C0E17BD49F5002325B2 /* CopyFiles */,
 				1D5CBA1817BD4900009D58E2 /* ShellScript */,
 				1D5CBA1917BD4900009D58E2 /* ShellScript */,
 			);

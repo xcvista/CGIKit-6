@@ -34,7 +34,6 @@
 		1D13DAB417BD13EB008507EC /* CGIRemoteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAB217BD13EB008507EC /* CGIRemoteConnection.m */; };
 		1D13DAB617BD2A8A008507EC /* CGINSObjectKeySubstitution.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAB517BD2A8A008507EC /* CGINSObjectKeySubstitution.m */; };
 		1D4A9C1017BD4A8F002325B2 /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D67AFDB17AAA554009D0826 /* MSBooster.framework */; };
-		1D4A9C1217BD4B2A002325B2 /* module.map in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D67AFD017AAA29B009D0826 /* module.map */; };
 		1D4A9C1517BD50F6002325B2 /* CGIServerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9C1317BD50F6002325B2 /* CGIServerObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D4A9C1617BD50F6002325B2 /* CGIServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9C1417BD50F6002325B2 /* CGIServerObject.m */; };
 		1D4A9C1817BD5118002325B2 /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9C1717BD5118002325B2 /* CGIKit.framework */; };
@@ -73,16 +72,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		1D4A9C1117BD4B23002325B2 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 1;
-			files = (
-				1D4A9C1217BD4B2A002325B2 /* module.map in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1D67AFD117AAA30F009D0826 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,7 +356,6 @@
 				1D5CB9F017BD4851009D58E2 /* Frameworks */,
 				1D5CB9F117BD4851009D58E2 /* Headers */,
 				1D5CB9F217BD4851009D58E2 /* Resources */,
-				1D4A9C1117BD4B23002325B2 /* CopyFiles */,
 				1D5CB9F317BD4851009D58E2 /* ShellScript */,
 				1D5CB9F417BD4851009D58E2 /* ShellScript */,
 			);
