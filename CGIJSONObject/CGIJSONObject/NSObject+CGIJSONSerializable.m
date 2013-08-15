@@ -49,46 +49,9 @@
 {
     if (self = [self init])
     {
-        NSDictionary *dict = nil;
-        if ([serializedObject isKindOfClass:[NSDictionary class]])
+        if (![self setSerializedObject:serializedObject])
         {
-            dict = serializedObject;
-        }
-        else
-        {
-            return self = nil;
-        }
-        
-        for (NSString *_key in [self allKeys])
-        {
-            NSString *key = [self serializationKeyForKey:_key];
-            if (!key)
-                key = _key;
-            
-            Class class = [self classForKey:_key];
-            if (class)
-            {
-                id encodedObject = dict[key];
-                id object = nil;
-                if ([encodedObject isKindOfClass:[NSArray class]])
-                {
-                    object = [[NSArray alloc] initWithArray:encodedObject
-                                            classForMembers:class];
-                }
-                else if ([object isKindOfClass:[NSNull class]])
-                {
-                    object = nil;
-                }
-                else
-                {
-                    object = [[class alloc] initWithSerializedObject:encodedObject];
-                }
-                
-                if (object)
-                {
-                    [self setValue:object forKey:_key];
-                }
-            }
+            self = nil;
         }
     }
     return self;
@@ -114,6 +77,52 @@
     }
     
     return [NSDictionary dictionaryWithDictionary:dict];
+}
+
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    NSDictionary *dict = nil;
+    if ([serializedObject isKindOfClass:[NSDictionary class]])
+    {
+        dict = serializedObject;
+    }
+    else
+    {
+        return NO;
+    }
+    
+    for (NSString *_key in [self allKeys])
+    {
+        NSString *key = [self serializationKeyForKey:_key];
+        if (!key)
+            key = _key;
+        
+        Class class = [self classForKey:_key];
+        if (class)
+        {
+            id encodedObject = dict[key];
+            id object = nil;
+            if ([encodedObject isKindOfClass:[NSArray class]])
+            {
+                object = [[NSArray alloc] initWithArray:encodedObject
+                                        classForMembers:class];
+            }
+            else if ([object isKindOfClass:[NSNull class]])
+            {
+                object = nil;
+            }
+            else
+            {
+                object = [[class alloc] initWithSerializedObject:encodedObject];
+            }
+            
+            if (object)
+            {
+                [self setValue:object forKey:_key];
+            }
+        }
+    }
+    return YES;
 }
 
 - (NSArray *)allKeys

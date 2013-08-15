@@ -29,4 +29,9 @@
     return @(time);
 }
 
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    return NO;
+}
+
 @end

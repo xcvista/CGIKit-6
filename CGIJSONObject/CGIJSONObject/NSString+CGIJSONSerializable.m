@@ -20,4 +20,24 @@
     return self;
 }
 
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    return NO;
+}
+
+@end
+
+@implementation NSMutableString (CGIJSONSerializable)
+
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    if ([serializedObject isKindOfClass:[NSString class]])
+    {
+        [self setString:serializedObject];
+        return YES;
+    }
+    else
+        return NO;
+}
+
 @end

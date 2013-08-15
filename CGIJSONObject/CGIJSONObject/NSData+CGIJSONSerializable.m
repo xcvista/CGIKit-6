@@ -101,7 +101,7 @@ void *NewBase64Decode(
 		size_t accumulateIndex = 0;
 		while (i < length)
 		{
-			unsigned char decode = base64DecodeLookup[inputBuffer[i++]];
+			unsigned char decode = base64DecodeLookup[(int)(inputBuffer[i++])];
 			if (decode != xx)
 			{
 				accumulated[accumulateIndex] = decode;
@@ -341,6 +341,26 @@ char *NewBase64Encode(
 - (id)serializedObject
 {
     return [self base64EncodedString];
+}
+
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    return NO;
+}
+
+@end
+
+@implementation NSMutableData (CGIJSONSerializable)
+
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    if ([serializedObject isKindOfClass:[NSString class]])
+    {
+        [self setData:[[NSData alloc] initWithBase64String:serializedObject]];
+        return YES;
+    }
+    else
+        return NO;
 }
 
 @end

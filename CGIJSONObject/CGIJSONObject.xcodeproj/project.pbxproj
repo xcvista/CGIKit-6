@@ -35,6 +35,9 @@
 		1D13DAB617BD2A8A008507EC /* CGINSObjectKeySubstitution.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAB517BD2A8A008507EC /* CGINSObjectKeySubstitution.m */; };
 		1D4A9C1017BD4A8F002325B2 /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D67AFDB17AAA554009D0826 /* MSBooster.framework */; };
 		1D4A9C1217BD4B2A002325B2 /* module.map in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D67AFD017AAA29B009D0826 /* module.map */; };
+		1D4A9C1517BD50F6002325B2 /* CGIServerObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9C1317BD50F6002325B2 /* CGIServerObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9C1617BD50F6002325B2 /* CGIServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9C1417BD50F6002325B2 /* CGIServerObject.m */; };
+		1D4A9C1817BD5118002325B2 /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9C1717BD5118002325B2 /* CGIKit.framework */; };
 		1D4BF28017AA0BBF005080A2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */; };
 		1D4BF28A17AA0BBF005080A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4BF28817AA0BBF005080A2 /* InfoPlist.strings */; };
 		1D5CB9F817BD4851009D58E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5CB9F717BD4851009D58E2 /* Foundation.framework */; };
@@ -126,6 +129,9 @@
 		1D13DAB117BD13EB008507EC /* CGIRemoteConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIRemoteConnection.h; sourceTree = "<group>"; };
 		1D13DAB217BD13EB008507EC /* CGIRemoteConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIRemoteConnection.m; sourceTree = "<group>"; };
 		1D13DAB517BD2A8A008507EC /* CGINSObjectKeySubstitution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGINSObjectKeySubstitution.m; sourceTree = "<group>"; };
+		1D4A9C1317BD50F6002325B2 /* CGIServerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIServerObject.h; sourceTree = "<group>"; };
+		1D4A9C1417BD50F6002325B2 /* CGIServerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIServerObject.m; sourceTree = "<group>"; };
+		1D4A9C1717BD5118002325B2 /* CGIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CGIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D4BF28217AA0BBF005080A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -154,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4A9C1817BD5118002325B2 /* CGIKit.framework in Frameworks */,
 				1D67AFDC17AAA554009D0826 /* MSBooster.framework in Frameworks */,
 				1D4BF28017AA0BBF005080A2 /* Cocoa.framework in Frameworks */,
 			);
@@ -224,6 +231,7 @@
 		1D4BF27E17AA0BBF005080A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D4A9C1717BD5118002325B2 /* CGIKit.framework */,
 				1D67AFDB17AAA554009D0826 /* MSBooster.framework */,
 				1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */,
 				1D13DA5E17BCBE7C008507EC /* SenTestingKit.framework */,
@@ -262,6 +270,8 @@
 				1D13DAA217BD0680008507EC /* CGIRemoteObject.m */,
 				1D13DAB117BD13EB008507EC /* CGIRemoteConnection.h */,
 				1D13DAB217BD13EB008507EC /* CGIRemoteConnection.m */,
+				1D4A9C1317BD50F6002325B2 /* CGIServerObject.h */,
+				1D4A9C1417BD50F6002325B2 /* CGIServerObject.m */,
 				1D4BF28617AA0BBF005080A2 /* Supporting Files */,
 			);
 			path = CGIJSONObject;
@@ -290,6 +300,7 @@
 				1D13DAB317BD13EB008507EC /* CGIRemoteConnection.h in Headers */,
 				1D67AFE117AAAB68009D0826 /* CGIJSONObject.h in Headers */,
 				1D13DA9117BCF9A9008507EC /* NSData+CGIJSONSerializable.h in Headers */,
+				1D4A9C1517BD50F6002325B2 /* CGIServerObject.h in Headers */,
 				1D13DA5717BCBAB7008507EC /* NSObject+CGIJSONSerializable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +508,7 @@
 				1D13DA9217BCF9A9008507EC /* NSData+CGIJSONSerializable.m in Sources */,
 				1D13DA7817BCDFF6008507EC /* NSString+CGIJSONSerializable.m in Sources */,
 				1D13DAA417BD0680008507EC /* CGIRemoteObject.m in Sources */,
+				1D4A9C1617BD50F6002325B2 /* CGIServerObject.m in Sources */,
 				1D13DA8017BCE14D008507EC /* NSNumber+CGIJSONSerializable.m in Sources */,
 				1D13DA8617BCE44D008507EC /* NSDate+CGIJSONSerializable.m in Sources */,
 				1D13DA7217BCC935008507EC /* NSArray+CGIJSONSerializable.m in Sources */,

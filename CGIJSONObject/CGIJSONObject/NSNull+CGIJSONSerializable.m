@@ -21,4 +21,9 @@
     return [NSNull null];
 }
 
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    return NO;
+}
+
 @end

@@ -21,4 +21,9 @@
     return self;
 }
 
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    return NO;
+}
+
 @end

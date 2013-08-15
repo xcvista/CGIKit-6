@@ -48,6 +48,7 @@
 
 - (id)initWithSerializedObject:(id)serializedObject;
 - (id)serializedObject;
+- (BOOL)setSerializedObject:(id)serializedObject;
 - (NSArray *)allKeys;
 - (Class)classForKey:(NSString *)key;
 - (NSString *)serializationKeyForKey:(NSString *)key;

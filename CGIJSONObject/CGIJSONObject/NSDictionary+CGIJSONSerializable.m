@@ -34,4 +34,24 @@
     return [NSDictionary dictionaryWithDictionary:output];
 }
 
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    return NO;
+}
+
+@end
+
+@implementation NSMutableDictionary (CGIJSONSerializable)
+
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    if ([serializedObject isKindOfClass:[NSDictionary class]])
+    {
+        [self setDictionary:serializedObject];
+        return YES;
+    }
+    else
+        return NO;
+}
+
 @end

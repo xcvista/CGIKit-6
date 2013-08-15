@@ -56,4 +56,24 @@
     return [NSArray arrayWithArray:output];
 }
 
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    return NO;
+}
+
+@end
+
+@implementation NSMutableArray (CGIJSONSerializable)
+
+- (BOOL)setSerializedObject:(id)serializedObject
+{
+    if ([serializedObject isKindOfClass:[NSArray class]])
+    {
+        [self setArray:serializedObject];
+        return YES;
+    }
+    else
+        return NO;
+}
+
 @end

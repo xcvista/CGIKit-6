@@ -18,4 +18,8 @@
 #import <CGIJSONObject/CGIRemoteObject.h>
 #import <CGIJSONObject/CGIRemoteConnection.h>
 
+#if !TARGET_OS_IPHONE
+
+#endif
+
 #endif
