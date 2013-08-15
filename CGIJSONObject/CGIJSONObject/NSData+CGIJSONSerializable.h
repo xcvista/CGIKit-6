@@ -21,7 +21,7 @@
 //     distribution.
 //
 
-#import <CGIJSONObject/CGIJSONObject.h>
+#import <Foundation/Foundation.h>
 
 void *NewBase64Decode(
                       const char *inputBuffer,

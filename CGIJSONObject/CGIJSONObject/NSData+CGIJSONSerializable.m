@@ -22,6 +22,7 @@
 //
 
 #import "NSData+CGIJSONSerializable.h"
+#import "NSObject+CGIJSONSerializable.h"
 
 //
 // Mapping from 6 bit pattern to ASCII character.

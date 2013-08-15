@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
+		1D4A9C1C17BD596D002325B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D5CB9F617BD4851009D58E2;
+			remoteInfo = MobileJSONObject;
+		};
+		1D4A9C1E17BD596D002325B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D13DA5D17BCBE7C008507EC;
+			remoteInfo = "CGIJSONObject Tests";
+		};
+		1D4A9C2317BD596D002325B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D5CBA1B17BD4900009D58E2;
+			remoteInfo = MobileBooster;
+		};
 		1D4BF0B017A8FF31005080A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */;
@@ -40,7 +61,7 @@
 		1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CGIKit.xcodeproj; path = CGIKit/CGIKit.xcodeproj; sourceTree = "<group>"; };
 		1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CGIJSONObject.xcodeproj; path = CGIJSONObject/CGIJSONObject.xcodeproj; sourceTree = "<group>"; };
 		1D61211017BA02B500C2AD14 /* GNUstep.make */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = GNUstep.make; sourceTree = "<group>"; usesTabs = 1; };
-		1D61211117BA040700C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = GNUmakefile; sourceTree = "<group>"; };
+		1D61211117BA040700C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = GNUmakefile; sourceTree = "<group>"; usesTabs = 1; };
 		1D61211417BA092300C2AD14 /* framework.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = framework.make; sourceTree = "<group>"; usesTabs = 1; };
 		1D61211817BA16B500C2AD14 /* tool.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = tool.make; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF0B117A8FF31005080A2 /* MSBooster.framework */,
+				1D4A9C2417BD596D002325B2 /* MSBooster.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF2B017AA0BC0005080A2 /* CGIJSONObject.framework */,
+				1D4A9C1D17BD596D002325B2 /* CGIJSONObject.framework */,
+				1D4A9C1F17BD596D002325B2 /* CGIJSONObject Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +166,27 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1D4A9C1D17BD596D002325B2 /* CGIJSONObject.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework.static;
+			path = CGIJSONObject.framework;
+			remoteRef = 1D4A9C1C17BD596D002325B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D4A9C1F17BD596D002325B2 /* CGIJSONObject Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "CGIJSONObject Tests.octest";
+			remoteRef = 1D4A9C1E17BD596D002325B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D4A9C2417BD596D002325B2 /* MSBooster.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework.static;
+			path = MSBooster.framework;
+			remoteRef = 1D4A9C2317BD596D002325B2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1D4BF0B117A8FF31005080A2 /* MSBooster.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
