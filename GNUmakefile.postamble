@@ -4,3 +4,6 @@ before-all::
 
 before-clean::
 	-rm -r $(PROJECT_ROOT)/build
+
+pull::
+	cd $(PROJECT_ROOT) && git pull
