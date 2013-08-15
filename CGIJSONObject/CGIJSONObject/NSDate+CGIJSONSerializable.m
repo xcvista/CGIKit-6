@@ -15,7 +15,7 @@
 {
     if ([serializedObject isKindOfClass:[NSString class]])
     {
-        int64_t time = [serializedObject longLongValue];
+        long long time = [serializedObject longLongValue];
         NSTimeInterval interval = time / 1000.0;
         return self = [self initWithTimeIntervalSince1970:interval];
     }
@@ -26,7 +26,7 @@
 - (id)serializedObject
 {
     NSTimeInterval interval = [self timeIntervalSince1970];
-    int64_t time = interval * 1000.0 + 0.5;
+    long long time = interval * 1000.0 + 0.5;
     return MSSTR(@"%lld", time);
 }
 
