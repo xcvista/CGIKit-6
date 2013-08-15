@@ -7,12 +7,13 @@
 //
 
 #import "NSObject+CGIJSONSerializable.h"
+#import <MSBooster/MSBooster.h>
 
 @implementation NSDate (CGIJSONSerializable)
 
 - (id)initWithSerializedObject:(id)serializedObject
 {
-    if ([serializedObject isKindOfClass:[NSNumber class]])
+    if ([serializedObject isKindOfClass:[NSString class]])
     {
         int64_t time = [serializedObject longLongValue];
         NSTimeInterval interval = time / 1000.0;
@@ -26,7 +27,7 @@
 {
     NSTimeInterval interval = [self timeIntervalSince1970];
     int64_t time = interval * 1000.0 + 0.5;
-    return @(time);
+    return MSSTR(@"%lld", time);
 }
 
 - (BOOL)setSerializedObject:(id)serializedObject
