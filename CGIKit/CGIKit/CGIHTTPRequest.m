@@ -53,13 +53,13 @@ extern char **environ;
     for (NSString *part in parts)
     {
         NSArray *components = [part componentsSeparatedByString:@"="];
-        NSString *value = [[components lastObject] stringByRemovingPercentEncoding];
-        NSString *key = ([components count] > 1) ? [components[0] stringByRemovingPercentEncoding] : @"";
+        NSString *value = [[components lastObject] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSString *key = ([components count] > 1) ? [components[0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding] : @"";
         
         if (!key)
             key = @"";
         if (value)
-            dict[key] = [value stringByRemovingPercentEncoding];
+            dict[key] = value;
     }
     
     return [NSDictionary dictionaryWithDictionary:dict];
