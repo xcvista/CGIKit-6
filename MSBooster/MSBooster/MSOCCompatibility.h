@@ -17,6 +17,9 @@
 #else // !__has_include(<objc/arc.h>)
 extern id objc_retain(id);
 extern void objc_release(id);
+extern id objc_autorelease(id);
+extern id objc_autoreleaseReturnValue(id);
+extern id objc_retainAutoreleaseReturnValue(id);
 #endif // __has_include(<objc/arc.h>)
 
 #if __has_include(<CoreFoundation/CoreFoundaton.h>)

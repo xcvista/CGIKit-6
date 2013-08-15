@@ -59,9 +59,13 @@
             return self = nil;
         }
         
-        for (NSString *key in [self allKeys])
+        for (NSString *_key in [self allKeys])
         {
-            Class class = [self classForKey:key];
+            NSString *key = [self serializationKeyForKey:_key];
+            if (!key)
+                key = _key;
+            
+            Class class = [self classForKey:_key];
             if (class)
             {
                 id encodedObject = dict[key];
@@ -79,9 +83,10 @@
                 {
                     object = [[class alloc] initWithSerializedObject:encodedObject];
                 }
-                if (key)
+                
+                if (object)
                 {
-                    [self setValue:object forKey:key];
+                    [self setValue:object forKey:_key];
                 }
             }
         }
@@ -100,7 +105,12 @@
         if (!value)
             value = [NSNull null];
         if ([self classForKey:key])
-            dict[key] = [value serializedObject];
+        {
+            NSString *_key = [self serializationKeyForKey:key];
+            if (!_key)
+                _key = key;
+            dict[_key] = [value serializedObject];
+        }
     }
     
     return [NSDictionary dictionaryWithDictionary:dict];
@@ -150,6 +160,11 @@
         }
         return NSClassFromString(className);
     }
+}
+
+- (NSString *)serializationKeyForKey:(NSString *)key
+{
+    return key;
 }
 
 @end

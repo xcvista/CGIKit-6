@@ -13,7 +13,7 @@
 		1D13DA6517BCBE7C008507EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D13DA6317BCBE7C008507EC /* InfoPlist.strings */; };
 		1D13DA6E17BCC847008507EC /* CGIJSONObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */; };
 		1D13DA7217BCC935008507EC /* NSArray+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7017BCC935008507EC /* NSArray+CGIJSONSerializable.m */; };
-		1D13DA7417BCCBF8008507EC /* CGINSObjetSerializing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7317BCCBF8008507EC /* CGINSObjetSerializing.m */; };
+		1D13DA7417BCCBF8008507EC /* CGINSObjectSerializing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7317BCCBF8008507EC /* CGINSObjectSerializing.m */; };
 		1D13DA7817BCDFF6008507EC /* NSString+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7617BCDFF6008507EC /* NSString+CGIJSONSerializable.m */; };
 		1D13DA8017BCE14D008507EC /* NSNumber+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7E17BCE14D008507EC /* NSNumber+CGIJSONSerializable.m */; };
 		1D13DA8217BCE378008507EC /* NSArray+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA8117BCE378008507EC /* NSArray+CGIJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -21,13 +21,39 @@
 		1D13DA8817BCF794008507EC /* CGINSArraySerializing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8717BCF794008507EC /* CGINSArraySerializing.m */; };
 		1D13DA8A17BCF816008507EC /* CGINSObjectClassSensing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8917BCF816008507EC /* CGINSObjectClassSensing.m */; };
 		1D13DA8E17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8C17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m */; };
-		1D13DA9117BCF9A9008507EC /* NSData+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA8F17BCF9A9008507EC /* NSData+CGIJSONSerializable.h */; };
+		1D13DA9117BCF9A9008507EC /* NSData+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA8F17BCF9A9008507EC /* NSData+CGIJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D13DA9217BCF9A9008507EC /* NSData+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9017BCF9A9008507EC /* NSData+CGIJSONSerializable.m */; };
 		1D13DA9617BCFBB4008507EC /* NSNull+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9417BCFBB4008507EC /* NSNull+CGIJSONSerializable.m */; };
 		1D13DA9917BCFCAC008507EC /* CGITestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9817BCFCAC008507EC /* CGITestClass.m */; };
 		1D13DA9C17BD00CC008507EC /* CGISingleElementClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9B17BD00CC008507EC /* CGISingleElementClass.m */; };
+		1D13DAA317BD0680008507EC /* CGIRemoteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DAA117BD0680008507EC /* CGIRemoteObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D13DAA417BD0680008507EC /* CGIRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAA217BD0680008507EC /* CGIRemoteObject.m */; };
+		1D13DAAE17BD11D1008507EC /* CGITestRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAAD17BD11D1008507EC /* CGITestRemoteObject.m */; };
+		1D13DAB017BD11FE008507EC /* CGIRemoteObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAAF17BD11FE008507EC /* CGIRemoteObjectTest.m */; };
+		1D13DAB317BD13EB008507EC /* CGIRemoteConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DAB117BD13EB008507EC /* CGIRemoteConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D13DAB417BD13EB008507EC /* CGIRemoteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAB217BD13EB008507EC /* CGIRemoteConnection.m */; };
+		1D13DAB617BD2A8A008507EC /* CGINSObjectKeySubstitution.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAB517BD2A8A008507EC /* CGINSObjectKeySubstitution.m */; };
+		1D4A9C1017BD4A8F002325B2 /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D67AFDB17AAA554009D0826 /* MSBooster.framework */; };
+		1D4A9C1217BD4B2A002325B2 /* module.map in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D67AFD017AAA29B009D0826 /* module.map */; };
 		1D4BF28017AA0BBF005080A2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */; };
 		1D4BF28A17AA0BBF005080A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4BF28817AA0BBF005080A2 /* InfoPlist.strings */; };
+		1D5CB9F817BD4851009D58E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D5CB9F717BD4851009D58E2 /* Foundation.framework */; };
+		1D5CBA0317BD48DE009D58E2 /* CGIJSONObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4BF28C17AA0BBF005080A2 /* CGIJSONObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D5CBA0417BD48DE009D58E2 /* NSObject+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA5517BCBAB7008507EC /* NSObject+CGIJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D5CBA0517BD48DE009D58E2 /* NSObject+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA5617BCBAB7008507EC /* NSObject+CGIJSONSerializable.m */; };
+		1D5CBA0617BD48DE009D58E2 /* NSArray+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA8117BCE378008507EC /* NSArray+CGIJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D5CBA0717BD48DE009D58E2 /* NSArray+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7017BCC935008507EC /* NSArray+CGIJSONSerializable.m */; };
+		1D5CBA0817BD48DE009D58E2 /* NSString+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7617BCDFF6008507EC /* NSString+CGIJSONSerializable.m */; };
+		1D5CBA0917BD48DE009D58E2 /* NSNumber+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA7E17BCE14D008507EC /* NSNumber+CGIJSONSerializable.m */; };
+		1D5CBA0A17BD48DE009D58E2 /* NSDate+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8417BCE44D008507EC /* NSDate+CGIJSONSerializable.m */; };
+		1D5CBA0B17BD48DE009D58E2 /* NSDictionary+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA8C17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m */; };
+		1D5CBA0C17BD48DE009D58E2 /* NSData+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA8F17BCF9A9008507EC /* NSData+CGIJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D5CBA0D17BD48DE009D58E2 /* NSData+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9017BCF9A9008507EC /* NSData+CGIJSONSerializable.m */; };
+		1D5CBA0E17BD48DE009D58E2 /* NSNull+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA9417BCFBB4008507EC /* NSNull+CGIJSONSerializable.m */; };
+		1D5CBA0F17BD48DE009D58E2 /* CGIRemoteObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DAA117BD0680008507EC /* CGIRemoteObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D5CBA1017BD48DE009D58E2 /* CGIRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAA217BD0680008507EC /* CGIRemoteObject.m */; };
+		1D5CBA1117BD48DE009D58E2 /* CGIRemoteConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DAB117BD13EB008507EC /* CGIRemoteConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D5CBA1217BD48DE009D58E2 /* CGIRemoteConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DAB217BD13EB008507EC /* CGIRemoteConnection.m */; };
 		1D67AFD217AAA314009D0826 /* module.map in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D67AFD017AAA29B009D0826 /* module.map */; };
 		1D67AFDC17AAA554009D0826 /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D67AFDB17AAA554009D0826 /* MSBooster.framework */; };
 		1D67AFE117AAAB68009D0826 /* CGIJSONObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4BF28C17AA0BBF005080A2 /* CGIJSONObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +70,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1D4A9C1117BD4B23002325B2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 1;
+			files = (
+				1D4A9C1217BD4B2A002325B2 /* module.map in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D67AFD117AAA30F009D0826 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,7 +103,7 @@
 		1D13DA6417BCBE7C008507EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D13DA6817BCBE7C008507EC /* CGIJSONObject Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CGIJSONObject Tests-Prefix.pch"; sourceTree = "<group>"; };
 		1D13DA7017BCC935008507EC /* NSArray+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CGIJSONSerializable.m"; sourceTree = "<group>"; };
-		1D13DA7317BCCBF8008507EC /* CGINSObjetSerializing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGINSObjetSerializing.m; sourceTree = "<group>"; };
+		1D13DA7317BCCBF8008507EC /* CGINSObjectSerializing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGINSObjectSerializing.m; sourceTree = "<group>"; };
 		1D13DA7617BCDFF6008507EC /* NSString+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CGIJSONSerializable.m"; sourceTree = "<group>"; };
 		1D13DA7E17BCE14D008507EC /* NSNumber+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CGIJSONSerializable.m"; sourceTree = "<group>"; };
 		1D13DA8117BCE378008507EC /* NSArray+CGIJSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+CGIJSONSerializable.h"; sourceTree = "<group>"; };
@@ -82,6 +118,14 @@
 		1D13DA9817BCFCAC008507EC /* CGITestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGITestClass.m; sourceTree = "<group>"; };
 		1D13DA9A17BD00CC008507EC /* CGISingleElementClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGISingleElementClass.h; sourceTree = "<group>"; };
 		1D13DA9B17BD00CC008507EC /* CGISingleElementClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGISingleElementClass.m; sourceTree = "<group>"; };
+		1D13DAA117BD0680008507EC /* CGIRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIRemoteObject.h; sourceTree = "<group>"; };
+		1D13DAA217BD0680008507EC /* CGIRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIRemoteObject.m; sourceTree = "<group>"; };
+		1D13DAAC17BD11D1008507EC /* CGITestRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGITestRemoteObject.h; sourceTree = "<group>"; };
+		1D13DAAD17BD11D1008507EC /* CGITestRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGITestRemoteObject.m; sourceTree = "<group>"; };
+		1D13DAAF17BD11FE008507EC /* CGIRemoteObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIRemoteObjectTest.m; sourceTree = "<group>"; };
+		1D13DAB117BD13EB008507EC /* CGIRemoteConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIRemoteConnection.h; sourceTree = "<group>"; };
+		1D13DAB217BD13EB008507EC /* CGIRemoteConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIRemoteConnection.m; sourceTree = "<group>"; };
+		1D13DAB517BD2A8A008507EC /* CGINSObjectKeySubstitution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGINSObjectKeySubstitution.m; sourceTree = "<group>"; };
 		1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D4BF28217AA0BBF005080A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +134,8 @@
 		1D4BF28717AA0BBF005080A2 /* CGIJSONObject-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CGIJSONObject-Info.plist"; sourceTree = "<group>"; };
 		1D4BF28917AA0BBF005080A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D4BF28C17AA0BBF005080A2 /* CGIJSONObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGIJSONObject.h; sourceTree = "<group>"; };
+		1D5CB9F617BD4851009D58E2 /* CGIJSONObject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5CB9F717BD4851009D58E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D67AFD017AAA29B009D0826 /* module.map */ = {isa = PBXFileReference; lastKnownFileType = text; path = module.map; sourceTree = "<group>"; };
 		1D67AFDB17AAA554009D0826 /* MSBooster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MSBooster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -113,6 +159,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D5CB9F017BD4851009D58E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D4A9C1017BD4A8F002325B2 /* MSBooster.framework in Frameworks */,
+				1D5CB9F817BD4851009D58E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,9 +178,13 @@
 				1D13DA9817BCFCAC008507EC /* CGITestClass.m */,
 				1D13DA9A17BD00CC008507EC /* CGISingleElementClass.h */,
 				1D13DA9B17BD00CC008507EC /* CGISingleElementClass.m */,
-				1D13DA7317BCCBF8008507EC /* CGINSObjetSerializing.m */,
+				1D13DAAC17BD11D1008507EC /* CGITestRemoteObject.h */,
+				1D13DAAD17BD11D1008507EC /* CGITestRemoteObject.m */,
+				1D13DA7317BCCBF8008507EC /* CGINSObjectSerializing.m */,
 				1D13DA8917BCF816008507EC /* CGINSObjectClassSensing.m */,
 				1D13DA8717BCF794008507EC /* CGINSArraySerializing.m */,
+				1D13DAAF17BD11FE008507EC /* CGIRemoteObjectTest.m */,
+				1D13DAB517BD2A8A008507EC /* CGINSObjectKeySubstitution.m */,
 				1D13DA6117BCBE7C008507EC /* Supporting Files */,
 			);
 			path = "CGIJSONObject Tests";
@@ -157,6 +216,7 @@
 			children = (
 				1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */,
 				1D13DA5D17BCBE7C008507EC /* CGIJSONObject Tests.octest */,
+				1D5CB9F617BD4851009D58E2 /* CGIJSONObject.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +227,7 @@
 				1D67AFDB17AAA554009D0826 /* MSBooster.framework */,
 				1D4BF27F17AA0BBF005080A2 /* Cocoa.framework */,
 				1D13DA5E17BCBE7C008507EC /* SenTestingKit.framework */,
+				1D5CB9F717BD4851009D58E2 /* Foundation.framework */,
 				1D4BF28117AA0BBF005080A2 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -197,6 +258,10 @@
 				1D13DA8F17BCF9A9008507EC /* NSData+CGIJSONSerializable.h */,
 				1D13DA9017BCF9A9008507EC /* NSData+CGIJSONSerializable.m */,
 				1D13DA9417BCFBB4008507EC /* NSNull+CGIJSONSerializable.m */,
+				1D13DAA117BD0680008507EC /* CGIRemoteObject.h */,
+				1D13DAA217BD0680008507EC /* CGIRemoteObject.m */,
+				1D13DAB117BD13EB008507EC /* CGIRemoteConnection.h */,
+				1D13DAB217BD13EB008507EC /* CGIRemoteConnection.m */,
 				1D4BF28617AA0BBF005080A2 /* Supporting Files */,
 			);
 			path = CGIJSONObject;
@@ -221,9 +286,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D13DA8217BCE378008507EC /* NSArray+CGIJSONSerializable.h in Headers */,
+				1D13DAA317BD0680008507EC /* CGIRemoteObject.h in Headers */,
+				1D13DAB317BD13EB008507EC /* CGIRemoteConnection.h in Headers */,
 				1D67AFE117AAAB68009D0826 /* CGIJSONObject.h in Headers */,
 				1D13DA9117BCF9A9008507EC /* NSData+CGIJSONSerializable.h in Headers */,
 				1D13DA5717BCBAB7008507EC /* NSObject+CGIJSONSerializable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D5CB9F117BD4851009D58E2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D5CBA0C17BD48DE009D58E2 /* NSData+CGIJSONSerializable.h in Headers */,
+				1D5CBA0F17BD48DE009D58E2 /* CGIRemoteObject.h in Headers */,
+				1D5CBA1117BD48DE009D58E2 /* CGIRemoteConnection.h in Headers */,
+				1D5CBA0317BD48DE009D58E2 /* CGIJSONObject.h in Headers */,
+				1D5CBA0617BD48DE009D58E2 /* NSArray+CGIJSONSerializable.h in Headers */,
+				1D5CBA0417BD48DE009D58E2 /* NSObject+CGIJSONSerializable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +347,28 @@
 			productReference = 1D4BF27C17AA0BBF005080A2 /* CGIJSONObject.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		1D5CB9F517BD4851009D58E2 /* MobileJSONObject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D5CBA0017BD4851009D58E2 /* Build configuration list for PBXNativeTarget "MobileJSONObject" */;
+			buildPhases = (
+				1D5CB9EE17BD4851009D58E2 /* ShellScript */,
+				1D5CB9EF17BD4851009D58E2 /* Sources */,
+				1D5CB9F017BD4851009D58E2 /* Frameworks */,
+				1D5CB9F117BD4851009D58E2 /* Headers */,
+				1D5CB9F217BD4851009D58E2 /* Resources */,
+				1D4A9C1117BD4B23002325B2 /* CopyFiles */,
+				1D5CB9F317BD4851009D58E2 /* ShellScript */,
+				1D5CB9F417BD4851009D58E2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileJSONObject;
+			productName = MobileJSONObjects;
+			productReference = 1D5CB9F617BD4851009D58E2 /* CGIJSONObject.framework */;
+			productType = "com.apple.product-type.framework.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -295,6 +397,7 @@
 			projectRoot = "";
 			targets = (
 				1D4BF27B17AA0BBF005080A2 /* CGIJSONObject */,
+				1D5CB9F517BD4851009D58E2 /* MobileJSONObject */,
 				1D13DA5C17BCBE7C008507EC /* CGIJSONObject Tests */,
 			);
 		};
@@ -317,18 +420,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1D5CB9F217BD4851009D58E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D5CB9EE17BD4851009D58E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n  ([[ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]] || \\\n    ([[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n     [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n     [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n    )\n  )\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n\nif [[ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]]\nthen\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    rm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nfi\n";
+		};
+		1D5CB9F317BD4851009D58E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
+		};
+		1D5CB9F417BD4851009D58E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\nONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM:-$ONLY_ACTIVE_ARCH}\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" == \"YES\" ]\nthen\n    echo \"ONLY_ACTIVE_PLATFORM=${ONLY_ACTIVE_PLATFORM}: Skipping other platform build\"\nelse\n    # Make sure the other platform gets built\n    \n    echo \"Build other platform\"\n    \n    echo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n    \n    \n    # Build the fat static library binary\n    \n    echo \"Create universal static library\"\n    \n    echo \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \"$PLATFORM_DEVELOPER_BIN_DIR/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n    \n    echo mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n    mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nfi\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\nif [ \"${ONLY_ACTIVE_PLATFORM}\" != \"YES\" ]\nthen\n    # Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n    \n    echo \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n    \n    echo rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    echo cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n    cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D13DA5917BCBE7C008507EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D13DAB617BD2A8A008507EC /* CGINSObjectKeySubstitution.m in Sources */,
 				1D13DA8A17BCF816008507EC /* CGINSObjectClassSensing.m in Sources */,
 				1D13DA8817BCF794008507EC /* CGINSArraySerializing.m in Sources */,
 				1D13DA9C17BD00CC008507EC /* CGISingleElementClass.m in Sources */,
+				1D13DAB017BD11FE008507EC /* CGIRemoteObjectTest.m in Sources */,
 				1D13DA9917BCFCAC008507EC /* CGITestClass.m in Sources */,
-				1D13DA7417BCCBF8008507EC /* CGINSObjetSerializing.m in Sources */,
+				1D13DAAE17BD11D1008507EC /* CGITestRemoteObject.m in Sources */,
+				1D13DA7417BCCBF8008507EC /* CGINSObjectSerializing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,9 +496,28 @@
 				1D13DA9617BCFBB4008507EC /* NSNull+CGIJSONSerializable.m in Sources */,
 				1D13DA9217BCF9A9008507EC /* NSData+CGIJSONSerializable.m in Sources */,
 				1D13DA7817BCDFF6008507EC /* NSString+CGIJSONSerializable.m in Sources */,
+				1D13DAA417BD0680008507EC /* CGIRemoteObject.m in Sources */,
 				1D13DA8017BCE14D008507EC /* NSNumber+CGIJSONSerializable.m in Sources */,
 				1D13DA8617BCE44D008507EC /* NSDate+CGIJSONSerializable.m in Sources */,
 				1D13DA7217BCC935008507EC /* NSArray+CGIJSONSerializable.m in Sources */,
+				1D13DAB417BD13EB008507EC /* CGIRemoteConnection.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D5CB9EF17BD4851009D58E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D5CBA0517BD48DE009D58E2 /* NSObject+CGIJSONSerializable.m in Sources */,
+				1D5CBA0B17BD48DE009D58E2 /* NSDictionary+CGIJSONSerializable.m in Sources */,
+				1D5CBA0E17BD48DE009D58E2 /* NSNull+CGIJSONSerializable.m in Sources */,
+				1D5CBA0817BD48DE009D58E2 /* NSString+CGIJSONSerializable.m in Sources */,
+				1D5CBA0D17BD48DE009D58E2 /* NSData+CGIJSONSerializable.m in Sources */,
+				1D5CBA1017BD48DE009D58E2 /* CGIRemoteObject.m in Sources */,
+				1D5CBA0917BD48DE009D58E2 /* NSNumber+CGIJSONSerializable.m in Sources */,
+				1D5CBA0A17BD48DE009D58E2 /* NSDate+CGIJSONSerializable.m in Sources */,
+				1D5CBA0717BD48DE009D58E2 /* NSArray+CGIJSONSerializable.m in Sources */,
+				1D5CBA1217BD48DE009D58E2 /* CGIRemoteConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +691,49 @@
 			};
 			name = Release;
 		};
+		1D5CBA0117BD4851009D58E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks",
+				);
+				FRAMEWORK_VERSION = F;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CGIJSONObject/CGIJSONObject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = CGIJSONObject;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1D5CBA0217BD4851009D58E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks",
+				);
+				FRAMEWORK_VERSION = F;
+				INFOPLIST_FILE = "CGIJSONObject/CGIJSONObject-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = CGIJSONObject;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,6 +744,7 @@
 				1D13DA6D17BCBE7C008507EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D4BF27617AA0BBF005080A2 /* Build configuration list for PBXProject "CGIJSONObject" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +760,15 @@
 			buildConfigurations = (
 				1D4BF2A517AA0BBF005080A2 /* Debug */,
 				1D4BF2A617AA0BBF005080A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D5CBA0017BD4851009D58E2 /* Build configuration list for PBXNativeTarget "MobileJSONObject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D5CBA0117BD4851009D58E2 /* Debug */,
+				1D5CBA0217BD4851009D58E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

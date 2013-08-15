@@ -50,5 +50,6 @@
 - (id)serializedObject;
 - (NSArray *)allKeys;
 - (Class)classForKey:(NSString *)key;
+- (NSString *)serializationKeyForKey:(NSString *)key;
 
 @end

@@ -9,14 +9,14 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import <CGIJSONObject/CGIJSONObject.h>
 
-@interface CGINSObjetSerializing : SenTestCase
+@interface CGINSObjectSerializing : SenTestCase
 
 @property NSString *stringProperty;
 @property NSNumber *numberProperty;
 
 @end
 
-@implementation CGINSObjetSerializing
+@implementation CGINSObjectSerializing
 
 - (void)setUp
 {
@@ -44,7 +44,7 @@
 - (void)testDecoding
 {
     id target = @{@"stringProperty": @"World", @"numberProperty": @28};
-    CGINSObjetSerializing *deserialized = [[[self class] alloc] initWithSerializedObject:target];
+    CGINSObjectSerializing *deserialized = [[[self class] alloc] initWithSerializedObject:target];
     STAssertNotNil(deserialized, @"I cannot deserialize myself.");
     STAssertEqualObjects(deserialized.stringProperty, @"World", @"Deserialization wrong");
     STAssertEqualObjects(deserialized.numberProperty, @28, @"Deserialization Wrong");
