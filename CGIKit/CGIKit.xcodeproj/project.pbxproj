@@ -24,13 +24,8 @@
 		1D67AFE517AAAF58009D0826 /* CGIHTTPContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67AFE317AAAF58009D0826 /* CGIHTTPContext.m */; };
 		1D67AFE817AAB2EF009D0826 /* CGIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67AFE617AAB2EF009D0826 /* CGIHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D67AFE917AAB2EF009D0826 /* CGIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67AFE717AAB2EF009D0826 /* CGIHTTPRequest.m */; settings = {COMPILER_FLAGS = "-Wno-ambiguous-macro"; }; };
-		1D67AFF317AAB9F4009D0826 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D67AFF217AAB9F4009D0826 /* main.c */; };
-		1D67AFF717AAB9F4009D0826 /* ls_cgi.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D67AFF617AAB9F4009D0826 /* ls_cgi.1 */; };
-		1D67AFFB17AABA10009D0826 /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF0D017A9173F005080A2 /* CGIKit.framework */; };
-		1D67AFFE17AABEA5009D0826 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67AFFD17AABEA5009D0826 /* AppDelegate.m */; };
 		1D67B00117AABED1009D0826 /* CGIHTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67AFFF17AABED1009D0826 /* CGIHTTPResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D67B00217AABED1009D0826 /* CGIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67B00017AABED1009D0826 /* CGIHTTPResponse.m */; settings = {COMPILER_FLAGS = "-Wno-ambiguous-macro"; }; };
-		1D67B00317AABF0B009D0826 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF0D317A9173F005080A2 /* Cocoa.framework */; };
 		1D67B00517AAD70F009D0826 /* CGIHTTPRequestStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67B00417AAD6F4009D0826 /* CGIHTTPRequestStrings.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -45,19 +40,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D67AFEC17AAB9F4009D0826 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-				1D67AFF717AAB9F4009D0826 /* ls_cgi.1 in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D13DA4217BCB2F6008507EC /* MSBooster.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = MSBooster.framework; path = ../MSBooster/build/Release/MSBooster.framework; sourceTree = "<group>"; };
+		1D13DA4317BCB2F6008507EC /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
 		1D41113717B4D5EF00251E1B /* CGIHTTPResponseStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPResponseStrings.h; sourceTree = "<group>"; };
 		1D4BF0D017A9173F005080A2 /* CGIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF0D317A9173F005080A2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -86,17 +73,11 @@
 		1D61210717B9170700C2AD14 /* error.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = error.html; sourceTree = "<group>"; };
 		1D61211517BA0FC400C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1D61211617BA0FE900C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
-		1D61211717BA16A300C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1D67AFCE17AAA27C009D0826 /* CGIJSONObject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67AFE217AAAF58009D0826 /* CGIHTTPContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPContext.h; sourceTree = "<group>"; };
 		1D67AFE317AAAF58009D0826 /* CGIHTTPContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPContext.m; sourceTree = "<group>"; };
 		1D67AFE617AAB2EF009D0826 /* CGIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPRequest.h; sourceTree = "<group>"; };
 		1D67AFE717AAB2EF009D0826 /* CGIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPRequest.m; sourceTree = "<group>"; };
-		1D67AFEE17AAB9F4009D0826 /* ls.fcgi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ls.fcgi; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D67AFF217AAB9F4009D0826 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		1D67AFF617AAB9F4009D0826 /* ls_cgi.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ls_cgi.1; sourceTree = "<group>"; };
-		1D67AFFC17AABEA5009D0826 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1D67AFFD17AABEA5009D0826 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1D67AFFF17AABED1009D0826 /* CGIHTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPResponse.h; sourceTree = "<group>"; };
 		1D67B00017AABED1009D0826 /* CGIHTTPResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPResponse.m; sourceTree = "<group>"; };
 		1D67B00417AAD6F4009D0826 /* CGIHTTPRequestStrings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGIHTTPRequestStrings.h; sourceTree = "<group>"; };
@@ -112,15 +93,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1D67AFEB17AAB9F4009D0826 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D67B00317AABF0B009D0826 /* Cocoa.framework in Frameworks */,
-				1D67AFFB17AABA10009D0826 /* CGIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -129,7 +101,6 @@
 			children = (
 				1D61211517BA0FC400C2AD14 /* GNUmakefile */,
 				1D4BF0D917A9173F005080A2 /* CGIKit */,
-				1D67AFF117AAB9F4009D0826 /* ls.cgi */,
 				1D4BF0D217A9173F005080A2 /* Frameworks */,
 				1D4BF0D117A9173F005080A2 /* Products */,
 			);
@@ -139,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF0D017A9173F005080A2 /* CGIKit.framework */,
-				1D67AFEE17AAB9F4009D0826 /* ls.fcgi */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +117,8 @@
 		1D4BF0D217A9173F005080A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D13DA4217BCB2F6008507EC /* MSBooster.framework */,
+				1D13DA4317BCB2F6008507EC /* libssl.dylib */,
 				1D67AFCE17AAA27C009D0826 /* CGIJSONObject.framework */,
 				1D4BF10717A91761005080A2 /* MSBooster.framework */,
 				1D4BF0D317A9173F005080A2 /* Cocoa.framework */,
@@ -224,26 +196,6 @@
 			path = fcgi;
 			sourceTree = "<group>";
 		};
-		1D67AFF117AAB9F4009D0826 /* ls.cgi */ = {
-			isa = PBXGroup;
-			children = (
-				1D67AFF217AAB9F4009D0826 /* main.c */,
-				1D67AFFC17AABEA5009D0826 /* AppDelegate.h */,
-				1D67AFFD17AABEA5009D0826 /* AppDelegate.m */,
-				1D67AFF617AAB9F4009D0826 /* ls_cgi.1 */,
-				1D67AFF417AAB9F4009D0826 /* Supporting Files */,
-			);
-			path = ls.cgi;
-			sourceTree = "<group>";
-		};
-		1D67AFF417AAB9F4009D0826 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1D61211717BA16A300C2AD14 /* GNUmakefile */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -283,23 +235,6 @@
 			productReference = 1D4BF0D017A9173F005080A2 /* CGIKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		1D67AFED17AAB9F4009D0826 /* ls.fcgi */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D67AFF817AAB9F4009D0826 /* Build configuration list for PBXNativeTarget "ls.fcgi" */;
-			buildPhases = (
-				1D67AFEA17AAB9F4009D0826 /* Sources */,
-				1D67AFEB17AAB9F4009D0826 /* Frameworks */,
-				1D67AFEC17AAB9F4009D0826 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ls.fcgi;
-			productName = ls.cgi;
-			productReference = 1D67AFEE17AAB9F4009D0826 /* ls.fcgi */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -323,7 +258,6 @@
 			projectRoot = "";
 			targets = (
 				1D4BF0CF17A9173F005080A2 /* CGIKit */,
-				1D67AFED17AAB9F4009D0826 /* ls.fcgi */,
 			);
 		};
 /* End PBXProject section */
@@ -353,15 +287,6 @@
 				1D4BF10C17A9194E005080A2 /* CGIApplication.m in Sources */,
 				1D67B00217AABED1009D0826 /* CGIHTTPResponse.m in Sources */,
 				1D67AFE917AAB2EF009D0826 /* CGIHTTPRequest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1D67AFEA17AAB9F4009D0826 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D67AFFE17AABEA5009D0826 /* AppDelegate.m in Sources */,
-				1D67AFF317AAB9F4009D0826 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,24 +408,6 @@
 			};
 			name = Release;
 		};
-		1D67AFF917AAB9F4009D0826 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		1D67AFFA17AAB9F4009D0826 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -518,15 +425,6 @@
 			buildConfigurations = (
 				1D4BF0F917A9173F005080A2 /* Debug */,
 				1D4BF0FA17A9173F005080A2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1D67AFF817AAB9F4009D0826 /* Build configuration list for PBXNativeTarget "ls.fcgi" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D67AFF917AAB9F4009D0826 /* Debug */,
-				1D67AFFA17AAB9F4009D0826 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

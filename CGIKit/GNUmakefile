@@ -1,6 +1,6 @@
 
 include ../GNUstep.make
 
-SUBPROJECTS := CGIKit ls.cgi
+SUBPROJECTS := CGIKit
 
 include $(GNUSTEP_MAKEFILES)/aggregate.make
