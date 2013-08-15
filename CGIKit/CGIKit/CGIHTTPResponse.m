@@ -127,6 +127,9 @@
                                                                                                     withExtension:@"html"]
                                               usedEncoding:NULL
                                                      error:NULL];
+    
+    self.statusCode = statusCode;
+    
     [self setResponseWithTemplatePage:template
                         substitutions:@{
                                         @"errorTitle": [error localizedDescription],
@@ -134,10 +137,9 @@
                                                                 [error domain],
                                                                 [error code]),
                                         @"errorDetails": [error localizedFailureReason],
-                                        @"serverSignature": [[CGIApplication sharedApplication] versionString]
+                                        @"serverSignature": [[CGIApplication sharedApplication] versionString],
+                                        @"statusCode": @(self.statusCode),
                                         }];
-    self.statusCode = statusCode;
-    
 }
 
 - (void)setResponseWithException:(NSException *)exception
@@ -146,6 +148,7 @@
                                                                                                     withExtension:@"html"]
                                               usedEncoding:NULL
                                                      error:NULL];
+    self.statusCode = CGIHTTPResponseInternalServerError;
     [self setResponseWithTemplatePage:template
                         substitutions:@{
                                         @"errorTitle": [exception name],
@@ -153,9 +156,9 @@
                                                                 NSStringFromClass([exception class]),
                                                                 [exception reason]),
                                         @"errorDetails": MSSTR(@""),
-                                        @"serverSignature": [[CGIApplication sharedApplication] versionString]
+                                        @"serverSignature": [[CGIApplication sharedApplication] versionString],
+                                        @"statusCode": @(self.statusCode),
                                         }];
-    self.statusCode = CGIHTTPResponseInternalServerError;
 }
 
 - (void)setResponseWithRedirection:(NSString *)target

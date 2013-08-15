@@ -52,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Demo.xcodeproj; path = Demo/Demo.xcodeproj; sourceTree = "<group>"; };
 		1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.en.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.en.md; sourceTree = "<group>"; };
 		1D4BF06B17A8FEA8005080A2 /* COPYRIGHT.zh-Hans.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "COPYRIGHT.zh-Hans.md"; sourceTree = "<group>"; };
 		1D4BF06C17A8FEA8005080A2 /* README.en.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.en.md; sourceTree = "<group>"; };
@@ -66,9 +67,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		1D4A9CFC17BD84AA002325B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1D4BF06317A8FE92005080A2 = {
 			isa = PBXGroup;
 			children = (
+				1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */,
 				1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */,
 				1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */,
 				1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */,
@@ -151,6 +160,10 @@
 				{
 					ProductGroup = 1D4BF0FF17A9173F005080A2 /* Products */;
 					ProjectRef = 1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 1D4A9CFC17BD84AA002325B2 /* Products */;
+					ProjectRef = 1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */;
 				},
 				{
 					ProductGroup = 1D4BF0AC17A8FF30005080A2 /* Products */;

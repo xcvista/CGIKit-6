@@ -10,6 +10,7 @@
 
 @interface CGIServerObject : NSObject <CGIHTTPContextDelegate>
 
+- (BOOL)shouldHandleEmptyRequests;
 - (id)objectFromProcessingContext:(CGIHTTPContext *)context;
 
 @end

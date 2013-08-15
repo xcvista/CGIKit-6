@@ -1,7 +1,7 @@
 
 include GNUstep.make
 
-SUBPROJECTS := MSBooster CGIKit CGIJSONObject
+SUBPROJECTS := MSBooster CGIKit CGIJSONObject Demo
 
 include $(GNUSTEP_MAKEFILES)/aggregate.make
 

@@ -16,14 +16,26 @@
     return nil;
 }
 
+- (BOOL)shouldHandleEmptyRequests
+{
+    return YES;
+}
+
 #pragma mark - HTTP Content Delegate
 
 - (BOOL)context:(CGIHTTPContext *)context shouldHandleRequest:(CGIHTTPRequest *)request
 {
-    id object = [NSJSONSerialization JSONObjectWithData:request.data
-                                                options:0
-                                                  error:NULL];
-    return [self setSerializedObject:object];
+    if ([request.data length] > 0)
+    {
+        id object = [NSJSONSerialization JSONObjectWithData:request.data
+                                                    options:0
+                                                      error:NULL];
+        return [self setSerializedObject:object];
+    }
+    else
+    {
+        return [self shouldHandleEmptyRequests];
+    }
 }
 
 - (void)handleHTTPContext:(CGIHTTPContext *)context
@@ -36,7 +48,7 @@
                                                                options:0
                                                                  error:NULL];
         if (responseData)
-            [context.response.data setData:response];
+            [context.response.data setData:responseData];
     }
     
     context.response.contentType = @"application/json";
