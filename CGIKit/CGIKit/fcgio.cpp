@@ -23,7 +23,7 @@
 #endif
 
 #include <limits.h>
-#include "fcgio.h"
+#include "fcgi/fcgio.h"
 
 using std::streambuf;
 using std::istream;

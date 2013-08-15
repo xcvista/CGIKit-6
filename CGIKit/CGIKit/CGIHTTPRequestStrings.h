@@ -27,4 +27,6 @@ MSConstantString(CGIHTTPRequestScriptNameKey, SCRIPT_NAME);
 MSConstantString(CGIHTTPRequestServerNameKey, SERVER_NAME);
 MSConstantString(CGIHTTPRequestServerAdminKey, SERVER_ADMIN);
 MSConstantString(CGIHTTPRequestServerPortKey, SERVER_PORT);
+MSConstantString(CGIHTTPRequestServerProtocolKey, SERVER_PROTOCOL);
 MSConstantString(CGIHTTPRequestServerSoftwareKey, SERVER_SOFTWARE);
+MSConstantString(CGIHTTPRequestContentLengthKey, CONTENT_LENGTH);

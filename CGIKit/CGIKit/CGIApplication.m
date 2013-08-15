@@ -37,6 +37,9 @@ int MSNoReturn CGIApplicationMain(int argc,
 }
 
 @implementation CGIApplication
+{
+    NSOperationQueue *_queue;
+}
 
 + (instancetype)sharedApplication
 {
@@ -48,6 +51,15 @@ int MSNoReturn CGIApplicationMain(int argc,
     return CGIApp;
 }
 
+- (id)init
+{
+    if (self = [super init])
+    {
+        _queue = [[NSOperationQueue alloc] init];
+    }
+    return self;
+}
+
 - (int)run
 {
     if (FCGX_IsCGI() && FCGX_Init())
@@ -57,16 +69,14 @@ int MSNoReturn CGIApplicationMain(int argc,
     
     CGIHTTPContext *context = nil;
     
-    dispatch_group_t group = dispatch_group_create();
-    
-    while ((context = [[CGIHTTPContext alloc] initWithDisptachGroup:group delegate:[self createDelegateForContext]]))
+    while ((context = [[CGIHTTPContext alloc] initWithDelegate:[self createDelegateForContext]]))
     {
-        [(CGIHTTPContext *)objc_retain(context) run];
+        [_queue addOperation:context];
     }
     
-    [self applicationWillTerminate];
+    [_queue waitUntilAllOperationsAreFinished];
     
-    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    [self applicationWillTerminate];
     
     exit(0);
 }

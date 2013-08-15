@@ -30,9 +30,9 @@ static const char rcsid[] = "$Id: fcgi_stdio.c,v 1.14 2001/09/01 01:09:30 robs E
 #define DLLAPI  __declspec(dllexport)
 #endif
 
-#include "fcgiapp.h"
-#include "fcgios.h"
-#include "fcgimisc.h"
+#include "fcgi/fcgiapp.h"
+#include "fcgi/fcgios.h"
+#include "fcgi/fcgimisc.h"
 
 #define NO_FCGI_DEFINES
 #include "fcgi_stdio.h"

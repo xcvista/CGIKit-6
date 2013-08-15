@@ -47,10 +47,10 @@ static const char rcsid[] = "$Id: fcgiapp.c,v 1.35 2003/06/22 00:16:43 robs Exp 
 #define DLLAPI  __declspec(dllexport)
 #endif
 
-#include "fcgimisc.h"
-#include "fastcgi.h"
-#include "fcgios.h"
-#include "fcgiapp.h"
+#include "fcgi/fcgimisc.h"
+#include "fcgi/fastcgi.h"
+#include "fcgi/fcgios.h"
+#include "fcgi/fcgiapp.h"
 
 /*
  * This is a workaround for one version of the HP C compiler

@@ -21,9 +21,8 @@
 @property (readonly) NSDictionary *queryString;
 @property (readonly) NSDictionary *form;
 
-@property (readonly) NSUInteger contentLength;
-@property (readonly) NSString *contentType;
 @property (readonly) NSString *userAgent;
+@property (readonly) NSInteger contentLength;
 
 @end
 

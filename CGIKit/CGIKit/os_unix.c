@@ -55,9 +55,9 @@ static const char rcsid[] = "$Id: os_unix.c,v 1.38 2003/06/22 00:16:43 robs Exp 
 #include <unistd.h>
 #endif
 
-#include "fastcgi.h"
-#include "fcgimisc.h"
-#include "fcgios.h"
+#include "fcgi/fastcgi.h"
+#include "fcgi/fcgimisc.h"
+#include "fcgi/fcgios.h"
 
 #ifndef INADDR_NONE
 #define INADDR_NONE ((unsigned long) -1)

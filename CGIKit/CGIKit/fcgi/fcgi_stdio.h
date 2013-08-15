@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include <sys/types.h>
 #include "fcgiapp.h"
+#include <MSBooster/MSBooster.h>
 
 #if defined (c_plusplus) || defined (__cplusplus)
 extern "C" {
@@ -89,7 +90,7 @@ DLLAPI int        FCGI_getchar(void);
 DLLAPI int        FCGI_ungetc(int c, FCGI_FILE *fp);
 
 DLLAPI char      *FCGI_fgets(char *str, int size, FCGI_FILE *fp);
-DLLAPI char      *FCGI_gets(char *str);
+DLLAPI char      *FCGI_gets(char *str) MSUnavailable("This method is too dangerous to be used.");
 
 /*
  * Not yet implemented

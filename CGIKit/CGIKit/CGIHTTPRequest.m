@@ -14,26 +14,8 @@ extern char **environ;
 
 @implementation CGIHTTPRequest
 
-- (id)init
-{
-    if (self = [super init])
-    {
-        NSMutableDictionary *environment = [NSMutableDictionary dictionary];
-        for (char **cp = environ; *cp; cp++)
-        {
-            char *env = *cp;
-            char *split = strchr(env, '=');
-            NSString *key = [[NSString alloc] initWithData:[NSData dataWithBytes:env
-                                                                           length:split - env]
-                                                   encoding:NSUTF8StringEncoding];
-            NSString *value = [[NSString alloc] initWithCString:split + 1
-                                                       encoding:NSUTF8StringEncoding];
-            environment[key] = value;
-        }
-        _environemnt = [NSDictionary dictionaryWithDictionary:environment];
-    }
-    return self;
-}
+@synthesize queryString = _queryString;
+@synthesize form = _form;
 
 - (NSString *)httpMethod
 {
@@ -45,8 +27,66 @@ extern char **environ;
     return self.environemnt[CGIHTTPRequestURIKey];
 }
 
+- (NSString *)protocol
+{
+    return self.environemnt[CGIHTTPRequestServerProtocolKey];
+}
+
+- (NSString *)userAgent
+{
+    return self.environemnt[CGIHTTPRequestUserAgentKey];
+}
+
+- (NSInteger)contentLength
+{
+    return [self.environemnt[CGIHTTPRequestContentLengthKey] integerValue];
+}
+
+#pragma mark - Forms and query strings.
+
+- (NSDictionary *)_CGI_DictionaryFromQuesryStyleString:(NSString *)string
+{
+    NSArray *parts = [string componentsSeparatedByString:@"&"];
+    
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:[parts count]];
+    
+    for (NSString *part in parts)
+    {
+        NSArray *components = [part componentsSeparatedByString:@"="];
+        NSString *value = [[components lastObject] stringByRemovingPercentEncoding];
+        NSString *key = ([components count] > 1) ? [components[0] stringByRemovingPercentEncoding] : @"";
+        
+        if (!key)
+            key = @"";
+        if (value)
+            dict[key] = [value stringByRemovingPercentEncoding];
+    }
+    
+    return [NSDictionary dictionaryWithDictionary:dict];
+}
+
+- (NSDictionary *)queryString
+{
+    if (!_queryString)
+    {
+        NSString *queryString = self.environemnt[CGIHTTPRequestQueryStringKey];
+        _queryString = [self _CGI_DictionaryFromQuesryStyleString:queryString];
+    }
+    return _queryString;
+}
+
+- (NSDictionary *)form
+{
+    if (!_form)
+    {
+        NSString *form = [[NSString alloc] initWithData:self.data
+                                               encoding:NSASCIIStringEncoding];
+        _form = [self _CGI_DictionaryFromQuesryStyleString:form];
+    }
+    return _form;
+}
+
 @end
 
 #import <MSBooster/MSBooster_Private.h>
-
 #include "CGIHTTPRequestStrings.h"

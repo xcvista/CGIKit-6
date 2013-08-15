@@ -83,16 +83,13 @@
 
 @end
 
-@interface CGIHTTPContext : NSObject
+@interface CGIHTTPContext : NSOperation
 
 @property id<CGIHTTPContextDelegate> delegate;
 @property (readonly) CGIHTTPRequest *request;
 @property (readonly) CGIHTTPResponse *response;
-@property (readonly) dispatch_queue_t queue;
 
-- (id)initWithDisptachGroup:(dispatch_group_t)group delegate:(id<CGIHTTPContextDelegate>)delegate;
-
-- (void)run;
+- (id)initWithDelegate:(id<CGIHTTPContextDelegate>)delegate;
 
 - (BOOL)contextShouldHandleRequest:(CGIHTTPRequest *)request;
 - (void)handleHTTPContext;
