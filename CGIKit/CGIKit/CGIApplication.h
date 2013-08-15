@@ -75,8 +75,9 @@ MSConstantString(CGIApplicationName, CGIApplication);
  */
 
 /**
- Called when the application did finished launching. You should finish app-
- specific initialization in this method.
+ @brief     Called when the application did finished launching.
+ 
+ You should finish app-specific initialization in this method.
  
  @param     application         The application object that sent this delegate
                                 message.
@@ -84,10 +85,14 @@ MSConstantString(CGIApplicationName, CGIApplication);
 - (void)applicationDidFinishLaunching:(CGIApplication *)application;
 
 /**
- Called when an application received a request. You can reject a request with
- this method, and a rejected request will be responded with HTTP 501 Not
- Implemented response. Also, you should set up environemnt of handling the
- request in this method.
+ @brief     Called when an application received a request.
+ 
+ You can reject a request with this method, and a rejected request will be
+ responded with HTTP 501 Not Implemented response. Also, you should set up
+ environemnt of handling the request in this method.
+ 
+ Alternatively, you can instantiate a contenxt delegate
+ in this method and assign it to the context based on the request data.
  
  @note      This method is expected to be thread-safe. It could be overridden by
             the delegate of the context.
@@ -115,9 +120,10 @@ shouldHandleRequest:(CGIHTTPRequest *)request;
   handleHTTPContext:(CGIHTTPContext *)context;
 
 /**
- Called when an application is going to send a response. You can redact a 
- response by returning NO from this method, and a redacted response will be
- replaced with a HTTP 403 Forbidden response.
+ @brief     Called when an application is going to send a response.
+ 
+ You can redact a response by returning NO from this method, and a redacted
+ response will be replaced with a HTTP 403 Forbidden response.
  
  @note      This method is expected to be thread-safe. It could be overridden by
             the delegate of the context.
@@ -157,8 +163,10 @@ shouldHandleRequest:(CGIHTTPRequest *)request;
  */
 
 /**
- Called by the applicaiton to obtain new delegate for the context. The context
- delegate will catch
+ @brief     Called by the applicaiton to obtain new delegate for the context.
+ 
+ The context delegate will catch all delegate methods instead of the app
+ delegate.
  
  @param     application         The application object that sent this delegate
                                 message.

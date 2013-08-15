@@ -20,6 +20,8 @@
 
 #if !TARGET_OS_IPHONE
 
+#import <CGIJSONObject/CGIServerObject.h>
+
 #endif
 
 #endif
