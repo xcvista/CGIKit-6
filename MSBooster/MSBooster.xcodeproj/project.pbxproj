@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4A9DC417BE6EB9002325B2 /* COPYING.MIT in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */; };
+		1D4A9DC517BE6EB9002325B2 /* COPYING.MIT in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */; };
+		1D4A9DC617BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DBF17BE6EB9002325B2 /* NSArray+LinqExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9DC717BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DBF17BE6EB9002325B2 /* NSArray+LinqExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9DC817BE6EB9002325B2 /* NSArray+LinqExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9DC017BE6EB9002325B2 /* NSArray+LinqExtensions.m */; };
+		1D4A9DC917BE6EB9002325B2 /* NSArray+LinqExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9DC017BE6EB9002325B2 /* NSArray+LinqExtensions.m */; };
+		1D4A9DCA17BE6EB9002325B2 /* NSDictionary+LinqExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DC117BE6EB9002325B2 /* NSDictionary+LinqExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9DCB17BE6EB9002325B2 /* NSDictionary+LinqExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DC117BE6EB9002325B2 /* NSDictionary+LinqExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9DCC17BE6EB9002325B2 /* NSDictionary+LinqExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9DC217BE6EB9002325B2 /* NSDictionary+LinqExtensions.m */; };
+		1D4A9DCD17BE6EB9002325B2 /* NSDictionary+LinqExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9DC217BE6EB9002325B2 /* NSDictionary+LinqExtensions.m */; };
+		1D4A9DCE17BE6EB9002325B2 /* LINQ-README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A9DC317BE6EB9002325B2 /* LINQ-README.md */; };
+		1D4A9DCF17BE6EB9002325B2 /* LINQ-README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A9DC317BE6EB9002325B2 /* LINQ-README.md */; };
+		1D4A9DD317BE7626002325B2 /* NSData+MSHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DD117BE7626002325B2 /* NSData+MSHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9DD417BE7626002325B2 /* NSData+MSHashing.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DD117BE7626002325B2 /* NSData+MSHashing.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9DD517BE7626002325B2 /* NSData+MSHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9DD217BE7626002325B2 /* NSData+MSHashing.m */; };
+		1D4A9DD617BE7626002325B2 /* NSData+MSHashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9DD217BE7626002325B2 /* NSData+MSHashing.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
+		1D4A9DDE17BE83D5002325B2 /* NSData+MSCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DDC17BE83D5002325B2 /* NSData+MSCompression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9DDF17BE83D5002325B2 /* NSData+MSCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DDC17BE83D5002325B2 /* NSData+MSCompression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D4A9DE017BE83D5002325B2 /* NSData+MSCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9DDD17BE83D5002325B2 /* NSData+MSCompression.m */; };
+		1D4A9DE117BE83D5002325B2 /* NSData+MSCompression.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9DDD17BE83D5002325B2 /* NSData+MSCompression.m */; };
+		1D4A9DE317BE861B002325B2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9DE217BE861B002325B2 /* libz.dylib */; };
+		1D4A9DED17BE8F9C002325B2 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9DEC17BE8F9C002325B2 /* libbz2.dylib */; };
 		1D4BF08117A8FF30005080A2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF08017A8FF30005080A2 /* Cocoa.framework */; };
 		1D4BF08B17A8FF30005080A2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D4BF08917A8FF30005080A2 /* InfoPlist.strings */; };
 		1D4BF0B617A8FFA8005080A2 /* MSStringManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4BF0B417A8FFA8005080A2 /* MSStringManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +63,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING.MIT; sourceTree = "<group>"; };
+		1D4A9DBF17BE6EB9002325B2 /* NSArray+LinqExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LinqExtensions.h"; sourceTree = "<group>"; };
+		1D4A9DC017BE6EB9002325B2 /* NSArray+LinqExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LinqExtensions.m"; sourceTree = "<group>"; };
+		1D4A9DC117BE6EB9002325B2 /* NSDictionary+LinqExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LinqExtensions.h"; sourceTree = "<group>"; };
+		1D4A9DC217BE6EB9002325B2 /* NSDictionary+LinqExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+LinqExtensions.m"; sourceTree = "<group>"; };
+		1D4A9DC317BE6EB9002325B2 /* LINQ-README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LINQ-README.md"; sourceTree = "<group>"; };
+		1D4A9DD117BE7626002325B2 /* NSData+MSHashing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MSHashing.h"; sourceTree = "<group>"; };
+		1D4A9DD217BE7626002325B2 /* NSData+MSHashing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MSHashing.m"; sourceTree = "<group>"; };
+		1D4A9DD717BE8013002325B2 /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
+		1D4A9DDA17BE8304002325B2 /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		1D4A9DDC17BE83D5002325B2 /* NSData+MSCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MSCompression.h"; sourceTree = "<group>"; };
+		1D4A9DDD17BE83D5002325B2 /* NSData+MSCompression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MSCompression.m"; sourceTree = "<group>"; };
+		1D4A9DE217BE861B002325B2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		1D4A9DEC17BE8F9C002325B2 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
 		1D4BF07D17A8FF30005080A2 /* MSBooster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSBooster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D4BF08017A8FF30005080A2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D4BF08317A8FF30005080A2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +104,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4A9DED17BE8F9C002325B2 /* libbz2.dylib in Frameworks */,
+				1D4A9DE317BE861B002325B2 /* libz.dylib in Frameworks */,
 				1D4BF08117A8FF30005080A2 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +121,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D4A9DD017BE6EC1002325B2 /* Objective-C LINQ */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */,
+				1D4A9DBF17BE6EB9002325B2 /* NSArray+LinqExtensions.h */,
+				1D4A9DC017BE6EB9002325B2 /* NSArray+LinqExtensions.m */,
+				1D4A9DC117BE6EB9002325B2 /* NSDictionary+LinqExtensions.h */,
+				1D4A9DC217BE6EB9002325B2 /* NSDictionary+LinqExtensions.m */,
+				1D4A9DC317BE6EB9002325B2 /* LINQ-README.md */,
+			);
+			name = "Objective-C LINQ";
+			sourceTree = "<group>";
+		};
 		1D4BF07317A8FF30005080A2 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +156,10 @@
 		1D4BF07F17A8FF30005080A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D4A9DEC17BE8F9C002325B2 /* libbz2.dylib */,
+				1D4A9DE217BE861B002325B2 /* libz.dylib */,
+				1D4A9DDA17BE8304002325B2 /* libcrypto.dylib */,
+				1D4A9DD717BE8013002325B2 /* libssl.dylib */,
 				1D4BF08017A8FF30005080A2 /* Cocoa.framework */,
 				1D4BF09517A8FF30005080A2 /* XCTest.framework */,
 				1D5CBA1C17BD4900009D58E2 /* Foundation.framework */,
@@ -133,6 +188,11 @@
 				1D4BF0C417A9165F005080A2 /* MSStringConstant.h */,
 				1D4BF0B417A8FFA8005080A2 /* MSStringManipulation.h */,
 				1D4BF0B517A8FFA8005080A2 /* MSStringManipulation.m */,
+				1D4A9DD117BE7626002325B2 /* NSData+MSHashing.h */,
+				1D4A9DD217BE7626002325B2 /* NSData+MSHashing.m */,
+				1D4A9DDC17BE83D5002325B2 /* NSData+MSCompression.h */,
+				1D4A9DDD17BE83D5002325B2 /* NSData+MSCompression.m */,
+				1D4A9DD017BE6EC1002325B2 /* Objective-C LINQ */,
 				1D4BF08717A8FF30005080A2 /* Supporting Files */,
 			);
 			path = MSBooster;
@@ -156,9 +216,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4A9DDE17BE83D5002325B2 /* NSData+MSCompression.h in Headers */,
+				1D4A9DC617BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */,
+				1D4A9DCA17BE6EB9002325B2 /* NSDictionary+LinqExtensions.h in Headers */,
 				1D4BF0B617A8FFA8005080A2 /* MSStringManipulation.h in Headers */,
 				1D4BF0B917A8FFDF005080A2 /* MSCommon.h in Headers */,
 				1D4BF0BF17A90653005080A2 /* MSBooster_Private.h in Headers */,
+				1D4A9DD317BE7626002325B2 /* NSData+MSHashing.h in Headers */,
 				1D4BF0C517A9165F005080A2 /* MSStringConstant.h in Headers */,
 				1D4BF0C317A90712005080A2 /* MSOCCompatibility.h in Headers */,
 				1D4BF0C017A90658005080A2 /* MSBooster.h in Headers */,
@@ -169,9 +233,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4A9DDF17BE83D5002325B2 /* NSData+MSCompression.h in Headers */,
+				1D4A9DC717BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */,
+				1D4A9DCB17BE6EB9002325B2 /* NSDictionary+LinqExtensions.h in Headers */,
 				1D5CBA2A17BD4910009D58E2 /* MSCommon.h in Headers */,
 				1D5CBA2B17BD4910009D58E2 /* MSOCCompatibility.h in Headers */,
 				1D5CBA2817BD4910009D58E2 /* MSBooster.h in Headers */,
+				1D4A9DD417BE7626002325B2 /* NSData+MSHashing.h in Headers */,
 				1D5CBA2C17BD4910009D58E2 /* MSStringConstant.h in Headers */,
 				1D5CBA2D17BD4910009D58E2 /* MSStringManipulation.h in Headers */,
 				1D5CBA2917BD4910009D58E2 /* MSBooster_Private.h in Headers */,
@@ -254,7 +322,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4A9DCE17BE6EB9002325B2 /* LINQ-README.md in Resources */,
 				1D4BF08B17A8FF30005080A2 /* InfoPlist.strings in Resources */,
+				1D4A9DC417BE6EB9002325B2 /* COPYING.MIT in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +332,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4A9DCF17BE6EB9002325B2 /* LINQ-README.md in Resources */,
+				1D4A9DC517BE6EB9002325B2 /* COPYING.MIT in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +386,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4A9DE017BE83D5002325B2 /* NSData+MSCompression.m in Sources */,
+				1D4A9DCC17BE6EB9002325B2 /* NSDictionary+LinqExtensions.m in Sources */,
+				1D4A9DD517BE7626002325B2 /* NSData+MSHashing.m in Sources */,
+				1D4A9DC817BE6EB9002325B2 /* NSArray+LinqExtensions.m in Sources */,
 				1D4BF0B717A8FFA8005080A2 /* MSStringManipulation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +398,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4A9DE117BE83D5002325B2 /* NSData+MSCompression.m in Sources */,
+				1D4A9DCD17BE6EB9002325B2 /* NSDictionary+LinqExtensions.m in Sources */,
+				1D4A9DD617BE7626002325B2 /* NSData+MSHashing.m in Sources */,
+				1D4A9DC917BE6EB9002325B2 /* NSArray+LinqExtensions.m in Sources */,
 				1D5CBA2E17BD4910009D58E2 /* MSStringManipulation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
