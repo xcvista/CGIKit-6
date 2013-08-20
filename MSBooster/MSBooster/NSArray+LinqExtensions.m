@@ -25,7 +25,8 @@
 {
     NSMutableArray* result = [[NSMutableArray alloc] initWithCapacity:self.count];
     for(id item in self) {
-        [result addObject:transform(item)];
+        id object = transform(item);
+        [result addObject:(object) ? object : [NSNull null]];
     }
     return result;
 }
