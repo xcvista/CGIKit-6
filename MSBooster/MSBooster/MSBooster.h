@@ -21,12 +21,6 @@
 #import <MSBooster/NSArray+LinqExtensions.h>
 #import <MSBooster/NSDictionary+LinqExtensions.h>
 
-#if !TARGET_OS_IPHONE
-
-#import <MSBooster/NSData+MSArchiving.h>
-
-#endif
-
 #endif
 
 #endif

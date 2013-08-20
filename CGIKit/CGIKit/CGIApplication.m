@@ -71,6 +71,7 @@ int MSNoReturn CGIApplicationMain(int argc,
     
     while ((context = [[CGIHTTPContext alloc] init]))
     {
+        context.delegate = [self applicationDelegateForContext:context];
         [_queue addOperation:context];
     }
     
@@ -100,10 +101,10 @@ int MSNoReturn CGIApplicationMain(int argc,
         [self.delegate applicationDidFinishLaunching:self];
 }
 
-- (id<CGIHTTPContextDelegate>)createDelegateForContext
+- (id<CGIHTTPContextDelegate>)applicationDelegateForContext:(CGIHTTPContext *)context
 {
-    if ([self.delegate respondsToSelector:@selector(createDelegateForContext:)])
-        return [self.delegate createDelegateForContext:self];
+    if ([self.delegate respondsToSelector:@selector(application:delegateForContext:)])
+        return [self.delegate application:self delegateForContext:context];
     else
         return nil;
 }

@@ -11,7 +11,8 @@
 
 @implementation TimeAppDelegate
 
-- (id<CGIHTTPContextDelegate>)createDelegateForContext:(CGIApplication *)application
+- (id<CGIHTTPContextDelegate>)application:(CGIApplication *)application
+                       delegateForContext:(CGIHTTPContext *)context
 {
     return [[TimeServerObject alloc] init];
 }
