@@ -173,7 +173,8 @@ shouldHandleRequest:(CGIHTTPRequest *)request;
  @return    The new context delegate. Return nil will make application delegate
             the handler of connection messages.
  */
-- (id<CGIHTTPContextDelegate>)createDelegateForContext:(CGIApplication *)application;
+- (id<CGIHTTPContextDelegate>)application:(CGIApplication *)application
+                       delegateForContext:(CGIHTTPContext *)context;
 
 @end
 
@@ -294,13 +295,15 @@ shouldHandleRequest:(CGIHTTPRequest *)request;
  */
 
 /**
- Called by the applicaiton to obtain new delegate for the context. The context
- delegate will catch connection events before application delegate does.
+ @brief     Called by the applicaiton to obtain new delegate for the context.
+ 
+ The context delegate will catch connection events before application delegate
+ does.
  
  @return    The new context delegate. Return nil will make application delegate
             the handler of connection messages.
  */
-- (id<CGIHTTPContextDelegate>)createDelegateForContext;
+- (id<CGIHTTPContextDelegate>)applicationDelegateForContext:(CGIHTTPContext *)context;
 
 @end
 

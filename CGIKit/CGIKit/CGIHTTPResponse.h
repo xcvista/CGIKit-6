@@ -88,28 +88,38 @@ enum
 
 @interface CGIHTTPResponse : NSObject
 
-- (void)prepareForSend;
+/**
+ @name      Response body
+ */
 
-#pragma mark - Response body
-
+/// HTTP header fields
 @property NSMutableDictionary *headers;
+/// HTTP response data
 @property NSMutableData *data;
 
-#pragma mark Accessors
+/**
+ @name      Accessors
+ */
+
 
 @property (nonatomic) CGIHTTPResponseCode statusCode;
 @property (nonatomic) NSUInteger contentLength;
 @property (nonatomic) NSString *contentType;
 @property (nonatomic) NSString *setCookie;
 
-#pragma mark - Easy error reporting methods
+/**
+ @name      Convenience methods
+ */
 
-- (void)setResponseWithTemplatePage:(NSString *)template substitutions:(NSDictionary *)substitutions;
+- (void)setResponseWithTemplatePage:(NSString *)template
+                      substitutions:(NSDictionary *)substitutions;
 - (void)setResponseWithError:(NSError *)error;
-- (void)setResponseWithError:(NSError *)error statusCode:(CGIHTTPResponseCode)statusCode;
+- (void)setResponseWithError:(NSError *)error
+                  statusCode:(CGIHTTPResponseCode)statusCode;
 - (void)setResponseWithException:(NSException *)exception;
 - (void)setResponseWithRedirection:(NSString *)target;
-- (void)setResponseWithRedirection:(NSString *)target statusCode:(CGIHTTPResponseCode)statusCode;
+- (void)setResponseWithRedirection:(NSString *)target
+                        statusCode:(CGIHTTPResponseCode)statusCode;
 - (void)setResponseWithRejectedRequest;
 - (void)setResponseWithRedactedResponse;
 

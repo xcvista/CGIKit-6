@@ -81,6 +81,8 @@
     NSMutableArray* distinctSet = [[NSMutableArray alloc] init];
     for (id item in self) {
         id keyForItem = keySelector(item);
+        if (!keyForItem)
+            keyForItem = [NSNull null];
         if (![keyValues containsObject:keyForItem]) {
             [distinctSet addObject:item];
             [keyValues addObject:keyForItem];
@@ -104,12 +106,12 @@
 
 - (id)firstOrNil
 {
-    return self.count == 0 ? nil : self[0];
+    return self.count ? nil : self[0];
 }
 
 - (id)lastOrNil
 {
-    return self.count == 0 ? nil : self[self.count-1];
+    return self.count ? nil : self[self.count-1];
 }
 
 - (NSArray*)skip:(NSUInteger)count
@@ -154,6 +156,8 @@
     NSMutableDictionary* groupedItems = [[NSMutableDictionary alloc] init];
     for (id item in self) {
         id key = groupKeySelector(item);
+        if (!key)
+            key = [NSNull null];
         NSMutableArray* arrayForKey;
         if (!(arrayForKey = [groupedItems objectForKey:key])){
             arrayForKey = [[NSMutableArray alloc] init];
@@ -170,6 +174,12 @@
     for (id item in self) {
         id key = keySelector(item);
         id value = valueSelector!=nil ? valueSelector(item) : item;
+        
+        if (!key)
+            key = [NSNull null];
+        if (!value)
+            value = [NSNull null];
+        
         [result setObject:value forKey:key];
     }
     return result;

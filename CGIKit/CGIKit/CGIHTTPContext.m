@@ -15,6 +15,12 @@
 static BOOL _CGI_Executed;
 static BOOL _CGI_Bad;
 
+@interface CGIHTTPResponse (CGIInternal)
+
+- (void)prepareForSend;
+
+@end
+
 @implementation CGIHTTPContext
 {
     FCGX_Request _fcgi_request;
@@ -24,7 +30,7 @@ static BOOL _CGI_Bad;
     id<CGIHTTPContextDelegate> _delegate;
 }
 
-- (id)initWithDelegate:(id<CGIHTTPContextDelegate>)delegate
+- (id)init
 {
     if (_CGI_Bad)
         return self = nil;
@@ -51,7 +57,7 @@ static BOOL _CGI_Bad;
                 _CGI_Executed = YES;
             }
         }
-        _delegate = delegate;
+        _delegate = nil;
     }
     return self;
 }

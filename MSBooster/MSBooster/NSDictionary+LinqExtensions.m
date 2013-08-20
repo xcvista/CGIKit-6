@@ -25,7 +25,11 @@
 {
     NSMutableDictionary* result = [[NSMutableDictionary alloc] init];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [result setObject:selector(key, obj) forKey:key];
+        id object = selector(key, obj);
+        if (!object)
+            object = [NSNull null];
+        
+        [result setObject:object forKey:key];
     }];
     return result;
 }
@@ -34,7 +38,10 @@
 {
     NSMutableArray* result = [[NSMutableArray alloc] init];
     [self enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-        [result addObject:selector(key, obj)];
+        id object = selector(key, obj);
+        if (!object)
+            object = [NSNull null];
+        [result addObject:object];
     }];
     return result;
 }

@@ -69,7 +69,7 @@ int MSNoReturn CGIApplicationMain(int argc,
     
     CGIHTTPContext *context = nil;
     
-    while ((context = [[CGIHTTPContext alloc] initWithDelegate:[self createDelegateForContext]]))
+    while ((context = [[CGIHTTPContext alloc] init]))
     {
         [_queue addOperation:context];
     }

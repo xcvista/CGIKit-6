@@ -39,10 +39,11 @@
  */
 
 /**
- Called when the context received a request. You can reject a request with this
- method, and a rejected request will be responded with HTTP 501 Not Implemented
- response. Also, you should set up environemnt of handling the request in this 
- method.
+ @brief     Called when the context received a request.
+ 
+ You can reject a request with this method, and a rejected request will be
+ responded with HTTP 501 Not Implemented response. Also, you should set up
+ environemnt of handling the request in this method.
  
  @param     context             The context object that sent this delegate
                                 message.
@@ -60,9 +61,10 @@
 - (void)handleHTTPContext:(CGIHTTPContext *)context;
 
 /**
- Called when an application is going to send a response. You can redact a
- response by returning NO from this method, and a redacted response will be
- replaced with a HTTP 403 Forbidden response.
+ @brief     Called when an application is going to send a response.
+ 
+ You can redact a response by returning NO from this method, and a redacted
+ response will be replaced with a HTTP 403 Forbidden response.
  
  @param     context             The context object that sent this delegate
                                 message.
@@ -85,15 +87,61 @@
 
 @interface CGIHTTPContext : NSOperation
 
+/**
+ @brief     Delegate of the HTTP context.
+ 
+ The context delegate will handle the connection events before application
+ delegate. Context delegate methods are guaranteed to be called on the same
+ thread for each context object.
+ */
 @property id<CGIHTTPContextDelegate> delegate;
+
+/**
+ The HTTP request.
+ */
 @property (readonly) CGIHTTPRequest *request;
+
+/**
+ The HTTP response.
+ */
 @property (readonly) CGIHTTPResponse *response;
 
-- (id)initWithDelegate:(id<CGIHTTPContextDelegate>)delegate;
-
+/**
+ @brief     Called when the context received a request.
+ 
+ You can reject a request with this method, and a rejected request will be
+ responded with HTTP 501 Not Implemented response. Also, you should set up
+ environemnt of handling the request in this method.
+ 
+ @param     request             The request to be handled.
+ @return    Whether the input should be handled. You can reject the request by
+            returning NO.
+ */
 - (BOOL)contextShouldHandleRequest:(CGIHTTPRequest *)request;
+
+/**
+ Called to handle the HTTP request and generate the response.
+ */
 - (void)handleHTTPContext;
+
+/**
+ @brief     Called when an application is going to send a response.
+ 
+ You can redact a response by returning NO from this method, and a redacted
+ response will be replaced with a HTTP 403 Forbidden response.
+ 
+ @param     response            The response to be handled.
+ @return    Whether the response should be sent. Return NO to redact the
+            response.
+ */
+
 - (BOOL)contextShouldSendResponse:(CGIHTTPResponse *)response;
+
+/**
+ Called when an application finished sending a response.
+ 
+ @param     response            The response to be handled.
+ */
 - (void)contextDidSendResponse:(CGIHTTPResponse *)response;
 
 @end
