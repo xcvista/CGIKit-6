@@ -8,8 +8,14 @@
 
 #import "TimeAppDelegate.h"
 #import "TimeServerObject.h"
+#import <CGIJSONObject/CGIJSONObject.h>
 
 @implementation TimeAppDelegate
+
+- (void)applicationDidFinishLaunching:(CGIApplication *)application
+{
+    [NSDate setEmitDataType:CGIDateEmitString];
+}
 
 - (id<CGIHTTPContextDelegate>)application:(CGIApplication *)application
                        delegateForContext:(CGIHTTPContext *)context

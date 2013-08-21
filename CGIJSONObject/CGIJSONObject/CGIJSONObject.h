@@ -14,6 +14,7 @@
 #import <CGIJSONObject/NSObject+CGIJSONSerializable.h>
 #import <CGIJSONObject/NSArray+CGIJSONSerializable.h>
 #import <CGIJSONObject/NSData+CGIJSONSerializable.h>
+#import <CGIJSONObject/NSDate+CGIJSONSerializable.h>
 
 #import <CGIJSONObject/CGIRemoteObject.h>
 #import <CGIJSONObject/CGIRemoteConnection.h>

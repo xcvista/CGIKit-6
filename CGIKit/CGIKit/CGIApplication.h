@@ -49,7 +49,7 @@ MSConstantString(CGIApplicationName, CGIApplication);
 /**
  Application delegate for the Web application.
  
- ## Application delegate or Context delegate?
+ ### Application delegate or Context delegate?
  
  Generally speaking, you should use context delegate for a single session, while
  reserve the application delegate for Application-wide state and management.
@@ -307,7 +307,7 @@ shouldHandleRequest:(CGIHTTPRequest *)request;
 
 @end
 
-#endif
+#endif // __OBJC__
 
 __END_DECLS
 
