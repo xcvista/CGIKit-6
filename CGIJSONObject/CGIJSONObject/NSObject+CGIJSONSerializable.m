@@ -104,7 +104,8 @@
             id object = nil;
             if ([encodedObject isKindOfClass:[NSArray class]])
             {
-                object = [[NSArray alloc] initWithArray:encodedObject
+                Class c = ([class isSubclassOfClass:[NSMutableArray class]]) ? [NSMutableArray class] : [NSArray class];
+                object = [[c alloc] initWithArray:encodedObject
                                         classForMembers:class];
             }
             else if ([object isKindOfClass:[NSNull class]])
