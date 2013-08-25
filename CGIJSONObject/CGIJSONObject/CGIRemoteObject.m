@@ -100,7 +100,7 @@ extern CGIRemoteConnection *_CGI_defaultRemoteConnection;
         
     } while (0);
     
-    value = objc_retainAutoreleaseReturnValue(value);
+    value = objc_retain(value);
     [anInvocation setReturnValue:&value];
 }
 
