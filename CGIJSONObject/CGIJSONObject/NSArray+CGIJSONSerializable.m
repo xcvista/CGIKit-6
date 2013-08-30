@@ -42,8 +42,7 @@
 
 - (id)initWithSerializedObject:(id)serializedObject
 {
-    self = nil;
-    return ([serializedObject isKindOfClass:[NSArray class]]) ? serializedObject : nil;
+    return ([serializedObject isKindOfClass:[NSArray class]]) ? [self initWithArray:serializedObject] : nil;
 }
 
 - (id)serializedObject
