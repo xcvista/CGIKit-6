@@ -104,8 +104,12 @@
             id object = nil;
             if ([encodedObject isKindOfClass:[NSArray class]])
             {
-                object = [[NSArray alloc] initWithArray:encodedObject
-                                        classForMembers:class];
+                Class propertyClass = [self classForProperty:key];
+                if (![propertyClass isSubclassOfClass:[NSArray class]])
+                    propertyClass = [NSArray class];
+                
+                object = [[propertyClass alloc] initWithArray:encodedObject
+                                              classForMembers:class];
             }
             else if ([object isKindOfClass:[NSNull class]])
             {
@@ -149,26 +153,31 @@
     }
     else
     {
-        objc_property_t property = class_getProperty([self class], [key UTF8String]);
-        NSArray *attributes = [@(property_getAttributes(property)) componentsSeparatedByString:@","];
-        NSString *className = NSStringFromClass([_CGI_DefaultClassMarker class]);
-        for (NSString *attribute in attributes)
+        return [self classForProperty:key];
+    }
+}
+
+- (Class)classForProperty:(NSString *)key
+{
+    objc_property_t property = class_getProperty([self class], [key UTF8String]);
+    NSArray *attributes = [@(property_getAttributes(property)) componentsSeparatedByString:@","];
+    NSString *className = NSStringFromClass([_CGI_DefaultClassMarker class]);
+    for (NSString *attribute in attributes)
+    {
+        if ([attribute hasPrefix:@"T"])
         {
-            if ([attribute hasPrefix:@"T"])
+            unichar ch = [attribute characterAtIndex:1];
+            if (ch == '@' && [attribute length] > 4)
             {
-                unichar ch = [attribute characterAtIndex:1];
-                if (ch == '@' && [attribute length] > 4)
-                {
-                    className = [attribute substringWithRange:NSMakeRange(3, [attribute length] - 4)];
-                }
-                else
-                {
-                    className = NSStringFromClass([NSNumber class]);
-                }
+                className = [attribute substringWithRange:NSMakeRange(3, [attribute length] - 4)];
+            }
+            else
+            {
+                className = NSStringFromClass([NSNumber class]);
             }
         }
-        return NSClassFromString(className);
     }
+    return NSClassFromString(className);
 }
 
 - (NSString *)serializationKeyForKey:(NSString *)key

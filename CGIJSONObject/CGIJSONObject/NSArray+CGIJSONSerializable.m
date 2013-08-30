@@ -19,7 +19,7 @@
         id object = nil;
         if ([encodedObject isKindOfClass:[NSArray class]])
         {
-            object = [[NSArray alloc] initWithArray:encodedObject
+            object = [[[self class] alloc] initWithArray:encodedObject
                                     classForMembers:class];
         }
         else

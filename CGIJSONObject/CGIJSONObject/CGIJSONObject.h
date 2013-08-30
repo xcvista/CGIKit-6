@@ -12,6 +12,7 @@
 #import <MSBooster/MSBooster.h>
 
 #import <CGIJSONObject/NSObject+CGIJSONSerializable.h>
+#import <CGIJSONObject/NSObject+CGIJSONSerializing.h>
 #import <CGIJSONObject/NSArray+CGIJSONSerializable.h>
 #import <CGIJSONObject/NSData+CGIJSONSerializable.h>
 #import <CGIJSONObject/NSDate+CGIJSONSerializable.h>
