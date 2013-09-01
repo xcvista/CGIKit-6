@@ -94,11 +94,11 @@
 #       define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
 #   endif
 #endif // !defined(NS_ENUM)
-#ifndef NS_OPTION
-#   ifdef CF_OPTION
-#       define NS_OPTION(_type, _name) CF_OPTION(_type, _name)
+#ifndef NS_OPTIONS
+#   ifdef CF_OPTIONS
+#       define NS_OPTIONS(_type, _name) CF_OPTIONS(_type, _name)
 #   else
-#       define NS_OPTION(_type, _name) enum _name : _type _name; enum _name : _type
+#       define NS_OPTIONS(_type, _name) enum _name : _type _name; enum _name : _type
 #   endif
 #endif // !defined(NS_ENUM)
 

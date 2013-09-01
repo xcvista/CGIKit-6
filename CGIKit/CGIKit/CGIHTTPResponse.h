@@ -45,7 +45,9 @@ typedef NS_ENUM(NSUInteger, CGIHTTPResponseCode)
     CGIHTTPResponseSeeOther,
     /// The requested content is not modified since last request.
     CGIHTTPResponseNotModified,
+    /// A proxy server is required to access the given content.
     CGIHTTPResponseUseProxy,
+    /// The content is temoprarily moved.
     CGIHTTPResponseTemporaryRedirect = 307,
     
     /// The request is malformed.
@@ -60,11 +62,17 @@ typedef NS_ENUM(NSUInteger, CGIHTTPResponseCode)
     CGIHTTPResponseNotFound,
     /// The HTTP method is not allowed on the server.
     CGIHTTPResponseMethodNotAllowed,
+    /// The request is not acceptable to the server.
     CGIHTTPResponseNotAcceptable,
+    /// The request must carry proxy authentication information.
     CGIHTTPResponseProxyAuthenticationRequired,
+    /// Requests conflicted with each other.
     CGIHTTPResponseConflict,
+    /// The request file is gome permanantly and cannot be found back.
     CGIHTTPResponseGone,
+    /// The request does not have a length header which is required.
     CGIHTTPResponseLengthRequired,
+    /// Preconditions indicated in the header failed to match.
     CGIHTTPResponsePreconditionFailed,
     CGIHTTPResponseRequestEntityTooLarge,
     CGIHTTPResponseRequestURITooLong,
@@ -92,19 +100,22 @@ enum
  @name      Response body
  */
 
-/// HTTP header fields
+/// HTTP header fields.
 @property NSMutableDictionary *headers;
-/// HTTP response data
+/// HTTP response data.
 @property NSMutableData *data;
 
 /**
  @name      Accessors
  */
 
-
+/// HTTP response code.
 @property (nonatomic) CGIHTTPResponseCode statusCode;
+/// Length of the HTTP response object.
 @property (nonatomic) NSUInteger contentLength;
+/// MIME type of the response data.
 @property (nonatomic) NSString *contentType;
+/// Cookies to be set at the server.
 @property (nonatomic) NSString *setCookie;
 
 /**

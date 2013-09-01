@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D640D0E17D2EDBE004C8C88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D640D0D17D2EDBE004C8C88 /* Cocoa.framework */; };
+		1D640D1817D2EDBE004C8C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D640D1617D2EDBE004C8C88 /* InfoPlist.strings */; };
+		1D640D2317D2EDBE004C8C88 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D640D2217D2EDBE004C8C88 /* XCTest.framework */; };
+		1D640D2417D2EDBE004C8C88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D640D0D17D2EDBE004C8C88 /* Cocoa.framework */; };
+		1D640D2717D2EDBE004C8C88 /* WebUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D640D0A17D2EDBE004C8C88 /* WebUIKit.framework */; };
+		1D640D2D17D2EDBE004C8C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D640D2B17D2EDBE004C8C88 /* InfoPlist.strings */; };
+		1D640D2F17D2EDBE004C8C88 /* WebUIKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D640D2E17D2EDBE004C8C88 /* WebUIKitTests.m */; };
+		1D640D3817D2EE85004C8C88 /* CGIResponder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D640D3617D2EE85004C8C88 /* CGIResponder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D640D3917D2EE85004C8C88 /* CGIResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D640D3717D2EE85004C8C88 /* CGIResponder.m */; };
+		1D640D3C17D2F01A004C8C88 /* CGIView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D640D3A17D2F01A004C8C88 /* CGIView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D640D3D17D2F01A004C8C88 /* CGIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D640D3B17D2F01A004C8C88 /* CGIView.m */; };
+		1D640D3E17D2F031004C8C88 /* WebUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D640D1A17D2EDBE004C8C88 /* WebUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D640D4117D2F9EC004C8C88 /* CGIPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D640D3F17D2F9EC004C8C88 /* CGIPage.h */; };
+		1D640D4217D2F9EC004C8C88 /* CGIPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D640D4017D2F9EC004C8C88 /* CGIPage.m */; };
+		1D640D4517D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D640D4317D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h */; };
+		1D640D4617D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D640D4417D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D640D2517D2EDBE004C8C88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D640CF517D2EDAE004C8C88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D640D0917D2EDBE004C8C88;
+			remoteInfo = WebUIKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D640D0A17D2EDBE004C8C88 /* WebUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D640D0D17D2EDBE004C8C88 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		1D640D1017D2EDBE004C8C88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D640D1117D2EDBE004C8C88 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1D640D1217D2EDBE004C8C88 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		1D640D1517D2EDBE004C8C88 /* WebUIKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebUIKit-Info.plist"; sourceTree = "<group>"; };
+		1D640D1717D2EDBE004C8C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D640D1917D2EDBE004C8C88 /* WebUIKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebUIKit-Prefix.pch"; sourceTree = "<group>"; };
+		1D640D1A17D2EDBE004C8C88 /* WebUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebUIKit.h; sourceTree = "<group>"; };
+		1D640D2117D2EDBE004C8C88 /* WebUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D640D2217D2EDBE004C8C88 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1D640D2A17D2EDBE004C8C88 /* WebUIKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebUIKitTests-Info.plist"; sourceTree = "<group>"; };
+		1D640D2C17D2EDBE004C8C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D640D2E17D2EDBE004C8C88 /* WebUIKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebUIKitTests.m; sourceTree = "<group>"; };
+		1D640D3617D2EE85004C8C88 /* CGIResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIResponder.h; sourceTree = "<group>"; };
+		1D640D3717D2EE85004C8C88 /* CGIResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIResponder.m; sourceTree = "<group>"; };
+		1D640D3A17D2F01A004C8C88 /* CGIView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIView.h; sourceTree = "<group>"; };
+		1D640D3B17D2F01A004C8C88 /* CGIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIView.m; sourceTree = "<group>"; };
+		1D640D3F17D2F9EC004C8C88 /* CGIPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIPage.h; sourceTree = "<group>"; };
+		1D640D4017D2F9EC004C8C88 /* CGIPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIPage.m; sourceTree = "<group>"; };
+		1D640D4317D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CGICSSWriter.h"; sourceTree = "<group>"; };
+		1D640D4417D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CGICSSWriter.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D640D0617D2EDBE004C8C88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D640D0E17D2EDBE004C8C88 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D640D1E17D2EDBE004C8C88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D640D2417D2EDBE004C8C88 /* Cocoa.framework in Frameworks */,
+				1D640D2317D2EDBE004C8C88 /* XCTest.framework in Frameworks */,
+				1D640D2717D2EDBE004C8C88 /* WebUIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D640CF417D2EDAE004C8C88 = {
+			isa = PBXGroup;
+			children = (
+				1D640D1317D2EDBE004C8C88 /* WebUIKit */,
+				1D640D2817D2EDBE004C8C88 /* WebUIKitTests */,
+				1D640D0C17D2EDBE004C8C88 /* Frameworks */,
+				1D640D0B17D2EDBE004C8C88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D640D0B17D2EDBE004C8C88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D640D0A17D2EDBE004C8C88 /* WebUIKit.framework */,
+				1D640D2117D2EDBE004C8C88 /* WebUIKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D640D0C17D2EDBE004C8C88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D640D0D17D2EDBE004C8C88 /* Cocoa.framework */,
+				1D640D2217D2EDBE004C8C88 /* XCTest.framework */,
+				1D640D0F17D2EDBE004C8C88 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D640D0F17D2EDBE004C8C88 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D640D1017D2EDBE004C8C88 /* Foundation.framework */,
+				1D640D1117D2EDBE004C8C88 /* CoreData.framework */,
+				1D640D1217D2EDBE004C8C88 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		1D640D1317D2EDBE004C8C88 /* WebUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				1D640D1A17D2EDBE004C8C88 /* WebUIKit.h */,
+				1D640D3617D2EE85004C8C88 /* CGIResponder.h */,
+				1D640D3717D2EE85004C8C88 /* CGIResponder.m */,
+				1D640D3A17D2F01A004C8C88 /* CGIView.h */,
+				1D640D3B17D2F01A004C8C88 /* CGIView.m */,
+				1D640D3F17D2F9EC004C8C88 /* CGIPage.h */,
+				1D640D4017D2F9EC004C8C88 /* CGIPage.m */,
+				1D640D4317D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h */,
+				1D640D4417D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m */,
+				1D640D1417D2EDBE004C8C88 /* Supporting Files */,
+			);
+			path = WebUIKit;
+			sourceTree = "<group>";
+		};
+		1D640D1417D2EDBE004C8C88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D640D1517D2EDBE004C8C88 /* WebUIKit-Info.plist */,
+				1D640D1617D2EDBE004C8C88 /* InfoPlist.strings */,
+				1D640D1917D2EDBE004C8C88 /* WebUIKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D640D2817D2EDBE004C8C88 /* WebUIKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D640D2E17D2EDBE004C8C88 /* WebUIKitTests.m */,
+				1D640D2917D2EDBE004C8C88 /* Supporting Files */,
+			);
+			path = WebUIKitTests;
+			sourceTree = "<group>";
+		};
+		1D640D2917D2EDBE004C8C88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D640D2A17D2EDBE004C8C88 /* WebUIKitTests-Info.plist */,
+				1D640D2B17D2EDBE004C8C88 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D640D0717D2EDBE004C8C88 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D640D4517D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h in Headers */,
+				1D640D3E17D2F031004C8C88 /* WebUIKit.h in Headers */,
+				1D640D3817D2EE85004C8C88 /* CGIResponder.h in Headers */,
+				1D640D3C17D2F01A004C8C88 /* CGIView.h in Headers */,
+				1D640D4117D2F9EC004C8C88 /* CGIPage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D640D0917D2EDBE004C8C88 /* WebUIKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D640D3017D2EDBE004C8C88 /* Build configuration list for PBXNativeTarget "WebUIKit" */;
+			buildPhases = (
+				1D640D0517D2EDBE004C8C88 /* Sources */,
+				1D640D0617D2EDBE004C8C88 /* Frameworks */,
+				1D640D0717D2EDBE004C8C88 /* Headers */,
+				1D640D0817D2EDBE004C8C88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebUIKit;
+			productName = WebUIKit;
+			productReference = 1D640D0A17D2EDBE004C8C88 /* WebUIKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1D640D2017D2EDBE004C8C88 /* WebUIKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D640D3317D2EDBE004C8C88 /* Build configuration list for PBXNativeTarget "WebUIKitTests" */;
+			buildPhases = (
+				1D640D1D17D2EDBE004C8C88 /* Sources */,
+				1D640D1E17D2EDBE004C8C88 /* Frameworks */,
+				1D640D1F17D2EDBE004C8C88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D640D2617D2EDBE004C8C88 /* PBXTargetDependency */,
+			);
+			name = WebUIKitTests;
+			productName = WebUIKitTests;
+			productReference = 1D640D2117D2EDBE004C8C88 /* WebUIKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D640CF517D2EDAE004C8C88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D640D2017D2EDBE004C8C88 = {
+						TestTargetID = 1D640D0917D2EDBE004C8C88;
+					};
+				};
+			};
+			buildConfigurationList = 1D640CF817D2EDAE004C8C88 /* Build configuration list for PBXProject "WebUIKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D640CF417D2EDAE004C8C88;
+			productRefGroup = 1D640D0B17D2EDBE004C8C88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D640D0917D2EDBE004C8C88 /* WebUIKit */,
+				1D640D2017D2EDBE004C8C88 /* WebUIKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D640D0817D2EDBE004C8C88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D640D1817D2EDBE004C8C88 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D640D1F17D2EDBE004C8C88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D640D2D17D2EDBE004C8C88 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D640D0517D2EDBE004C8C88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D640D3D17D2F01A004C8C88 /* CGIView.m in Sources */,
+				1D640D4617D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m in Sources */,
+				1D640D3917D2EE85004C8C88 /* CGIResponder.m in Sources */,
+				1D640D4217D2F9EC004C8C88 /* CGIPage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D640D1D17D2EDBE004C8C88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D640D2F17D2EDBE004C8C88 /* WebUIKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D640D2617D2EDBE004C8C88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D640D0917D2EDBE004C8C88 /* WebUIKit */;
+			targetProxy = 1D640D2517D2EDBE004C8C88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D640D1617D2EDBE004C8C88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D640D1717D2EDBE004C8C88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1D640D2B17D2EDBE004C8C88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D640D2C17D2EDBE004C8C88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D640CF917D2EDAE004C8C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		1D640CFA17D2EDAE004C8C88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		1D640D3117D2EDBE004C8C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebUIKit/WebUIKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "WebUIKit/WebUIKit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		1D640D3217D2EDBE004C8C88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebUIKit/WebUIKit-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "WebUIKit/WebUIKit-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		1D640D3417D2EDBE004C8C88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebUIKit.framework/Versions/A/WebUIKit";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebUIKit/WebUIKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "WebUIKitTests/WebUIKitTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		1D640D3517D2EDBE004C8C88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WebUIKit.framework/Versions/A/WebUIKit";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WebUIKit/WebUIKit-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "WebUIKitTests/WebUIKitTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D640CF817D2EDAE004C8C88 /* Build configuration list for PBXProject "WebUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D640CF917D2EDAE004C8C88 /* Debug */,
+				1D640CFA17D2EDAE004C8C88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D640D3017D2EDBE004C8C88 /* Build configuration list for PBXNativeTarget "WebUIKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D640D3117D2EDBE004C8C88 /* Debug */,
+				1D640D3217D2EDBE004C8C88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D640D3317D2EDBE004C8C88 /* Build configuration list for PBXNativeTarget "WebUIKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D640D3417D2EDBE004C8C88 /* Debug */,
+				1D640D3517D2EDBE004C8C88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D640CF517D2EDAE004C8C88 /* Project object */;
+}

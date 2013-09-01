@@ -88,6 +88,10 @@
 @interface CGIHTTPContext : NSOperation
 
 /**
+ @name      Context delegate
+ */
+
+/**
  @brief     Delegate of the HTTP context.
  
  The context delegate will handle the connection events before application
@@ -95,6 +99,10 @@
  thread for each context object.
  */
 @property id<CGIHTTPContextDelegate> delegate;
+
+/**
+ @name      HTTP context.
+ */
 
 /**
  The HTTP request.
@@ -105,6 +113,10 @@
  The HTTP response.
  */
 @property (readonly) CGIHTTPResponse *response;
+
+/**
+ @name      Context lifecycle.
+ */
 
 /**
  @brief     Called when the context received a request.

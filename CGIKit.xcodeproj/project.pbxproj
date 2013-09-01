@@ -71,6 +71,7 @@
 		1D61211117BA040700C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; explicitFileType = sourcecode.make; path = GNUmakefile; sourceTree = "<group>"; usesTabs = 1; };
 		1D61211417BA092300C2AD14 /* framework.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = framework.make; sourceTree = "<group>"; usesTabs = 1; };
 		1D61211817BA16B500C2AD14 /* tool.make */ = {isa = PBXFileReference; lastKnownFileType = text; path = tool.make; sourceTree = "<group>"; };
+		1D640CFB17D2EDAE004C8C88 /* WebUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WebUIKit.xcodeproj; path = WebUIKit/WebUIKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -85,6 +86,7 @@
 		1D4BF06317A8FE92005080A2 = {
 			isa = PBXGroup;
 			children = (
+				1D640CFB17D2EDAE004C8C88 /* WebUIKit.xcodeproj */,
 				1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */,
 				1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */,
 				1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */,
@@ -143,6 +145,13 @@
 			name = Makefiles;
 			sourceTree = "<group>";
 		};
+		1D640CFC17D2EDAE004C8C88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
@@ -176,6 +185,10 @@
 				{
 					ProductGroup = 1D4BF0AC17A8FF30005080A2 /* Products */;
 					ProjectRef = 1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */;
+				},
+				{
+					ProductGroup = 1D640CFC17D2EDAE004C8C88 /* Products */;
+					ProjectRef = 1D640CFB17D2EDAE004C8C88 /* WebUIKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
