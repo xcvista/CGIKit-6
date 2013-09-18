@@ -72,7 +72,24 @@
 
 - (NSString *)HTMLRepresentation
 {
+    NSMutableString *session = [NSMutableString stringWithFormat:@"<div"];
     
+    if ([self.ID length])
+        [session appendFormat:@" id=\"%@\"", self.ID];
+    if ([self.classes count])
+        [session appendFormat:@" class=\"%@\"", [self.classes componentsJoinedByString:@" "]];
+    if ([self.style count])
+        ;
+    [session appendString:@">\n"];
+    
+    for (CGIView *subview in _subviews)
+    {
+        [session appendString:[subview HTMLRepresentation]];
+    }
+    
+    [session appendString:@"</div>\n"];
+    
+    return [NSString stringWithString:session];
 }
 
 @end

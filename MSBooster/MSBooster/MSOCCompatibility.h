@@ -15,11 +15,20 @@
 #if __has_include(<objc/arc.h>)
 #   include <objc/arc.h>
 #else // !__has_include(<objc/arc.h>)
+/**
+ Retains an object.
+ */
 extern id objc_retain(id);
+
+/**
+ Releases an object.
+ */
 extern void objc_release(id);
+
+/**
+ Add the object into the current autorelease pool.
+ */
 extern id objc_autorelease(id);
-extern id objc_autoreleaseReturnValue(id);
-extern id objc_retainAutoreleaseReturnValue(id);
 #endif // __has_include(<objc/arc.h>)
 
 #if __has_include(<CoreFoundation/CoreFoundaton.h>)

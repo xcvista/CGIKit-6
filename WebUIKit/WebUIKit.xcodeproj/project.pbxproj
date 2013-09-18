@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D48768A17D4528D0040E738 /* NSDictionary+CGIStylesheet.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D48768817D4528D0040E738 /* NSDictionary+CGIStylesheet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D48768B17D4528D0040E738 /* NSDictionary+CGIStylesheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48768917D4528D0040E738 /* NSDictionary+CGIStylesheet.m */; settings = {COMPILER_FLAGS = "-Wno-ambiguous-macro"; }; };
+		1D48768E17D452A40040E738 /* NSAttributedString+CGIStyling.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D48768C17D452A40040E738 /* NSAttributedString+CGIStyling.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D48768F17D452A40040E738 /* NSAttributedString+CGIStyling.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D48768D17D452A40040E738 /* NSAttributedString+CGIStyling.m */; };
 		1D640D0E17D2EDBE004C8C88 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D640D0D17D2EDBE004C8C88 /* Cocoa.framework */; };
 		1D640D1817D2EDBE004C8C88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D640D1617D2EDBE004C8C88 /* InfoPlist.strings */; };
 		1D640D2317D2EDBE004C8C88 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D640D2217D2EDBE004C8C88 /* XCTest.framework */; };
@@ -21,8 +25,6 @@
 		1D640D3E17D2F031004C8C88 /* WebUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D640D1A17D2EDBE004C8C88 /* WebUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D640D4117D2F9EC004C8C88 /* CGIPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D640D3F17D2F9EC004C8C88 /* CGIPage.h */; };
 		1D640D4217D2F9EC004C8C88 /* CGIPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D640D4017D2F9EC004C8C88 /* CGIPage.m */; };
-		1D640D4517D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D640D4317D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h */; };
-		1D640D4617D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D640D4417D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D48768817D4528D0040E738 /* NSDictionary+CGIStylesheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CGIStylesheet.h"; sourceTree = "<group>"; };
+		1D48768917D4528D0040E738 /* NSDictionary+CGIStylesheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CGIStylesheet.m"; sourceTree = "<group>"; };
+		1D48768C17D452A40040E738 /* NSAttributedString+CGIStyling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CGIStyling.h"; sourceTree = "<group>"; };
+		1D48768D17D452A40040E738 /* NSAttributedString+CGIStyling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CGIStyling.m"; sourceTree = "<group>"; };
 		1D640D0A17D2EDBE004C8C88 /* WebUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D640D0D17D2EDBE004C8C88 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1D640D1017D2EDBE004C8C88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,7 +49,6 @@
 		1D640D1217D2EDBE004C8C88 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1D640D1517D2EDBE004C8C88 /* WebUIKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WebUIKit-Info.plist"; sourceTree = "<group>"; };
 		1D640D1717D2EDBE004C8C88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1D640D1917D2EDBE004C8C88 /* WebUIKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WebUIKit-Prefix.pch"; sourceTree = "<group>"; };
 		1D640D1A17D2EDBE004C8C88 /* WebUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebUIKit.h; sourceTree = "<group>"; };
 		1D640D2117D2EDBE004C8C88 /* WebUIKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebUIKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D640D2217D2EDBE004C8C88 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,8 +61,6 @@
 		1D640D3B17D2F01A004C8C88 /* CGIView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIView.m; sourceTree = "<group>"; };
 		1D640D3F17D2F9EC004C8C88 /* CGIPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIPage.h; sourceTree = "<group>"; };
 		1D640D4017D2F9EC004C8C88 /* CGIPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIPage.m; sourceTree = "<group>"; };
-		1D640D4317D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CGICSSWriter.h"; sourceTree = "<group>"; };
-		1D640D4417D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CGICSSWriter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +134,10 @@
 				1D640D3B17D2F01A004C8C88 /* CGIView.m */,
 				1D640D3F17D2F9EC004C8C88 /* CGIPage.h */,
 				1D640D4017D2F9EC004C8C88 /* CGIPage.m */,
-				1D640D4317D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h */,
-				1D640D4417D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m */,
+				1D48768817D4528D0040E738 /* NSDictionary+CGIStylesheet.h */,
+				1D48768917D4528D0040E738 /* NSDictionary+CGIStylesheet.m */,
+				1D48768C17D452A40040E738 /* NSAttributedString+CGIStyling.h */,
+				1D48768D17D452A40040E738 /* NSAttributedString+CGIStyling.m */,
 				1D640D1417D2EDBE004C8C88 /* Supporting Files */,
 			);
 			path = WebUIKit;
@@ -143,7 +148,6 @@
 			children = (
 				1D640D1517D2EDBE004C8C88 /* WebUIKit-Info.plist */,
 				1D640D1617D2EDBE004C8C88 /* InfoPlist.strings */,
-				1D640D1917D2EDBE004C8C88 /* WebUIKit-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -173,11 +177,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D640D4517D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.h in Headers */,
 				1D640D3E17D2F031004C8C88 /* WebUIKit.h in Headers */,
 				1D640D3817D2EE85004C8C88 /* CGIResponder.h in Headers */,
 				1D640D3C17D2F01A004C8C88 /* CGIView.h in Headers */,
+				1D48768E17D452A40040E738 /* NSAttributedString+CGIStyling.h in Headers */,
 				1D640D4117D2F9EC004C8C88 /* CGIPage.h in Headers */,
+				1D48768A17D4528D0040E738 /* NSDictionary+CGIStylesheet.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +281,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D640D3D17D2F01A004C8C88 /* CGIView.m in Sources */,
-				1D640D4617D2FA5D004C8C88 /* NSDictionary+CGICSSWriter.m in Sources */,
 				1D640D3917D2EE85004C8C88 /* CGIResponder.m in Sources */,
+				1D48768B17D4528D0040E738 /* NSDictionary+CGIStylesheet.m in Sources */,
+				1D48768F17D452A40040E738 /* NSAttributedString+CGIStyling.m in Sources */,
 				1D640D4217D2F9EC004C8C88 /* CGIPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,8 +363,6 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WebUIKit/WebUIKit-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -404,8 +408,6 @@
 				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WebUIKit/WebUIKit-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -533,6 +535,7 @@
 				1D640D3217D2EDBE004C8C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D640D3317D2EDBE004C8C88 /* Build configuration list for PBXNativeTarget "WebUIKitTests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +544,7 @@
 				1D640D3517D2EDBE004C8C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

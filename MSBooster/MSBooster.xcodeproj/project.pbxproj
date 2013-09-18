@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D03B5DE17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D03B5DC17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D03B5DF17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B5DD17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m */; };
+		1D03B5E217EA0E830067D035 /* NSData+MSHMAC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D03B5E017EA0E830067D035 /* NSData+MSHMAC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D03B5E317EA0E830067D035 /* NSData+MSHMAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B5E117EA0E830067D035 /* NSData+MSHMAC.m */; };
+		1D03B5E417EA17060067D035 /* NSData+MSHMAC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D03B5E017EA0E830067D035 /* NSData+MSHMAC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D03B5E517EA17060067D035 /* NSData+MSTrivialCryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D03B5DC17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D03B5EC17EA1C060067D035 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D03B5EB17EA1C060067D035 /* SenTestingKit.framework */; };
+		1D03B5F217EA1C060067D035 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D03B5F017EA1C060067D035 /* InfoPlist.strings */; };
+		1D03B5FC17EA1C450067D035 /* MSDataEncryptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B5FB17EA1C450067D035 /* MSDataEncryptionTest.m */; };
+		1D03B5FD17EA1E080067D035 /* NSData+MSTrivialCryptography.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B5DD17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m */; };
+		1D03B5FE17EA1E0D0067D035 /* NSData+MSHMAC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B5E117EA0E830067D035 /* NSData+MSHMAC.m */; };
+		1D03B5FF17EA1E320067D035 /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF07D17A8FF30005080A2 /* MSBooster.framework */; };
 		1D4A9DC417BE6EB9002325B2 /* COPYING.MIT in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */; };
 		1D4A9DC517BE6EB9002325B2 /* COPYING.MIT in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */; };
 		1D4A9DC617BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DBF17BE6EB9002325B2 /* NSArray+LinqExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -49,6 +61,16 @@
 		1D5CBA2E17BD4910009D58E2 /* MSStringManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4BF0B517A8FFA8005080A2 /* MSStringManipulation.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1D03B5F617EA1C060067D035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF07417A8FF30005080A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D4BF07C17A8FF30005080A2;
+			remoteInfo = MSBooster;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		1D4BF0BC17A905E4005080A2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -63,6 +85,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D03B5DC17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MSTrivialCryptography.h"; sourceTree = "<group>"; };
+		1D03B5DD17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MSTrivialCryptography.m"; sourceTree = "<group>"; };
+		1D03B5E017EA0E830067D035 /* NSData+MSHMAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MSHMAC.h"; sourceTree = "<group>"; };
+		1D03B5E117EA0E830067D035 /* NSData+MSHMAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MSHMAC.m"; sourceTree = "<group>"; };
+		1D03B5EA17EA1C060067D035 /* MSBooster Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MSBooster Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D03B5EB17EA1C060067D035 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1D03B5EF17EA1C060067D035 /* MSBooster Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSBooster Tests-Info.plist"; sourceTree = "<group>"; };
+		1D03B5F117EA1C060067D035 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1D03B5FB17EA1C450067D035 /* MSDataEncryptionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSDataEncryptionTest.m; sourceTree = "<group>"; };
 		1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING.MIT; sourceTree = "<group>"; };
 		1D4A9DBF17BE6EB9002325B2 /* NSArray+LinqExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LinqExtensions.h"; sourceTree = "<group>"; };
 		1D4A9DC017BE6EB9002325B2 /* NSArray+LinqExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LinqExtensions.m"; sourceTree = "<group>"; };
@@ -100,6 +131,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1D03B5E717EA1C060067D035 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D03B5FF17EA1E320067D035 /* MSBooster.framework in Frameworks */,
+				1D03B5EC17EA1C060067D035 /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D4BF07917A8FF30005080A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -121,6 +161,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D03B5ED17EA1C060067D035 /* MSBooster Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1D03B5EE17EA1C060067D035 /* Supporting Files */,
+				1D03B5FB17EA1C450067D035 /* MSDataEncryptionTest.m */,
+			);
+			path = "MSBooster Tests";
+			sourceTree = "<group>";
+		};
+		1D03B5EE17EA1C060067D035 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D03B5EF17EA1C060067D035 /* MSBooster Tests-Info.plist */,
+				1D03B5F017EA1C060067D035 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1D4A9DD017BE6EC1002325B2 /* Objective-C LINQ */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +197,7 @@
 			children = (
 				1D61211217BA06FD00C2AD14 /* GNUmakefile */,
 				1D4BF08617A8FF30005080A2 /* MSBooster */,
+				1D03B5ED17EA1C060067D035 /* MSBooster Tests */,
 				1D4BF07F17A8FF30005080A2 /* Frameworks */,
 				1D4BF07E17A8FF30005080A2 /* Products */,
 			);
@@ -149,6 +208,7 @@
 			children = (
 				1D4BF07D17A8FF30005080A2 /* MSBooster.framework */,
 				1D5CBA1B17BD4900009D58E2 /* MSBooster.framework */,
+				1D03B5EA17EA1C060067D035 /* MSBooster Tests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,6 +223,7 @@
 				1D4BF08017A8FF30005080A2 /* Cocoa.framework */,
 				1D4BF09517A8FF30005080A2 /* XCTest.framework */,
 				1D5CBA1C17BD4900009D58E2 /* Foundation.framework */,
+				1D03B5EB17EA1C060067D035 /* SenTestingKit.framework */,
 				1D4BF08217A8FF30005080A2 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -190,6 +251,10 @@
 				1D4BF0B517A8FFA8005080A2 /* MSStringManipulation.m */,
 				1D4A9DD117BE7626002325B2 /* NSData+MSHashing.h */,
 				1D4A9DD217BE7626002325B2 /* NSData+MSHashing.m */,
+				1D03B5E017EA0E830067D035 /* NSData+MSHMAC.h */,
+				1D03B5E117EA0E830067D035 /* NSData+MSHMAC.m */,
+				1D03B5DC17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h */,
+				1D03B5DD17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m */,
 				1D4A9DDC17BE83D5002325B2 /* NSData+MSCompression.h */,
 				1D4A9DDD17BE83D5002325B2 /* NSData+MSCompression.m */,
 				1D4A9DD017BE6EC1002325B2 /* Objective-C LINQ */,
@@ -216,6 +281,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D03B5DE17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h in Headers */,
 				1D4A9DDE17BE83D5002325B2 /* NSData+MSCompression.h in Headers */,
 				1D4A9DC617BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */,
 				1D4A9DCA17BE6EB9002325B2 /* NSDictionary+LinqExtensions.h in Headers */,
@@ -223,6 +289,7 @@
 				1D4BF0B917A8FFDF005080A2 /* MSCommon.h in Headers */,
 				1D4BF0BF17A90653005080A2 /* MSBooster_Private.h in Headers */,
 				1D4A9DD317BE7626002325B2 /* NSData+MSHashing.h in Headers */,
+				1D03B5E217EA0E830067D035 /* NSData+MSHMAC.h in Headers */,
 				1D4BF0C517A9165F005080A2 /* MSStringConstant.h in Headers */,
 				1D4BF0C317A90712005080A2 /* MSOCCompatibility.h in Headers */,
 				1D4BF0C017A90658005080A2 /* MSBooster.h in Headers */,
@@ -238,9 +305,11 @@
 				1D4A9DCB17BE6EB9002325B2 /* NSDictionary+LinqExtensions.h in Headers */,
 				1D5CBA2A17BD4910009D58E2 /* MSCommon.h in Headers */,
 				1D5CBA2B17BD4910009D58E2 /* MSOCCompatibility.h in Headers */,
+				1D03B5E417EA17060067D035 /* NSData+MSHMAC.h in Headers */,
 				1D5CBA2817BD4910009D58E2 /* MSBooster.h in Headers */,
 				1D4A9DD417BE7626002325B2 /* NSData+MSHashing.h in Headers */,
 				1D5CBA2C17BD4910009D58E2 /* MSStringConstant.h in Headers */,
+				1D03B5E517EA17060067D035 /* NSData+MSTrivialCryptography.h in Headers */,
 				1D5CBA2D17BD4910009D58E2 /* MSStringManipulation.h in Headers */,
 				1D5CBA2917BD4910009D58E2 /* MSBooster_Private.h in Headers */,
 			);
@@ -249,6 +318,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1D03B5E917EA1C060067D035 /* MSBooster Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D03B5F817EA1C060067D035 /* Build configuration list for PBXNativeTarget "MSBooster Tests" */;
+			buildPhases = (
+				1D03B5E617EA1C060067D035 /* Sources */,
+				1D03B5E717EA1C060067D035 /* Frameworks */,
+				1D03B5E817EA1C060067D035 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D03B5F717EA1C060067D035 /* PBXTargetDependency */,
+			);
+			name = "MSBooster Tests";
+			productName = "MSBooster Tests";
+			productReference = 1D03B5EA17EA1C060067D035 /* MSBooster Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		1D4BF07C17A8FF30005080A2 /* MSBooster */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D4BF0A517A8FF30005080A2 /* Build configuration list for PBXNativeTarget "MSBooster" */;
@@ -298,6 +385,11 @@
 				CLASSPREFIX = MS;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = muski;
+				TargetAttributes = {
+					1D03B5E917EA1C060067D035 = {
+						TestTargetID = 1D4BF07C17A8FF30005080A2;
+					};
+				};
 			};
 			buildConfigurationList = 1D4BF07717A8FF30005080A2 /* Build configuration list for PBXProject "MSBooster" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -313,11 +405,20 @@
 			targets = (
 				1D4BF07C17A8FF30005080A2 /* MSBooster */,
 				1D5CBA1A17BD4900009D58E2 /* MobileBooster */,
+				1D03B5E917EA1C060067D035 /* MSBooster Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1D03B5E817EA1C060067D035 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D03B5F217EA1C060067D035 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D4BF07B17A8FF30005080A2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -382,6 +483,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1D03B5E617EA1C060067D035 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D03B5FC17EA1C450067D035 /* MSDataEncryptionTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1D4BF07817A8FF30005080A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,7 +499,9 @@
 				1D4A9DCC17BE6EB9002325B2 /* NSDictionary+LinqExtensions.m in Sources */,
 				1D4A9DD517BE7626002325B2 /* NSData+MSHashing.m in Sources */,
 				1D4A9DC817BE6EB9002325B2 /* NSArray+LinqExtensions.m in Sources */,
+				1D03B5DF17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m in Sources */,
 				1D4BF0B717A8FFA8005080A2 /* MSStringManipulation.m in Sources */,
+				1D03B5E317EA0E830067D035 /* NSData+MSHMAC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,13 +513,31 @@
 				1D4A9DCD17BE6EB9002325B2 /* NSDictionary+LinqExtensions.m in Sources */,
 				1D4A9DD617BE7626002325B2 /* NSData+MSHashing.m in Sources */,
 				1D4A9DC917BE6EB9002325B2 /* NSArray+LinqExtensions.m in Sources */,
+				1D03B5FD17EA1E080067D035 /* NSData+MSTrivialCryptography.m in Sources */,
 				1D5CBA2E17BD4910009D58E2 /* MSStringManipulation.m in Sources */,
+				1D03B5FE17EA1E0D0067D035 /* NSData+MSHMAC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1D03B5F717EA1C060067D035 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D4BF07C17A8FF30005080A2 /* MSBooster */;
+			targetProxy = 1D03B5F617EA1C060067D035 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		1D03B5F017EA1C060067D035 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D03B5F117EA1C060067D035 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		1D4BF08917A8FF30005080A2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -420,6 +549,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1D03B5F917EA1C060067D035 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MSBooster Tests/MSBooster Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1D03B5FA17EA1C060067D035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MSBooster Tests/MSBooster Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		1D4BF0A317A8FF30005080A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -570,6 +731,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1D03B5F817EA1C060067D035 /* Build configuration list for PBXNativeTarget "MSBooster Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D03B5F917EA1C060067D035 /* Debug */,
+				1D03B5FA17EA1C060067D035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1D4BF07717A8FF30005080A2 /* Build configuration list for PBXProject "MSBooster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

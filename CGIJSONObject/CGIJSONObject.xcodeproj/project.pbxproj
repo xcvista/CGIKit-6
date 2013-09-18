@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D03B5CD17E97DDA0067D035 /* NSValue+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B5CA17E97DDA0067D035 /* NSValue+CGIJSONSerializable.m */; };
+		1D03B5CE17E97DDA0067D035 /* NSValue+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B5CA17E97DDA0067D035 /* NSValue+CGIJSONSerializable.m */; };
 		1D13DA5717BCBAB7008507EC /* NSObject+CGIJSONSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13DA5517BCBAB7008507EC /* NSObject+CGIJSONSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D13DA5817BCBAB7008507EC /* NSObject+CGIJSONSerializable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13DA5617BCBAB7008507EC /* NSObject+CGIJSONSerializable.m */; };
 		1D13DA5F17BCBE7C008507EC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D13DA5E17BCBE7C008507EC /* SenTestingKit.framework */; };
@@ -93,6 +95,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1D03B5CA17E97DDA0067D035 /* NSValue+CGIJSONSerializable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+CGIJSONSerializable.m"; sourceTree = "<group>"; };
 		1D13DA4717BCB49D008507EC /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1D13DA4C17BCB6D4008507EC /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1D13DA5517BCBAB7008507EC /* NSObject+CGIJSONSerializable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CGIJSONSerializable.h"; sourceTree = "<group>"; };
@@ -267,6 +270,7 @@
 				1D13DA7017BCC935008507EC /* NSArray+CGIJSONSerializable.m */,
 				1D13DA7617BCDFF6008507EC /* NSString+CGIJSONSerializable.m */,
 				1D13DA7E17BCE14D008507EC /* NSNumber+CGIJSONSerializable.m */,
+				1D03B5CA17E97DDA0067D035 /* NSValue+CGIJSONSerializable.m */,
 				1D417EBB17C4A86100550641 /* NSDate+CGIJSONSerializable.h */,
 				1D13DA8417BCE44D008507EC /* NSDate+CGIJSONSerializable.m */,
 				1D13DA8C17BCF82D008507EC /* NSDictionary+CGIJSONSerializable.m */,
@@ -520,6 +524,7 @@
 				1D13DA9217BCF9A9008507EC /* NSData+CGIJSONSerializable.m in Sources */,
 				1D13DA7817BCDFF6008507EC /* NSString+CGIJSONSerializable.m in Sources */,
 				1D13DAA417BD0680008507EC /* CGIRemoteObject.m in Sources */,
+				1D03B5CD17E97DDA0067D035 /* NSValue+CGIJSONSerializable.m in Sources */,
 				1D4A9C1617BD50F6002325B2 /* CGIServerObject.m in Sources */,
 				1D13DA8017BCE14D008507EC /* NSNumber+CGIJSONSerializable.m in Sources */,
 				1D13DA8617BCE44D008507EC /* NSDate+CGIJSONSerializable.m in Sources */,
@@ -536,6 +541,7 @@
 				1D5CBA0517BD48DE009D58E2 /* NSObject+CGIJSONSerializable.m in Sources */,
 				1D5CBA0B17BD48DE009D58E2 /* NSDictionary+CGIJSONSerializable.m in Sources */,
 				1D5CBA0E17BD48DE009D58E2 /* NSNull+CGIJSONSerializable.m in Sources */,
+				1D03B5CE17E97DDA0067D035 /* NSValue+CGIJSONSerializable.m in Sources */,
 				1D5CBA0817BD48DE009D58E2 /* NSString+CGIJSONSerializable.m in Sources */,
 				1D5CBA0D17BD48DE009D58E2 /* NSData+CGIJSONSerializable.m in Sources */,
 				1D5CBA1017BD48DE009D58E2 /* CGIRemoteObject.m in Sources */,

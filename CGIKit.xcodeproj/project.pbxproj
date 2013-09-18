@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
+		1D03B5D817EA03540067D035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D640CFB17D2EDAE004C8C88 /* WebUIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D640D0A17D2EDBE004C8C88;
+			remoteInfo = WebUIKit;
+		};
+		1D03B5DA17EA03540067D035 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D640CFB17D2EDAE004C8C88 /* WebUIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D640D2117D2EDBE004C8C88;
+			remoteInfo = WebUIKitTests;
+		};
 		1D4A9C1C17BD596D002325B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */;
@@ -60,9 +74,8 @@
 
 /* Begin PBXFileReference section */
 		1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Demo.xcodeproj; path = Demo/Demo.xcodeproj; sourceTree = "<group>"; };
-		1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.en.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.en.md; sourceTree = "<group>"; };
-		1D4BF06B17A8FEA8005080A2 /* COPYRIGHT.zh-Hans.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = "COPYRIGHT.zh-Hans.md"; sourceTree = "<group>"; };
-		1D4BF06C17A8FEA8005080A2 /* README.en.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.en.md; sourceTree = "<group>"; };
+		1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.md; sourceTree = "<group>"; };
+		1D4BF06C17A8FEA8005080A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1D4BF06D17A8FEB9005080A2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MSBooster.xcodeproj; path = MSBooster/MSBooster.xcodeproj; sourceTree = "<group>"; };
 		1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CGIKit.xcodeproj; path = CGIKit/CGIKit.xcodeproj; sourceTree = "<group>"; };
@@ -109,9 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				1D4BF06D17A8FEB9005080A2 /* .gitignore */,
-				1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.en.md */,
-				1D4BF06B17A8FEA8005080A2 /* COPYRIGHT.zh-Hans.md */,
-				1D4BF06C17A8FEA8005080A2 /* README.en.md */,
+				1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.md */,
+				1D4BF06C17A8FEA8005080A2 /* README.md */,
 			);
 			name = "Documentation & More";
 			sourceTree = "<group>";
@@ -148,6 +160,8 @@
 		1D640CFC17D2EDAE004C8C88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				1D03B5D917EA03540067D035 /* WebUIKit.framework */,
+				1D03B5DB17EA03540067D035 /* WebUIKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +212,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		1D03B5D917EA03540067D035 /* WebUIKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WebUIKit.framework;
+			remoteRef = 1D03B5D817EA03540067D035 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D03B5DB17EA03540067D035 /* WebUIKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = WebUIKitTests.xctest;
+			remoteRef = 1D03B5DA17EA03540067D035 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1D4A9C1D17BD596D002325B2 /* CGIJSONObject.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework.static;

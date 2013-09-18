@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- HTTP 错误域。
+ HTTP error domain.
  */
 extern NSString *const CGIHTTPErrorDomain __attribute__((weak));
 
