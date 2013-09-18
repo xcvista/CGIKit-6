@@ -133,7 +133,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
                   );
 }
 
-- (BOOL)connectionShouldSendURLRequest:(NSURLRequest *)request
+- (BOOL)connectionShouldSendURLRequest:(NSMutableURLRequest *)request
 {
     if ([self.delegate respondsToSelector:@selector(connection:shouldSendURLRequset:)])
         return [self.delegate connection:self shouldSendURLRequset:request];

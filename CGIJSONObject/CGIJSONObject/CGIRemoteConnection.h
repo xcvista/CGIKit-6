@@ -23,7 +23,7 @@ extern NSString *const CGIRemoteConnectionServerRootKey;
 
 @optional
 
-- (BOOL)connection:(CGIRemoteConnection *)connection shouldSendURLRequset:(NSURLRequest *)request;
+- (BOOL)connection:(CGIRemoteConnection *)connection shouldSendURLRequset:(NSMutableURLRequest *)request;
 
 @end
 
@@ -94,6 +94,6 @@ extern NSString *const CGIRemoteConnectionServerRootKey;
  */
 - (NSMutableURLRequest *)URLRequestForMethod:(NSString *)method;
 
-- (BOOL)connectionShouldSendURLRequest:(NSURLRequest *)request;
+- (BOOL)connectionShouldSendURLRequest:(NSMutableURLRequest *)request;
 
 @end
