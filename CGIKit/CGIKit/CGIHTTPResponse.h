@@ -74,26 +74,45 @@ typedef NS_ENUM(NSUInteger, CGIHTTPResponseCode)
     CGIHTTPResponseLengthRequired,
     /// Preconditions indicated in the header failed to match.
     CGIHTTPResponsePreconditionFailed,
+    /// The request entity is too large for the application to handle.
     CGIHTTPResponseRequestEntityTooLarge,
+    /// The request URI is too long for the application to handle.
     CGIHTTPResponseRequestURITooLong,
+    /// The requested media type is not supported.
     CGIHTTPResponseUnsupportedMediaType,
+    /// The requested data range is nit satisfiable.
     CGIHTTPResponseRequestedRangeNotSatisfiable,
+    /// The expectation of the requirement failed to meet.
     CGIHTTPResponseExpectationFailed,
     
+    /// The application crashed during processing the request.
     CGIHTTPResponseInternalServerError = 500,
+    /// The requested method is not implemented.
     CGIHTTPResponseNotImplemented,
+    /// The request cannot be forwarded.
     CGIHTTPResponseBadGateway,
+    /// The requested service is not available.
     CGIHTTPResponseServiceUnavailable,
+    /// The request forwarding timed out.
     CGIHTTPResponseGatewayTimeout,
+    /// The requested HTTP ersion is not supported.
     CGIHTTPResponseHTTPVersionNotSupported,
 };
 
 enum
 {
+    /// The response is redacted.
     CGIHTTPResponseRedactedError,
+    /// The request is rejected before a response is generated.
     CGIHTTPResponseRejectedError,
 };
 
+/**
+ @brief     The HTTP response object.
+ 
+ The CGIHTTPResponse object encapsulates the response data that is to be sent to
+ the client.
+ */
 @interface CGIHTTPResponse : NSObject
 
 /**
@@ -122,16 +141,76 @@ enum
  @name      Convenience methods
  */
 
+/**
+ @brief     Set the response to a template page with subsitiutions.
+ 
+ Load the response with a template page, loaded with substitutions from the
+ dictionary. The substitution comes with a template like "{KEY}". Content
+ is loaded from the substitutions dictionary.
+ 
+ @param     template        Template page.
+ @param     substitutions   Substitutions to be done on the template page.
+ */
 - (void)setResponseWithTemplatePage:(NSString *)template
                       substitutions:(NSDictionary *)substitutions;
+
+/**
+ Set the response to a page reporting a certain error, with the status code 500.
+ 
+ @param     error           The error to be reported.
+ */
 - (void)setResponseWithError:(NSError *)error;
+
+/**
+ Set the response to a page reporting a certain error, with the given status
+ code.
+ 
+ @param     error           The error to be reported.
+ @param     statusCode      The status code to be used.
+ */
 - (void)setResponseWithError:(NSError *)error
                   statusCode:(CGIHTTPResponseCode)statusCode;
+
+/**
+ Set the response to a page reporting a certain exception, with the status code
+ 500.
+ 
+ @param     exception       The exception to be reported.
+ */
 - (void)setResponseWithException:(NSException *)exception;
+
+/**
+ Set the response to a HTTP redirection to a certain page, with the status code
+ 302.
+ 
+ @param     target          The destinetion of redirection.
+ */
 - (void)setResponseWithRedirection:(NSString *)target;
+
+/**
+ Set the response to a HTTP redirection to a certain page, with the given status
+ code.
+ 
+ @param     target          The destinetion of redirection.
+ @param     statusCode      The status code to be used.
+ */
 - (void)setResponseWithRedirection:(NSString *)target
                         statusCode:(CGIHTTPResponseCode)statusCode;
+
+/**
+ Set the response to an error page reporting a rejected request.
+ 
+ @note      Generally you do not call this method directly, instead you return
+            NO from the respective delegate method.
+ */
 - (void)setResponseWithRejectedRequest;
+
+/**
+ Set the response to an error page reporting a redacted response.
+ 
+ @note      Generally you do not call this method directly, instead you return
+            NO from the respective delegate method.
+ */
 - (void)setResponseWithRedactedResponse;
 
 @end
