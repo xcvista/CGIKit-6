@@ -11,12 +11,18 @@
 @interface NSData (MSTrivialCryptography)
 
 /**
- A trivial stream cipher implementation based on a CSPRNG implemented on top of
- SHA-512 and XOR as stream cipher function. This method will decrypt itself when
- called on the encrypted NSObject with the same key object.
+ @brief     A trivial stream cipher.
  
- @warning   There is no guarantee on the strength and effectiveness of this
+ This cipher is a stream cipher constructed by running SHA-512 HMAC, a keyed
+ hash algorithm, in output-feedback mode. Both initializing vector and crypto
+ key is derived from the input key object.
+ 
+ When this method is called on the result of this methhod with the same key, its
+ effect is reversed. (i.e. it decrypts itself.)
+ 
+ @warning   There is no guarantee on the strength and effectiveness of this toy
             cipher. Use at your own risk, and use a real cipher on real deals.
+            Also, it is quite slow.
  */
 - (NSData *)scrambleUsingKey:(NSData *)key;
 
