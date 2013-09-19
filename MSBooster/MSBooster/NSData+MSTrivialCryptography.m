@@ -71,7 +71,8 @@
     // Generate an initializer.
     NSData *initializer = [NSData randomDataWithLength:128];
     NSData *ciphertext = [self scrambleUsingKey:key initializer:initializer];
-    NSData *package = [NSPropertyListSerialization dataWithPropertyList:@[initializer, ciphertext]
+    NSData *MAC = [ciphertext SHA512HMAC:key];
+    NSData *package = [NSPropertyListSerialization dataWithPropertyList:@[initializer, ciphertext, MAC]
                                                                  format:NSPropertyListBinaryFormat_v1_0
                                                                 options:0
                                                                   error:NULL];
@@ -93,6 +94,11 @@
     
     NSData *initializer = package[0];
     NSData *ciphertext = package[1];
+    NSData *MAC = package[2];
+    NSData *MAC2 = [ciphertext SHA512HMAC:key];
+    
+    if (![MAC isEqualToData:MAC2])
+        return nil;
     
     return [ciphertext scrambleUsingKey:key initializer:initializer];
 }
