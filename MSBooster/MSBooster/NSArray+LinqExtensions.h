@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+/// LINQ condition.
 typedef BOOL (^MSLINQCondition)(id item);
 
+/// LINQ data selector.
 typedef id (^MSLINQSelector)(id item);
 
+/// LINQ data accumlator.
 typedef id (^MSLINQAccumulator)(id item, id aggregate);
 
 /**
