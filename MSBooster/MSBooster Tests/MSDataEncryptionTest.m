@@ -40,16 +40,14 @@
     
     NSData *cryptData = [sourceData scrambleUsingKey:keyData];
     
+    STAssertNotNil(cryptData, nil);
+    
     NSLog(@"Ciphertext: %@", cryptData);
     
-    NSData *decryptedData = [cryptData scrambleUsingKey:keyData];
+    NSData *decryptedData = [cryptData descrambleUsingKey:keyData];
     
     STAssertEqualObjects(sourceData, decryptedData, nil);
     NSLog(@"Decrypted: %@", decryptedData);
-    
-    NSData *recipheredData = [decryptedData scrambleUsingKey:keyData];
-    
-    STAssertEqualObjects(recipheredData, cryptData, nil);
 }
 
 - (void)testRandomStringCrypto
@@ -65,16 +63,14 @@
     
     NSData *cryptData = [sourceData scrambleUsingKey:keyData];
     
+    STAssertNotNil(cryptData, nil);
+    
     NSLog(@"Ciphertext: %@", cryptData);
     
-    NSData *decryptedData = [cryptData scrambleUsingKey:keyData];
+    NSData *decryptedData = [cryptData descrambleUsingKey:keyData];
     
     STAssertEqualObjects(sourceData, decryptedData, nil);
     NSLog(@"Decrypted: %@", decryptedData);
-    
-    NSData *recipheredData = [decryptedData scrambleUsingKey:keyData];
-    
-    STAssertEqualObjects(recipheredData, cryptData, nil);
 }
 
 - (void)testBigRandomStringCrypto
@@ -94,11 +90,13 @@
     
     NSData *cryptData = [sourceData scrambleUsingKey:keyData];
     
+    STAssertNotNil(cryptData, nil);
+    
     //NSLog(@"Ciphertext: %@", cryptData);
     
     NSLog(@"Decrypto 1MB");
     
-    NSData *decryptedData = [cryptData scrambleUsingKey:keyData];
+    NSData *decryptedData = [cryptData descrambleUsingKey:keyData];
     
     STAssertEqualObjects(sourceData, decryptedData, nil);
     //NSLog(@"Decrypted: %@", decryptedData);
@@ -108,7 +106,7 @@
 
 /*
  This test is too huge.
- 
+
 - (void)testHugeRandomStringCrypto
 {
     
