@@ -99,9 +99,6 @@
     NSLog(@"Done 1MB");
 }
 
-/*
-// This test is too huge.
-*/
 - (void)testHugeRandomStringCrypto
 {
     
@@ -130,6 +127,5 @@
     
     NSLog(@"Done 32MB");
 }
- /**/
 
 @end

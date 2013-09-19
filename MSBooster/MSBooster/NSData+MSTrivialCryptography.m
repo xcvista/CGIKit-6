@@ -38,33 +38,39 @@
     
     do
     {
-        // Snap off vector-lengthed source segment.
-        NSUInteger segmentStart = NSMaxRange(segmentRange);
-        NSUInteger segmentLength = MIN(length, [self length] - segmentStart);
-        segmentRange = NSMakeRange(segmentStart, segmentLength);
-        NSData *segment = [self subdataWithRange:segmentRange];
-        
-        // Derive a key
-        segmentKey = [segmentKey SHA512HMAC:keyHash];
-        
-        // XOR bytes
+        @autoreleasepool
+        {
+            // Snap off vector-lengthed source segment.
+            NSUInteger segmentStart = NSMaxRange(segmentRange);
+            NSUInteger segmentLength = MIN(length, [self length] - segmentStart);
+            if (!segmentLength)
+                break;
+            
+            segmentRange = NSMakeRange(segmentStart, segmentLength);
+            NSData *segment = [self subdataWithRange:segmentRange];
+            
+            // Derive a key
+            segmentKey = [segmentKey SHA512HMAC:keyHash];
+            
+            // XOR bytes
 #ifndef GNUSTEP
-        dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            char *obuf = malloc(length);
+            dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                char *obuf = malloc(length);
 #endif
-            const char *sp = (const char *)[segment bytes];
-            const char *kp = (const char *)[segmentKey bytes];
-            char *dp = obuf;
-            for (NSUInteger i = 0; i < segmentRange.length; i++)
-            {
-                *dp = *sp ^ *kp;
-                dp++, sp++, kp++;
-            }
-            [dest replaceBytesInRange:segmentRange withBytes:obuf];
+                const char *sp = (const char *)[segment bytes];
+                const char *kp = (const char *)[segmentKey bytes];
+                char *dp = obuf;
+                for (NSUInteger i = 0; i < segmentRange.length; i++)
+                {
+                    *dp = *sp ^ *kp;
+                    dp++, sp++, kp++;
+                }
+                [dest replaceBytesInRange:segmentRange withBytes:obuf];
 #ifndef GNUSTEP
-            free(obuf);
-        });
+                free(obuf);
+            });
 #endif
+        }
     } while (segmentRange.length);
     
 #ifndef GNUSTEP
