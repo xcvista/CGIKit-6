@@ -17,7 +17,10 @@ typedef NS_ENUM(NSUInteger, CGIDateEmitDataType)
 
 @interface NSDate (CGIJSONSerializableEmittingType)
 
+/// Get the current date serialization emitting type.
 + (CGIDateEmitDataType)emitDataType;
+
+/// Set the current date serialization emitting type.
 + (void)setEmitDataType:(CGIDateEmitDataType)dataType;
 
 @end

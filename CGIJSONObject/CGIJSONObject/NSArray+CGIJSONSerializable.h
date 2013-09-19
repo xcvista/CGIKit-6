@@ -10,6 +10,10 @@
 
 @interface NSArray (CGIJSONSerializableHelper)
 
+/**
+ Initialize the array with an array of serialized forms of objects of a given
+ class.
+ */
 - (id)initWithArray:(NSArray *)array classForMembers:(Class)class;
 
 @end

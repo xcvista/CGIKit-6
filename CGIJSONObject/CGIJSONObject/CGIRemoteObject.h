@@ -7,18 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 /**
- @def       CGIRemoteMethodClass
+ @def       CGIClassForKey
  
- 此宏定义一个远程方法返回类型的私有方法。方法反射无法获知其返回值。
+ This macro defines a method that tags the class of the key.
  
- @param     __key    需要制定类型的属性名。
- @param     __class  属性值的类型。
- @note      宏定义展开后包括一个对指定类的方法调用，因此需要导入该类的头文件。
+ @param     __key    Name of method that requires its class identified.
+ @param     __class  Type of the return value of the method.
+ @note      A nonexist class will cause the key being ignored.
  */
 #define CGIRemoteMethodClass(__method, __class) \
-- (Class)classForMethod ##__method { return [__class class]; }
+- (Class)classForMethod ##__method { return objc_lookUpClass(#__class); }
 
 #define CGINotRemoteMethod(__method) \
 - (Class)classForMethod ##__method { return Nil; }

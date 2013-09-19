@@ -21,6 +21,20 @@
 			remoteGlobalIDString = 1D640D2117D2EDBE004C8C88;
 			remoteInfo = WebUIKitTests;
 		};
+		1D278D3217EB7B2F00FBDA36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D03B5EA17EA1C060067D035;
+			remoteInfo = "MSBooster Tests";
+		};
+		1D278D3417EB7B2F00FBDA36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D278D1817EB081B00FBDA36;
+			remoteInfo = "MSBooster Profiling";
+		};
 		1D4A9C1C17BD596D002325B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */;
@@ -73,6 +87,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D278D2817EB7B2F00FBDA36 /* FORMAT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = FORMAT.md; sourceTree = "<group>"; };
 		1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Demo.xcodeproj; path = Demo/Demo.xcodeproj; sourceTree = "<group>"; };
 		1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.md; sourceTree = "<group>"; };
 		1D4BF06C17A8FEA8005080A2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
@@ -114,6 +129,8 @@
 			children = (
 				1D4BF0B117A8FF31005080A2 /* MSBooster.framework */,
 				1D4A9C2417BD596D002325B2 /* MSBooster.framework */,
+				1D278D3317EB7B2F00FBDA36 /* MSBooster Tests.octest */,
+				1D278D3517EB7B2F00FBDA36 /* MSBooster Profiling */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +141,7 @@
 				1D4BF06D17A8FEB9005080A2 /* .gitignore */,
 				1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.md */,
 				1D4BF06C17A8FEA8005080A2 /* README.md */,
+				1D278D2817EB7B2F00FBDA36 /* FORMAT.md */,
 			);
 			name = "Documentation & More";
 			sourceTree = "<group>";
@@ -224,6 +242,20 @@
 			fileType = wrapper.cfbundle;
 			path = WebUIKitTests.xctest;
 			remoteRef = 1D03B5DA17EA03540067D035 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D278D3317EB7B2F00FBDA36 /* MSBooster Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "MSBooster Tests.octest";
+			remoteRef = 1D278D3217EB7B2F00FBDA36 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D278D3517EB7B2F00FBDA36 /* MSBooster Profiling */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "MSBooster Profiling";
+			remoteRef = 1D278D3417EB7B2F00FBDA36 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1D4A9C1D17BD596D002325B2 /* CGIJSONObject.framework */ = {

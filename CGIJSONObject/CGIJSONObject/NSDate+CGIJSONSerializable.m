@@ -44,7 +44,11 @@ static CGIDateEmitDataType _CGI_DateEmitDataType;
 
 + (void)load
 {
+#ifdef GNUSTEP
+    _CGI_DateEmitDataType = CGIDateEmitString;
+#else
     _CGI_DateEmitDataType = CGIDateEmitNumber;
+#endif
 }
 
 + (CGIDateEmitDataType)emitDataType

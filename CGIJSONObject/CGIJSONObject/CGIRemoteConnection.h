@@ -13,7 +13,7 @@
 extern NSString *const CGIHTTPErrorDomain __attribute__((weak));
 
 /**
- 服务器地址根键。
+ Server root key.
  */
 extern NSString *const CGIRemoteConnectionServerRootKey;
 
@@ -28,7 +28,7 @@ extern NSString *const CGIRemoteConnectionServerRootKey;
 @end
 
 /**
- 远程连接控制对象。
+ CGIRemoteConnection object controls the remote connection
  */
 @interface CGIRemoteConnection : NSObject
 

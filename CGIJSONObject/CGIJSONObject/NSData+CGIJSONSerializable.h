@@ -36,11 +36,22 @@ char *NewBase64Encode(
 
 @interface NSData (Base64)
 
+/// Get the data from a Base-64 encoded string.
 + (NSData *)dataFromBase64String:(NSString *)aString;
+
+/// Initialize the data from a Base-64 encoded string.
 - (id)initWithBase64String:(NSString *)aString;
+
+/// Get the Base-64 encoded string representation of current data object.
 - (NSString *)base64EncodedString;
 
 // added by Hiroshi Hashiguchi
+
+/**
+ Get the Base-64 encoded string representation of current data object.
+ 
+ @param     separateLines   Whether the 76-character seperation is used.
+ */
 - (NSString *)base64EncodedStringWithSeparateLines:(BOOL)separateLines;
 
 @end

@@ -43,12 +43,39 @@
 
 @interface NSObject (CGIJSONSerializable)
 
+/**
+ Initialize an object from its serialized object.
+ */
 - (id)initWithSerializedObject:(id)serializedObject;
+
+/**
+ Return the serialized form of the current object.
+ */
 - (id)serializedObject;
+
+/**
+ Set the current object's state to the serialized form.
+ */
 - (BOOL)setSerializedObject:(id)serializedObject;
+
+/**
+ Get a list of all keys available.
+ */
 - (NSArray *)allKeys;
+
+/**
+ Get the class of the key.
+ */
 - (Class)classForKey:(NSString *)key;
+
+/**
+ Get the class for a property.
+ */
 - (Class)classForProperty:(NSString *)key;
+
+/**
+ Get the serialized name of a key.
+ */
 - (NSString *)serializationKeyForKey:(NSString *)key;
 
 @end
