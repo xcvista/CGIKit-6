@@ -27,35 +27,51 @@
     NSData *segmentKey = [initializer SHA512Hash];
     NSUInteger length = [keyHash length];
     
-    NSMutableData *source = [NSMutableData dataWithData:self];
-    NSMutableData *dest = [NSMutableData dataWithCapacity:[self length]];
+    NSMutableData *dest = [NSMutableData dataWithLength:[self length]];
+    NSRange segmentRange = NSMakeRange(0, 0);
     
-    void *obuf = malloc(length);
+#ifndef GNUSTEP
+    dispatch_group_t group = dispatch_group_create(); // Parallelized on OS X
+#else
+    char *obuf = malloc(length);
+#endif
     
     do
     {
         // Snap off vector-lengthed source segment.
-        NSRange segmentRange = NSMakeRange(0, MIN(length, [source length]));
-        NSData *segment = [source subdataWithRange:segmentRange];
-        [source replaceBytesInRange:segmentRange withBytes:NULL length:0];
+        NSUInteger segmentStart = NSMaxRange(segmentRange);
+        NSUInteger segmentLength = MIN(length, [self length] - segmentStart);
+        segmentRange = NSMakeRange(segmentStart, segmentLength);
+        NSData *segment = [self subdataWithRange:segmentRange];
         
         // Derive a key
         segmentKey = [segmentKey SHA512HMAC:keyHash];
         
         // XOR bytes
-        const char *sp = (const char *)[segment bytes];
-        const char *kp = (const char *)[segmentKey bytes];
-        char *dp = (char *)obuf;
-        for (NSUInteger i = 0; i < segmentRange.length; i++)
-        {
-            *dp = *sp ^ *kp;
-            dp++, sp++, kp++;
-        }
-        
-        [dest appendBytes:obuf length:segmentRange.length];
-    } while ([source length]);
+#ifndef GNUSTEP
+        dispatch_group_async(group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            char *obuf = malloc(length);
+#endif
+            const char *sp = (const char *)[segment bytes];
+            const char *kp = (const char *)[segmentKey bytes];
+            char *dp = obuf;
+            for (NSUInteger i = 0; i < segmentRange.length; i++)
+            {
+                *dp = *sp ^ *kp;
+                dp++, sp++, kp++;
+            }
+            [dest replaceBytesInRange:segmentRange withBytes:obuf];
+#ifndef GNUSTEP
+            free(obuf);
+        });
+#endif
+    } while (segmentRange.length);
     
+#ifndef GNUSTEP
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+#else
     free(obuf);
+#endif
     
     return [NSData dataWithData:dest];
 }
