@@ -6,12 +6,7 @@
 //  Copyright (c) 2013 muski. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
-#import <MSBooster/MSBooster.h>
-
-@interface MSDataEncryptionTest : SenTestCase
-
-@end
+#import "MSDataEncryptionTest.h"
 
 @implementation MSDataEncryptionTest
 
@@ -105,8 +100,8 @@
 }
 
 /*
- This test is too huge.
-
+// This test is too huge.
+*/
 - (void)testHugeRandomStringCrypto
 {
     
@@ -128,13 +123,13 @@
     
     NSLog(@"Decrypto 32MB");
     
-    NSData *decryptedData = [cryptData scrambleUsingKey:keyData];
+    NSData *decryptedData = [cryptData descrambleUsingKey:keyData];
     
     STAssertEqualObjects(sourceData, decryptedData, nil);
     //NSLog(@"Decrypted: %@", decryptedData);
     
-    NSLog(@"Done 1MB");
+    NSLog(@"Done 32MB");
 }
- */
+ /**/
 
 @end
