@@ -10,6 +10,7 @@
 #import "NSData+MSHashing.h"
 #import "NSData+MSCompression.h"
 #import "NSData+MSHMAC.h"
+#import "NSData+MSTrivialCryptography.h"
 
 #if __has_include(<CommonCrypto/CommonCrypto.h>)
 #define USE_CC
@@ -140,8 +141,14 @@
 
 + (NSData *)randomDataWithLength:(NSUInteger)length
 {
-    NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:@"/dev/urandom"];
-    return [handle readDataOfLength:length];
+    @autoreleasepool
+    {
+        NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:@"/dev/urandom"];
+        NSData *key = [handle readDataOfLength:64];
+        NSData *IV = [handle readDataOfLength:64];
+        NSData *data = [handle readDataOfLength:length];
+        return [data scrambleUsingKey:key initializer:IV delegate:nil];
+    }
 }
 
 @end
