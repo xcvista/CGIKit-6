@@ -29,17 +29,18 @@
     
     NSData *sourceData = [sourceString dataUsingEncoding:NSUTF8StringEncoding];
     NSData *keyData = [key dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *IV = [NSData randomDataWithLength:64];
     
     NSLog(@"Source Plaintext: %@", sourceData);
     NSLog(@"Key: %@", keyData);
     
-    NSData *cryptData = [sourceData scrambleUsingKey:keyData];
+    NSData *cryptData = [sourceData scrambleUsingKey:keyData initializer:IV delegate:nil];
     
     STAssertNotNil(cryptData, nil);
     
     NSLog(@"Ciphertext: %@", cryptData);
     
-    NSData *decryptedData = [cryptData descrambleUsingKey:keyData];
+    NSData *decryptedData = [cryptData scrambleUsingKey:keyData initializer:IV delegate:nil];
     
     STAssertEqualObjects(sourceData, decryptedData, nil);
     NSLog(@"Decrypted: %@", decryptedData);
@@ -52,17 +53,42 @@
     
     NSData *sourceData = [urandom readDataOfLength:512];
     NSData *keyData = [urandom readDataOfLength:80];
+    NSData *IV = [NSData randomDataWithLength:64];
     
     NSLog(@"Source Plaintext: %@", sourceData);
     NSLog(@"Key: %@", keyData);
     
-    NSData *cryptData = [sourceData scrambleUsingKey:keyData];
+    NSData *cryptData = [sourceData scrambleUsingKey:keyData initializer:IV delegate:nil];
     
     STAssertNotNil(cryptData, nil);
     
     NSLog(@"Ciphertext: %@", cryptData);
     
-    NSData *decryptedData = [cryptData descrambleUsingKey:keyData];
+    NSData *decryptedData = [cryptData scrambleUsingKey:keyData initializer:IV delegate:nil];
+    
+    STAssertEqualObjects(sourceData, decryptedData, nil);
+    NSLog(@"Decrypted: %@", decryptedData);
+}
+
+- (void)testRandomStringAESCrypto
+{
+    
+    NSFileHandle *urandom = [NSFileHandle fileHandleForReadingAtPath:@"/dev/urandom"];
+    
+    NSData *sourceData = [urandom readDataOfLength:512];
+    NSData *keyData = [urandom readDataOfLength:80];
+    NSData *IV = [NSData randomDataWithLength:64];
+    
+    NSLog(@"Source Plaintext: %@", sourceData);
+    NSLog(@"Key: %@", keyData);
+    
+    NSData *cryptData = [sourceData encryptUsingKey:keyData initializer:IV];
+    
+    STAssertNotNil(cryptData, nil);
+    
+    NSLog(@"Ciphertext: %@", cryptData);
+    
+    NSData *decryptedData = [cryptData decryptUsingKey:keyData initializer:IV];
     
     STAssertEqualObjects(sourceData, decryptedData, nil);
     NSLog(@"Decrypted: %@", decryptedData);
@@ -77,13 +103,14 @@
     
     NSData *sourceData = [urandom readDataOfLength:1UL << 20]; // 1MB of data
     NSData *keyData = [urandom readDataOfLength:1UL << 10]; // 1KB of keyfile
+    NSData *IV = [NSData randomDataWithLength:64];
     
     NSLog(@"Read 1MB");
     
     //NSLog(@"Source Plaintext: %@", sourceData);
     //NSLog(@"Key: %@", keyData);
     
-    NSData *cryptData = [sourceData scrambleUsingKey:keyData];
+    NSData *cryptData = [sourceData scrambleUsingKey:keyData initializer:IV delegate:nil];
     
     STAssertNotNil(cryptData, nil);
     
@@ -91,7 +118,39 @@
     
     NSLog(@"Decrypto 1MB");
     
-    NSData *decryptedData = [cryptData descrambleUsingKey:keyData];
+    NSData *decryptedData = [cryptData scrambleUsingKey:keyData initializer:IV delegate:nil];
+    
+    STAssertEqualObjects(sourceData, decryptedData, nil);
+    //NSLog(@"Decrypted: %@", decryptedData);
+    
+    NSLog(@"Done 1MB");
+}
+
+- (void)testBigRandomStringAESCrypto
+{
+    
+    NSLog(@"Crypto 1MB");
+    
+    NSFileHandle *urandom = [NSFileHandle fileHandleForReadingAtPath:@"/dev/urandom"];
+    
+    NSData *sourceData = [urandom readDataOfLength:1UL << 20]; // 1MB of data
+    NSData *keyData = [urandom readDataOfLength:1UL << 10]; // 1KB of keyfile
+    NSData *IV = [NSData randomDataWithLength:64];
+    
+    NSLog(@"Read 1MB");
+    
+    //NSLog(@"Source Plaintext: %@", sourceData);
+    //NSLog(@"Key: %@", keyData);
+    
+    NSData *cryptData = [sourceData encryptUsingKey:keyData initializer:IV];
+    
+    STAssertNotNil(cryptData, nil);
+    
+    //NSLog(@"Ciphertext: %@", cryptData);
+    
+    NSLog(@"Decrypto 1MB");
+    
+    NSData *decryptedData = [cryptData decryptUsingKey:keyData initializer:IV];
     
     STAssertEqualObjects(sourceData, decryptedData, nil);
     //NSLog(@"Decrypted: %@", decryptedData);
@@ -108,19 +167,52 @@
     
     NSData *sourceData = [urandom readDataOfLength:1UL << 25]; // 32MB of data
     NSData *keyData = [urandom readDataOfLength:1UL << 10]; // 1KB of keyfile
+    NSData *IV = [NSData randomDataWithLength:64];
     
     NSLog(@"Read 32MB");
     
     //NSLog(@"Source Plaintext: %@", sourceData);
     //NSLog(@"Key: %@", keyData);
     
-    NSData *cryptData = [sourceData scrambleUsingKey:keyData];
+    NSData *cryptData = [sourceData scrambleUsingKey:keyData initializer:IV delegate:nil];
     
     //NSLog(@"Ciphertext: %@", cryptData);
     
     NSLog(@"Decrypto 32MB");
     
-    NSData *decryptedData = [cryptData descrambleUsingKey:keyData];
+    NSData *decryptedData = [cryptData scrambleUsingKey:keyData initializer:IV delegate:nil];
+    
+    STAssertEqualObjects(sourceData, decryptedData, nil);
+    //NSLog(@"Decrypted: %@", decryptedData);
+    
+    NSLog(@"Done 32MB");
+}
+
+- (void)testHugeRandomStringAESCrypto
+{
+    
+    NSLog(@"Crypto 32MB");
+    
+    NSFileHandle *urandom = [NSFileHandle fileHandleForReadingAtPath:@"/dev/urandom"];
+    
+    NSData *sourceData = [urandom readDataOfLength:1UL << 25]; // 32MB of data
+    NSData *keyData = [urandom readDataOfLength:1UL << 10]; // 1KB of keyfile
+    NSData *IV = [NSData randomDataWithLength:64];
+    
+    NSLog(@"Read 32MB");
+    
+    //NSLog(@"Source Plaintext: %@", sourceData);
+    //NSLog(@"Key: %@", keyData);
+    
+    NSData *cryptData = [sourceData encryptUsingKey:keyData initializer:IV];
+    
+    STAssertNotNil(cryptData, nil);
+    
+    //NSLog(@"Ciphertext: %@", cryptData);
+    
+    NSLog(@"Decrypto 1MB");
+    
+    NSData *decryptedData = [cryptData decryptUsingKey:keyData initializer:IV];
     
     STAssertEqualObjects(sourceData, decryptedData, nil);
     //NSLog(@"Decrypted: %@", decryptedData);

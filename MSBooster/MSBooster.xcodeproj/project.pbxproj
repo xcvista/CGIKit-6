@@ -68,6 +68,7 @@
 		1D5CBA2C17BD4910009D58E2 /* MSStringConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4BF0C417A9165F005080A2 /* MSStringConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D5CBA2D17BD4910009D58E2 /* MSStringManipulation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4BF0B417A8FFA8005080A2 /* MSStringManipulation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D5CBA2E17BD4910009D58E2 /* MSStringManipulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4BF0B517A8FFA8005080A2 /* MSStringManipulation.m */; };
+		1DD48BFC17ECB50400852874 /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9DDA17BE8304002325B2 /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DD48BFC17ECB50400852874 /* libcrypto.dylib in Frameworks */,
 				1D4A9DED17BE8F9C002325B2 /* libbz2.dylib in Frameworks */,
 				1D4A9DE317BE861B002325B2 /* libz.dylib in Frameworks */,
 				1D4BF08117A8FF30005080A2 /* Cocoa.framework in Frameworks */,

@@ -10,22 +10,10 @@
 #import "NSData+MSHashing.h"
 #import "NSData+MSHMAC.h"
 #import "NSData+MSCompression.h"
-
+#import "NSData+MSCryptor.h"
 #import "MSCommon.h"
 
-#if __has_include(<Accelerate/Accelerate.h>)
-#define USE_SIMD
-#import <Accelerate/Accelerate.h>
-#endif
-
 @implementation NSData (MSTrivialCryptography)
-
-- (NSData *)scrambleUsingKey:(NSData *)key initializer:(NSData *)initializer
-{
-    return [self scrambleUsingKey:key
-                      initializer:initializer
-                         delegate:nil];
-}
 
 - (NSData *)scrambleUsingKey:(NSData *)key
                  initializer:(NSData *)initializer
@@ -97,59 +85,6 @@
 #endif
     
     return [NSData dataWithData:dest];
-}
-
-+ (NSData *)randomDataWithLength:(NSUInteger)length
-{
-    NSFileHandle *handle = [NSFileHandle fileHandleForReadingAtPath:@"/dev/urandom"];
-    return [handle readDataOfLength:length];
-}
-
-- (NSData *)scrambleUsingKey:(NSData *)key
-{
-    return [self scrambleUsingKey:key delegate:nil];
-}
-
-- (NSData *)scrambleUsingKey:(NSData *)key delegate:(id<MSCryptorDelegate>)delegate
-{
-    // Generate an initializer.
-    NSData *initializer = [NSData randomDataWithLength:128];
-    NSData *ciphertext = [self scrambleUsingKey:key initializer:initializer delegate:delegate];
-    NSData *MAC = [ciphertext SHA512HMAC:key];
-    NSData *package = [NSPropertyListSerialization dataWithPropertyList:@[initializer, ciphertext, MAC]
-                                                                 format:NSPropertyListBinaryFormat_v1_0
-                                                                options:0
-                                                                  error:NULL];
-    return [package gzipCompress];
-}
-
-- (NSData *)descrambleUsingKey:(NSData *)key
-{
-    return [self descrambleUsingKey:key delegate:nil];
-}
-
-- (NSData *)descrambleUsingKey:(NSData *)key delegate:(id<MSCryptorDelegate>)delegate
-{
-    NSData *decompressed = [self gzipDecompress];
-    if (!decompressed)
-        return nil;
-    
-    NSArray *package = [NSPropertyListSerialization propertyListWithData:decompressed
-                                                                 options:0
-                                                                  format:NULL
-                                                                   error:NULL];
-    if (![package isKindOfClass:[NSArray class]] || [package count] < 2)
-        return nil;
-    
-    NSData *initializer = package[0];
-    NSData *ciphertext = package[1];
-    NSData *MAC = package[2];
-    NSData *MAC2 = [ciphertext SHA512HMAC:key];
-    
-    if (![MAC isEqualToData:MAC2])
-        return nil;
-    
-    return [ciphertext scrambleUsingKey:key initializer:initializer delegate:delegate];
 }
 
 @end
