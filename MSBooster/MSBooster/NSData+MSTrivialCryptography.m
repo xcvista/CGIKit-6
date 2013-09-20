@@ -22,6 +22,15 @@
 
 - (NSData *)scrambleUsingKey:(NSData *)key initializer:(NSData *)initializer
 {
+    return [self scrambleUsingKey:key
+                      initializer:initializer
+                         delegate:nil];
+}
+
+- (NSData *)scrambleUsingKey:(NSData *)key
+                 initializer:(NSData *)initializer
+                    delegate:(id<MSCryptorDelegate>)delegate
+{
     // Derive the initial vector from the key.
     NSData *keyHash = [key SHA512Hash];
     NSData *segmentKey = [initializer SHA512Hash];
@@ -35,6 +44,8 @@
 #else
     char *obuf = malloc(length);
 #endif
+    
+    volatile register __block NSUInteger processed = 0;
     
     do
     {
@@ -66,6 +77,12 @@
                     dp++, sp++, kp++;
                 }
                 [dest replaceBytesInRange:segmentRange withBytes:obuf];
+                NSUInteger processed2 = ++processed;
+                
+                if ([delegate respondsToSelector:@selector(data:cryptor:didProcessBytes:)])
+                    [delegate data:self
+                           cryptor:_cmd
+                   didProcessBytes:MIN(processed2 * length, [self length])];
 #ifndef GNUSTEP
                 free(obuf);
             });
@@ -90,9 +107,14 @@
 
 - (NSData *)scrambleUsingKey:(NSData *)key
 {
+    return [self scrambleUsingKey:key delegate:nil];
+}
+
+- (NSData *)scrambleUsingKey:(NSData *)key delegate:(id<MSCryptorDelegate>)delegate
+{
     // Generate an initializer.
     NSData *initializer = [NSData randomDataWithLength:128];
-    NSData *ciphertext = [self scrambleUsingKey:key initializer:initializer];
+    NSData *ciphertext = [self scrambleUsingKey:key initializer:initializer delegate:delegate];
     NSData *MAC = [ciphertext SHA512HMAC:key];
     NSData *package = [NSPropertyListSerialization dataWithPropertyList:@[initializer, ciphertext, MAC]
                                                                  format:NSPropertyListBinaryFormat_v1_0
@@ -102,6 +124,11 @@
 }
 
 - (NSData *)descrambleUsingKey:(NSData *)key
+{
+    return [self descrambleUsingKey:key delegate:nil];
+}
+
+- (NSData *)descrambleUsingKey:(NSData *)key delegate:(id<MSCryptorDelegate>)delegate
 {
     NSData *decompressed = [self gzipDecompress];
     if (!decompressed)
@@ -122,7 +149,7 @@
     if (![MAC isEqualToData:MAC2])
         return nil;
     
-    return [ciphertext scrambleUsingKey:key initializer:initializer];
+    return [ciphertext scrambleUsingKey:key initializer:initializer delegate:delegate];
 }
 
 @end

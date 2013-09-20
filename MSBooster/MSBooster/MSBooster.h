@@ -18,6 +18,7 @@
 
 #import <MSBooster/NSData+MSHashing.h>
 #import <MSBooster/NSData+MSHMAC.h>
+#import <MSBooster/NSData+MSCryptor.h>
 #import <MSBooster/NSData+MSTrivialCryptography.h>
 #import <MSBooster/NSData+MSCompression.h>
 #import <MSBooster/NSArray+LinqExtensions.h>

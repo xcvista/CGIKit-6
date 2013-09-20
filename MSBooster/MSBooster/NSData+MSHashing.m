@@ -22,6 +22,11 @@ typedef unsigned char *(*_MS_CryptoFunction)(const void *, CC_LONG, unsigned cha
 #define _MB_CC_TYPE size_t
 typedef unsigned char *(*_MS_CryptoFunction)(const unsigned char *, size_t, unsigned char *);
 #endif
+
+#ifndef SHA1_DIGEST_LENGTH
+#define SHA1_DIGEST_LENGTH SHA_DIGEST_LENGTH
+#endif
+
 #import "MSCommon.h"
 
 MSInline NSData *_MS_ComputeHash(NSData *self, _MB_CC_TYPE digestSize, _MS_CryptoFunction function)
@@ -40,7 +45,6 @@ MSInline NSData *_MS_ComputeHash(NSData *self, _MB_CC_TYPE digestSize, _MS_Crypt
 }
 
 #define _MS_HashMethod(_function) - (NSData *)_function##Hash { return _MS_ComputeHash(self, _function##_DIGEST_LENGTH, _MB_CC_FUNC(_function)); }
-#define SHA1_DIGEST_LENGTH SHA_DIGEST_LENGTH
 
 @implementation NSData (MSHashing)
 

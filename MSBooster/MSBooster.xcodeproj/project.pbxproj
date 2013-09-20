@@ -25,6 +25,9 @@
 		1D278D2417EB083D00FBDA36 /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4BF07D17A8FF30005080A2 /* MSBooster.framework */; };
 		1D278D2517EB083D00FBDA36 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D03B5EB17EA1C060067D035 /* SenTestingKit.framework */; };
 		1D278D2617EB084500FBDA36 /* MSDataEncryptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D03B5FB17EA1C450067D035 /* MSDataEncryptionTest.m */; };
+		1D278D3A17EC6EEA00FBDA36 /* NSData+MSCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D278D3817EC6EEA00FBDA36 /* NSData+MSCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D278D3B17EC6EEA00FBDA36 /* NSData+MSCryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D278D3917EC6EEA00FBDA36 /* NSData+MSCryptor.m */; };
+		1D278D3C17EC6F7300FBDA36 /* NSData+MSCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D278D3817EC6EEA00FBDA36 /* NSData+MSCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D4A9DC417BE6EB9002325B2 /* COPYING.MIT in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */; };
 		1D4A9DC517BE6EB9002325B2 /* COPYING.MIT in Resources */ = {isa = PBXBuildFile; fileRef = 1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */; };
 		1D4A9DC617BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D4A9DBF17BE6EB9002325B2 /* NSArray+LinqExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -115,6 +118,8 @@
 		1D278D1E17EB081B00FBDA36 /* MSBooster Profiling-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MSBooster Profiling-Prefix.pch"; sourceTree = "<group>"; };
 		1D278D1F17EB081B00FBDA36 /* MSBooster_Profiling.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = MSBooster_Profiling.1; sourceTree = "<group>"; };
 		1D278D2717EB099800FBDA36 /* MSDataEncryptionTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSDataEncryptionTest.h; sourceTree = "<group>"; };
+		1D278D3817EC6EEA00FBDA36 /* NSData+MSCryptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MSCryptor.h"; sourceTree = "<group>"; };
+		1D278D3917EC6EEA00FBDA36 /* NSData+MSCryptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MSCryptor.m"; sourceTree = "<group>"; };
 		1D4A9DBE17BE6EB9002325B2 /* COPYING.MIT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = COPYING.MIT; sourceTree = "<group>"; };
 		1D4A9DBF17BE6EB9002325B2 /* NSArray+LinqExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LinqExtensions.h"; sourceTree = "<group>"; };
 		1D4A9DC017BE6EB9002325B2 /* NSArray+LinqExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+LinqExtensions.m"; sourceTree = "<group>"; };
@@ -305,6 +310,8 @@
 				1D4A9DD217BE7626002325B2 /* NSData+MSHashing.m */,
 				1D03B5E017EA0E830067D035 /* NSData+MSHMAC.h */,
 				1D03B5E117EA0E830067D035 /* NSData+MSHMAC.m */,
+				1D278D3817EC6EEA00FBDA36 /* NSData+MSCryptor.h */,
+				1D278D3917EC6EEA00FBDA36 /* NSData+MSCryptor.m */,
 				1D03B5DC17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h */,
 				1D03B5DD17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m */,
 				1D4A9DDC17BE83D5002325B2 /* NSData+MSCompression.h */,
@@ -335,6 +342,7 @@
 			files = (
 				1D03B5DE17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h in Headers */,
 				1D4A9DDE17BE83D5002325B2 /* NSData+MSCompression.h in Headers */,
+				1D278D3A17EC6EEA00FBDA36 /* NSData+MSCryptor.h in Headers */,
 				1D4A9DC617BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */,
 				1D4A9DCA17BE6EB9002325B2 /* NSDictionary+LinqExtensions.h in Headers */,
 				1D4BF0B617A8FFA8005080A2 /* MSStringManipulation.h in Headers */,
@@ -354,6 +362,7 @@
 			files = (
 				1D4A9DDF17BE83D5002325B2 /* NSData+MSCompression.h in Headers */,
 				1D4A9DC717BE6EB9002325B2 /* NSArray+LinqExtensions.h in Headers */,
+				1D278D3C17EC6F7300FBDA36 /* NSData+MSCryptor.h in Headers */,
 				1D4A9DCB17BE6EB9002325B2 /* NSDictionary+LinqExtensions.h in Headers */,
 				1D5CBA2A17BD4910009D58E2 /* MSCommon.h in Headers */,
 				1D5CBA2B17BD4910009D58E2 /* MSOCCompatibility.h in Headers */,
@@ -580,6 +589,7 @@
 				1D4A9DC817BE6EB9002325B2 /* NSArray+LinqExtensions.m in Sources */,
 				1D03B5DF17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m in Sources */,
 				1D4BF0B717A8FFA8005080A2 /* MSStringManipulation.m in Sources */,
+				1D278D3B17EC6EEA00FBDA36 /* NSData+MSCryptor.m in Sources */,
 				1D03B5E317EA0E830067D035 /* NSData+MSHMAC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,6 +868,7 @@
 				1D278D2217EB081B00FBDA36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D4BF07717A8FF30005080A2 /* Build configuration list for PBXProject "MSBooster" */ = {
 			isa = XCConfigurationList;
