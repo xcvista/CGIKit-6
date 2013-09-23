@@ -19,10 +19,16 @@ extern NSString *const CGIRemoteConnectionServerRootKey;
 
 @class CGIRemoteConnection;
 
+/**
+ Delegate of remote connection object.
+ */
 @protocol CGIRemoteConnectionDelegate <NSObject>
 
 @optional
 
+/**
+ Called when an URL request is to be sent.
+ */
 - (BOOL)connection:(CGIRemoteConnection *)connection shouldSendURLRequset:(NSMutableURLRequest *)request;
 
 @end
