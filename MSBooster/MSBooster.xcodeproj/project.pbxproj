@@ -308,16 +308,9 @@
 				1D4BF0C417A9165F005080A2 /* MSStringConstant.h */,
 				1D4BF0B417A8FFA8005080A2 /* MSStringManipulation.h */,
 				1D4BF0B517A8FFA8005080A2 /* MSStringManipulation.m */,
-				1D4A9DD117BE7626002325B2 /* NSData+MSHashing.h */,
-				1D4A9DD217BE7626002325B2 /* NSData+MSHashing.m */,
-				1D03B5E017EA0E830067D035 /* NSData+MSHMAC.h */,
-				1D03B5E117EA0E830067D035 /* NSData+MSHMAC.m */,
-				1D278D3817EC6EEA00FBDA36 /* NSData+MSCryptor.h */,
-				1D278D3917EC6EEA00FBDA36 /* NSData+MSCryptor.m */,
-				1D03B5DC17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h */,
-				1D03B5DD17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m */,
 				1D4A9DDC17BE83D5002325B2 /* NSData+MSCompression.h */,
 				1D4A9DDD17BE83D5002325B2 /* NSData+MSCompression.m */,
+				1D93768017F29F710024DA2A /* Cryptography */,
 				1D4A9DD017BE6EC1002325B2 /* Objective-C LINQ */,
 				1D4BF08717A8FF30005080A2 /* Supporting Files */,
 			);
@@ -333,6 +326,21 @@
 				1D61211317BA073200C2AD14 /* GNUmakefile */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1D93768017F29F710024DA2A /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				1D4A9DD117BE7626002325B2 /* NSData+MSHashing.h */,
+				1D4A9DD217BE7626002325B2 /* NSData+MSHashing.m */,
+				1D03B5E017EA0E830067D035 /* NSData+MSHMAC.h */,
+				1D03B5E117EA0E830067D035 /* NSData+MSHMAC.m */,
+				1D278D3817EC6EEA00FBDA36 /* NSData+MSCryptor.h */,
+				1D278D3917EC6EEA00FBDA36 /* NSData+MSCryptor.m */,
+				1D03B5DC17EA0B0B0067D035 /* NSData+MSTrivialCryptography.h */,
+				1D03B5DD17EA0B0B0067D035 /* NSData+MSTrivialCryptography.m */,
+			);
+			name = Cryptography;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

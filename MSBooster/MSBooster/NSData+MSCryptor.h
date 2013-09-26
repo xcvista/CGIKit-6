@@ -12,29 +12,43 @@
 
 @optional
 - (void)data:(NSData *)data
-     cryptor:(SEL)cryptor didProcessBytes:(NSUInteger)bytes;
+     cryptor:(SEL)cryptor didProcessBytes:(NSUInteger)bytes totalBytes:(NSUInteger)length;
 
 @end
 
 @interface NSData (MSCryptor)
 
-/**
- Encrypt the data using 256-bit AES in CBC mode.
- 
- @param     key         Cryptographic key.
- @param     initializer Initializer.
- @note      Key and initializer is SHA-256'd and MD5'd to match the lengths.
- */
-- (NSData *)encryptUsingKey:(NSData *)key initializer:(NSData *)initializer;
+/// Encrypt a block of AES data.
+- (NSData *)AESEncryptBlockWithKey:(NSData *)key;
+/// Decrypt a block of AES data.
+- (NSData *)AESDecryptBlockWithKey:(NSData *)key;
 
 /**
- Decrypt the data using 256-bit AES in CBC mode.
+ AES PCBC encryption.
  
- @param     key         Cryptographic key.
- @param     initializer Initializer.
- @note      Key and initializer is SHA-256'd and MD5'd to match the lengths.
+ This method includes internal hashing of keys, initializers and padding.
  */
-- (NSData *)decryptUsingKey:(NSData *)key initializer:(NSData *)initializer;
+- (NSData *)AESEncryptWithKey:(NSData *)key
+                  initializer:(NSData *)initializer
+                     delegate:(id<MSCryptorDelegate>)delegate;
+
+/**
+ AES PCBC decryption.
+ */
+- (NSData *)AESDecryptWithKey:(NSData *)key
+                  initializer:(NSData *)initializer
+                     delegate:(id<MSCryptorDelegate>)delegate;
+
+/**
+ AES OFB encryption/decryption
+ */
+- (NSData *)AESScrambleStreamWithKey:(NSData *)key
+                         initializer:(NSData *)initializer
+                            delegate:(id<MSCryptorDelegate>)delegate;
+
+- (NSData *)xorWithData:(NSData *)data;
+
+- (NSData *)gzipPaddingToBoundry:(NSUInteger)boundry;
 
 @end
 
