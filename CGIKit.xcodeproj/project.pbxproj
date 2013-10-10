@@ -21,6 +21,20 @@
 			remoteGlobalIDString = 1D640D2117D2EDBE004C8C88;
 			remoteInfo = WebUIKitTests;
 		};
+		1D04E8F71806446800FC4EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D04E8EE1806446700FC4EEA /* CGISocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D04E8C01806446700FC4EEA;
+			remoteInfo = CGISocket;
+		};
+		1D04E8F91806446800FC4EEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D04E8EE1806446700FC4EEA /* CGISocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1D04E8D71806446700FC4EEA;
+			remoteInfo = CGISocketTests;
+		};
 		1D278D3217EB7B2F00FBDA36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1D4BF0AB17A8FF30005080A2 /* MSBooster.xcodeproj */;
@@ -87,6 +101,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D04E8EE1806446700FC4EEA /* CGISocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CGISocket.xcodeproj; path = CGISocket/CGISocket.xcodeproj; sourceTree = "<group>"; };
 		1D278D2817EB7B2F00FBDA36 /* FORMAT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = FORMAT.md; sourceTree = "<group>"; };
 		1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Demo.xcodeproj; path = Demo/Demo.xcodeproj; sourceTree = "<group>"; };
 		1D4BF06A17A8FEA8005080A2 /* COPYRIGHT.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = COPYRIGHT.md; sourceTree = "<group>"; };
@@ -103,6 +118,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
+		1D04E8EF1806446700FC4EEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D04E8F81806446800FC4EEA /* CGISocket.framework */,
+				1D04E8FA1806446800FC4EEA /* CGISocketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		1D4A9CFC17BD84AA002325B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +138,7 @@
 		1D4BF06317A8FE92005080A2 = {
 			isa = PBXGroup;
 			children = (
+				1D04E8EE1806446700FC4EEA /* CGISocket.xcodeproj */,
 				1D640CFB17D2EDAE004C8C88 /* WebUIKit.xcodeproj */,
 				1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */,
 				1D4BF2AA17AA0BBF005080A2 /* CGIJSONObject.xcodeproj */,
@@ -211,6 +236,10 @@
 					ProjectRef = 1D4BF0FE17A9173F005080A2 /* CGIKit.xcodeproj */;
 				},
 				{
+					ProductGroup = 1D04E8EF1806446700FC4EEA /* Products */;
+					ProjectRef = 1D04E8EE1806446700FC4EEA /* CGISocket.xcodeproj */;
+				},
+				{
 					ProductGroup = 1D4A9CFC17BD84AA002325B2 /* Products */;
 					ProjectRef = 1D4A9CFB17BD84AA002325B2 /* Demo.xcodeproj */;
 				},
@@ -242,6 +271,20 @@
 			fileType = wrapper.cfbundle;
 			path = WebUIKitTests.xctest;
 			remoteRef = 1D03B5DA17EA03540067D035 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D04E8F81806446800FC4EEA /* CGISocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CGISocket.framework;
+			remoteRef = 1D04E8F71806446800FC4EEA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D04E8FA1806446800FC4EEA /* CGISocketTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CGISocketTests.xctest;
+			remoteRef = 1D04E8F91806446800FC4EEA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		1D278D3317EB7B2F00FBDA36 /* MSBooster Tests.octest */ = {
