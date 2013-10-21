@@ -10,6 +10,10 @@
 
 @interface CGITestRemoteObject : CGIRemoteObject
 
+@end
+
+@interface CGITestRemoteObject (CGIRemoteMethods)
+
 - (NSArray *)remoteMethod;
 
 @end

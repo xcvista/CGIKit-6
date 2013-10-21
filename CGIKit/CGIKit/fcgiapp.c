@@ -1497,6 +1497,7 @@ static int ProcessManagementRecord(int type, FCGX_Stream *stream)
                          len, 0);
         ((FCGI_UnknownTypeRecord *) response)->body
             = MakeUnknownTypeBody(type);
+        FreeParams(&paramsPtr);
     }
     if (write_it_all(data->reqDataPtr->ipcFd, response, FCGI_HEADER_LEN + paddedLen) < 0) {
         SetError(stream, OS_Errno);
