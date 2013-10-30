@@ -134,13 +134,11 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
     
     NSHTTPURLResponse *response = nil;
     
-    NSData *responseData = nil;
-    
     if ([self connectionShouldSendURLRequest:request])
     {
-        responseData = [NSURLConnection sendSynchronousRequest:request
-                                             returningResponse:&response
-                                                         error:NULL];
+        [NSURLConnection sendSynchronousRequest:request
+                              returningResponse:&response
+                                          error:NULL];
     }
     else
     {
