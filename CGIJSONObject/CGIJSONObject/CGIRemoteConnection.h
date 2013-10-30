@@ -93,6 +93,10 @@ extern NSString *const CGIRemoteConnectionServerRootKey;
  */
 - (NSString *)userAgent;
 
+- (NSDictionary *)requestHeaderFields;
+
+- (BOOL)remoteRespondsToMethod:(NSString *)method;
+
 /**
  Get the URL request from name of the method.
  

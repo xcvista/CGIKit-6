@@ -23,6 +23,10 @@
 #import <MSBooster/NSData+MSCompression.h>
 #import <MSBooster/NSArray+LinqExtensions.h>
 #import <MSBooster/NSDictionary+LinqExtensions.h>
+#import <MSBooster/NSArray+MSOrderedCollection.h>
+#import <MSBooster/NSSet+MSUniqueCollection.h>
+#import <MSBooster/NSDictionary+MSKeyValueCollection.h>
+#import <MSBooster/NSOrderedSet+MSCollectionProtocols.h>
 
 #endif
 

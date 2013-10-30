@@ -49,6 +49,11 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
     return self;
 }
 
+- (NSDictionary *)requestHeaderFields
+{
+    return @{@"User-Agent": [self userAgent]};
+}
+
 - (NSMutableURLRequest *)URLRequestForMethod:(NSString *)method
 {
     if (!self.serverRoot)
@@ -58,8 +63,11 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
     
     NSURL *methodURL = [NSURL URLWithString:MSSTR(self.serverRoot, method)];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:methodURL];
-    [request setValue:[self userAgent]
-   forHTTPHeaderField:@"User-Agent"];
+    NSDictionary *headers = [self requestHeaderFields];
+    for (NSString *key in headers)
+    {
+        [request setValue:headers[key] forHTTPHeaderField:key];
+    }
     
     return request;
 }
@@ -119,6 +127,32 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
     return responseData;
 }
 
+- (BOOL)remoteRespondsToMethod:(NSString *)method
+{
+    NSMutableURLRequest *request = [self URLRequestForMethod:method];
+    [request setHTTPMethod:@"HEAD"];
+    
+    NSHTTPURLResponse *response = nil;
+    
+    NSData *responseData = nil;
+    
+    if ([self connectionShouldSendURLRequest:request])
+    {
+        responseData = [NSURLConnection sendSynchronousRequest:request
+                                             returningResponse:&response
+                                                         error:NULL];
+    }
+    else
+    {
+        return NO;
+    }
+    
+    if ([response statusCode] < 400)
+        return YES;
+    else
+        return NO;
+}
+
 - (NSString *)userAgent
 {
     NSString *utname = @"Unknown OS";
@@ -128,7 +162,7 @@ NSString *const CGIRemoteConnectionServerRootKey = @"CGIRemoteConnectionServerRo
         utname = MSSTR(@"%s/%s", utsname.sysname, utsname.release);
     }
     
-    return MSSTR(@"CGIJSONRemoteObject/6.0; CGIKit/6.0; %@",
+    return MSSTR(@"CGIJSONRemoteObject/6.1; CGIKit/6.1; %@",
                   utname
                   );
 }

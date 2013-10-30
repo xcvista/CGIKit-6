@@ -55,9 +55,12 @@ extern CGIRemoteConnection *_CGI_defaultRemoteConnection;
         [NSException raise:@"CGINoConnectionException" format:@"I am not connected."];
     }
     
+    if (!class)
+        return;
+    
     do
     {
-        NSMutableString *methodName = [NSStringFromSelector(method) mutableCopy];
+        NSString *methodName = NSStringFromSelector(method);
         
         NSError *error = nil;
         id uplinkObject = [self serializedObject];
@@ -102,6 +105,23 @@ extern CGIRemoteConnection *_CGI_defaultRemoteConnection;
     
     value = objc_retain(value);
     [anInvocation setReturnValue:&value];
+}
+
+- (BOOL)remoteRespondsToSelector:(SEL)method
+{
+    Class class = [self classForSelector:method];
+    
+    if (!_CGI_defaultRemoteConnection)
+    {
+        [NSException raise:@"CGINoConnectionException" format:@"I am not connected."];
+    }
+    
+    if (class)
+    {
+        return [_CGI_defaultRemoteConnection remoteRespondsToMethod:NSStringFromSelector(method)];
+    }
+    else
+        return NO;
 }
 
 @end

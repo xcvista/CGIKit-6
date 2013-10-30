@@ -1,6 +1,6 @@
 # CGIKit
 
-*   Version:    6.0 (6A16)
+*   Version:    6.1 (6B24)
 *   Author:     Maxthon T. Chan, et al.
 
 ## Introduction

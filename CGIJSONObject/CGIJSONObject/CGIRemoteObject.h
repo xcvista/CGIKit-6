@@ -28,6 +28,7 @@
 
 @interface CGIRemoteObject : NSObject
 
+- (BOOL)remoteRespondsToSelector:(SEL)selector;
 - (Class)classForSelector:(SEL)selector;
 
 @end
