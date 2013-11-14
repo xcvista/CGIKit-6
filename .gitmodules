@@ -1,0 +1,3 @@
+[submodule "MSBooster"]
+	path = MSBooster
+	url = https://github.com/xcvista/MSBooster.git
