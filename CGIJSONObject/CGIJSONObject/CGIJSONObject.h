@@ -9,7 +9,12 @@
 #if __OBJC__
 
 #import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
 #import <MSBooster/MSBooster.h>
+#else
+#import <CGIKit/CGIKit.h>
+#endif
 
 #import <CGIJSONObject/NSObject+CGIJSONSerializable.h>
 #import <CGIJSONObject/NSObject+CGIJSONSerializing.h>

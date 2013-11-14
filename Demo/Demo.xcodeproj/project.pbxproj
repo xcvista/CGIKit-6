@@ -11,11 +11,11 @@
 		1D4A9D1017BD84DA002325B2 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9D0F17BD84DA002325B2 /* main.c */; };
 		1D4A9D1417BD84DA002325B2 /* time_fcgi.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D4A9D1317BD84DA002325B2 /* time_fcgi.1 */; };
 		1D4A9D1B17BD84E7002325B2 /* CGIJSONObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9D1817BD84E7002325B2 /* CGIJSONObject.framework */; };
-		1D4A9D1C17BD84E7002325B2 /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9D1917BD84E7002325B2 /* CGIKit.framework */; };
-		1D4A9D1D17BD84E7002325B2 /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9D1A17BD84E7002325B2 /* MSBooster.framework */; };
 		1D4A9D2017BD8550002325B2 /* TimeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9D1F17BD8550002325B2 /* TimeAppDelegate.m */; };
 		1D4A9D2417BD85D1002325B2 /* TimeDateWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9D2317BD85D1002325B2 /* TimeDateWrapper.m */; };
 		1D4A9D2717BD8631002325B2 /* TimeServerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4A9D2617BD8631002325B2 /* TimeServerObject.m */; };
+		1D6E16A81834EE3E0051A47A /* CGIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9D1917BD84E7002325B2 /* CGIKit.framework */; };
+		1D6E16A91834EE410051A47A /* MSBooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D4A9D1A17BD84E7002325B2 /* MSBooster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,9 +55,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D4A9D1B17BD84E7002325B2 /* CGIJSONObject.framework in Frameworks */,
-				1D4A9D1C17BD84E7002325B2 /* CGIKit.framework in Frameworks */,
-				1D4A9D1D17BD84E7002325B2 /* MSBooster.framework in Frameworks */,
 				1D4A9D0D17BD84DA002325B2 /* Foundation.framework in Frameworks */,
+				1D6E16A81834EE3E0051A47A /* CGIKit.framework in Frameworks */,
+				1D6E16A91834EE410051A47A /* MSBooster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +205,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -225,6 +226,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -248,6 +250,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -263,6 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -288,6 +292,7 @@
 				1D4A9D1717BD84DA002325B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

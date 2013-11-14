@@ -1,8 +1,37 @@
 framework module CGIKit {
     umbrella header "CGIKit.h"
     
+    module CGIApplication
+    {
+        header "CGIApplication.h"
+    }
+
+    module CGIHTTPContext
+    {
+        header "CGIHTTPContext.h"
+
+        requires objc
+    }
+    
+    module CGIHTTPRequest
+    {
+        header "CGIHTTPRequest.h"
+        header "CGIHTTPRequestStrings.h"
+
+        requires objc
+    }
+    
+    module CGIHTTPResponse
+    {
+        header "CGIHTTPResponse.h"
+        header "CGIHTTPResponseStrings.h"
+
+        requires objc
+    }
+
     export *
     module * {
         export *
     }
+
 }

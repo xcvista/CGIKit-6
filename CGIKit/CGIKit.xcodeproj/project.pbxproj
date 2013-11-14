@@ -27,23 +27,33 @@
 		1D67B00117AABED1009D0826 /* CGIHTTPResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67AFFF17AABED1009D0826 /* CGIHTTPResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D67B00217AABED1009D0826 /* CGIHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D67B00017AABED1009D0826 /* CGIHTTPResponse.m */; settings = {COMPILER_FLAGS = "-Wno-ambiguous-macro"; }; };
 		1D67B00517AAD70F009D0826 /* CGIHTTPRequestStrings.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D67B00417AAD6F4009D0826 /* CGIHTTPRequestStrings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D6E16A41834E9750051A47A /* MSBooster.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1D4BF10717A91761005080A2 /* MSBooster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1D4BF26B17A92385005080A2 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 1;
 			files = (
 				1D4BF26C17A92390005080A2 /* module.map in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1D6E169F1834E86D0051A47A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				1D6E16A41834E9750051A47A /* MSBooster.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1D13DA4217BCB2F6008507EC /* MSBooster.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = MSBooster.framework; path = ../MSBooster/build/Release/MSBooster.framework; sourceTree = "<group>"; };
 		1D13DA4317BCB2F6008507EC /* libssl.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.dylib; path = usr/lib/libssl.dylib; sourceTree = SDKROOT; };
 		1D41113717B4D5EF00251E1B /* CGIHTTPResponseStrings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPResponseStrings.h; sourceTree = "<group>"; };
 		1D4BF0D017A9173F005080A2 /* CGIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,7 +127,6 @@
 		1D4BF0D217A9173F005080A2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1D13DA4217BCB2F6008507EC /* MSBooster.framework */,
 				1D13DA4317BCB2F6008507EC /* libssl.dylib */,
 				1D67AFCE17AAA27C009D0826 /* CGIJSONObject.framework */,
 				1D4BF10717A91761005080A2 /* MSBooster.framework */,
@@ -225,6 +234,8 @@
 				1D4BF0CD17A9173F005080A2 /* Headers */,
 				1D4BF26B17A92385005080A2 /* CopyFiles */,
 				1D4BF0CE17A9173F005080A2 /* Resources */,
+				1D6E169F1834E86D0051A47A /* CopyFiles */,
+				1D6E16A51834EA360051A47A /* Generate Documentation */,
 			);
 			buildRules = (
 			);
@@ -273,6 +284,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D6E16A51834EA360051A47A /* Generate Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate Documentation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"muski\";\ncompanyID=\"info.maxchan\";\ncompanyURL=\"http://www.maxchan.info\";\n#target=\"iphoneos\";\ntarget=\"macosx\";\noutputPath=\"~/appledoc\";\n# End constants\nmkdir -p outputPath\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n--ignore \"${PROJECT_DIR}/Frameworks\" \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--search-undocumented-doc \\\n$(find \"${PROJECT_DIR}/${TARGET_NAME}\" | grep \"\\.h\")";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D4BF0CB17A9173F005080A2 /* Sources */ = {
@@ -377,6 +405,7 @@
 		1D4BF0F917A9173F005080A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 6;
 				DYLIB_CURRENT_VERSION = 6;
@@ -386,6 +415,8 @@
 				);
 				FRAMEWORK_VERSION = F;
 				INFOPLIST_FILE = "CGIKit/CGIKit-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -394,6 +425,7 @@
 		1D4BF0FA17A9173F005080A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 6;
 				DYLIB_CURRENT_VERSION = 6;
@@ -403,6 +435,8 @@
 				);
 				FRAMEWORK_VERSION = F;
 				INFOPLIST_FILE = "CGIKit/CGIKit-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};

@@ -14,10 +14,12 @@
 
 #if __OBJC__
 
-#import <CGIKit/CGIApplication.h>
 #import <CGIKit/CGIHTTPContext.h>
 #import <CGIKit/CGIHTTPRequest.h>
 #import <CGIKit/CGIHTTPResponse.h>
+
+#import <CGIKit/CGIHTTPRequestStrings.h>
+#import <CGIKit/CGIHTTPResponseStrings.h>
 
 #endif
 
