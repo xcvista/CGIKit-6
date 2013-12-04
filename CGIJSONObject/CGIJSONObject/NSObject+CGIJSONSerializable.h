@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 
+@compatibility_alias CGIPersistantObject NSObject;
+
 /**
  @def       CGIClassForKey
  
