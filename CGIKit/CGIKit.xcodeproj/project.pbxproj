@@ -83,7 +83,6 @@
 		1D61210717B9170700C2AD14 /* error.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = error.html; sourceTree = "<group>"; };
 		1D61211517BA0FC400C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
 		1D61211617BA0FE900C2AD14 /* GNUmakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = GNUmakefile; sourceTree = "<group>"; };
-		1D67AFCE17AAA27C009D0826 /* CGIJSONObject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CGIJSONObject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D67AFE217AAAF58009D0826 /* CGIHTTPContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPContext.h; sourceTree = "<group>"; };
 		1D67AFE317AAAF58009D0826 /* CGIHTTPContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGIHTTPContext.m; sourceTree = "<group>"; };
 		1D67AFE617AAB2EF009D0826 /* CGIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGIHTTPRequest.h; sourceTree = "<group>"; };
@@ -128,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				1D13DA4317BCB2F6008507EC /* libssl.dylib */,
-				1D67AFCE17AAA27C009D0826 /* CGIJSONObject.framework */,
 				1D4BF10717A91761005080A2 /* MSBooster.framework */,
 				1D4BF0D317A9173F005080A2 /* Cocoa.framework */,
 				1D4BF0D517A9173F005080A2 /* Other Frameworks */,
@@ -288,7 +286,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		1D6E16A51834EA360051A47A /* Generate Documentation */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
@@ -296,9 +294,9 @@
 			name = "Generate Documentation";
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"muski\";\ncompanyID=\"info.maxchan\";\ncompanyURL=\"http://www.maxchan.info\";\n#target=\"iphoneos\";\ntarget=\"macosx\";\noutputPath=\"~/appledoc\";\n# End constants\nmkdir -p outputPath\n/usr/local/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n--ignore \"${PROJECT_DIR}/Frameworks\" \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--search-undocumented-doc \\\n$(find \"${PROJECT_DIR}/${TARGET_NAME}\" | grep \"\\.h\")";
+			shellScript = "#appledoc Xcode script\n\nif [ ! -x $(which appledoc) ]; then\nexit 0;\nelse\nAPPLEDOC=\"$(which appledoc)\"\nfi\n\n# Start constants\ncompany=\"muski\";\ncompanyID=\"info.maxchan\";\ncompanyURL=\"http://www.maxchan.info\";\n#target=\"iphoneos\";\ntarget=\"macosx\";\noutputPath=\"~/appledoc\";\n# End constants\nmkdir -p outputPath\n\"$APPLEDOC\" \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n--ignore \"${PROJECT_DIR}/Frameworks\" \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--search-undocumented-doc \\\n$(find \"${PROJECT_DIR}/${TARGET_NAME}\" | grep \"\\.h\")";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -405,7 +403,6 @@
 		1D4BF0F917A9173F005080A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 6;
 				DYLIB_CURRENT_VERSION = 6;
@@ -425,7 +422,6 @@
 		1D4BF0FA17A9173F005080A2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 6;
 				DYLIB_CURRENT_VERSION = 6;
