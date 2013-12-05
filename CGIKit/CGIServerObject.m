@@ -7,7 +7,9 @@
 //
 
 #import "CGIServerObject.h"
-#import "NSObject+CGIJSONSerializable.h"
+#import "CGIHTTPRequest.h"
+#import "CGIHTTPResponse.h"
+#import <CGIJSONObject/CGIJSONObject.h>
 
 @implementation CGIServerObject
 

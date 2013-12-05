@@ -1,8 +1,0 @@
-framework module CGIJSONObject {
-    umbrella header "CGIJSONObject.h"
-    
-    export *
-    module * {
-        export *
-    }
-}

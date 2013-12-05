@@ -1,3 +1,6 @@
-[submodule "MSBooster"]
-	path = MSBooster
+[submodule "Frameworks/CGIJSONObject"]
+	path = Frameworks/CGIJSONObject
+	url = https://github.com/xcvista/CGIJSONObject.git
+[submodule "Frameworks/MSBooster"]
+	path = Frameworks/MSBooster
 	url = https://github.com/xcvista/MSBooster.git

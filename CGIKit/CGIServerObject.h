@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 muski. All rights reserved.
 //
 
-#import <CGIKit/CGIKit.h>
+#import <CGIKit/CGIHTTPContext.h>
 
 /**
  Represents a remote method that can be called when needed.

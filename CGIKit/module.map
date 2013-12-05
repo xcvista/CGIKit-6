@@ -28,6 +28,13 @@ framework module CGIKit {
 
         requires objc
     }
+    
+    module CGIServerObject
+    {
+        header "CGIServerObject.h"
+        
+        requires objc
+    }
 
     export *
     module * {
